@@ -1,0 +1,74 @@
+footer {
+    .column-text {
+        margin-bottom: 20px;
+        @include breakpoint(768px) {
+            margin-bottom: 40px;
+        }
+        .column-title {
+            margin-bottom: 20px;
+            font-size: 20px;
+            @include breakpoint(768px) {
+                margin-bottom: 40px;
+            }
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    .contact-icon-list {
+        @include listrest(0, 0, none);
+        li {
+            padding-bottom: 13px;
+            font-size: 0;
+            border-bottom: 1px solid rgba($gray-600, 0.5);
+            +li {
+                padding-top: 13px;
+            }
+            >* {
+                display: inline-block;
+                vertical-align: text-top;
+            }
+            .icon {
+                margin-right: 20px;
+                color: $gray-600;
+                font-size: 1.125rem;
+            }
+            .list-content {
+                width: calc(100% - 40px);
+                font-size: 1rem;
+                a {
+                    display: block;
+                    color: $white;
+                    &:hover {
+                        color: $gray-600;
+                    }
+                }
+            }
+        }
+    }
+    .container-fluid {
+        &.contact {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            color: $white;
+            background-color: #2e2e2e;
+        }
+        &.copyright {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            color: $gray-600;
+            background-color: $black;
+        }
+    }
+    .col-instagram {
+        @include breakpoint(768px) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        @include breakpoint(max-width 767px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+}

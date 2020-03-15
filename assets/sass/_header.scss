@@ -1,0 +1,146 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 0 1em;
+    // background-color: $black;
+    z-index: 10;
+    @include breakpoint(950px) {
+        padding: 0 1em;
+    }
+    .container-fluid {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        @include breakpoint(max-width 949px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include breakpoint(950px) {
+            padding-left: 155px;
+        }
+        @include breakpoint(1100px) {
+            padding-left: 180px;
+        }
+        @include breakpoint(1260px) {
+            padding-right: 180px;
+        }
+    }
+    h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        @include breakpoint(950px) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include translateY(-50%);
+            z-index: 5;
+        }
+        a {
+            display: block;
+            color: $white;
+            @include breakpoint(max-width 949px) {
+                padding: 9px 10px 8px 0;
+            }
+        }
+        i {
+            display: block;
+            font-size: 1.05em;
+            @include breakpoint(1100px) {
+                font-size: 1.5em;
+            }
+            @include breakpoint(1260px) {
+                font-size: 1.8em;
+            }
+        }
+    }
+    nav {
+        position: relative;
+        text-align: left;
+        z-index: 1;
+        @include breakpoint(950px) {
+            padding: 1em 0;
+            text-align: right;
+        }
+        @include breakpoint(1260px) {
+            text-align: center;
+        }
+        .ham {
+            position: relative;
+            width: calc(20px + 2em);
+            height: calc(18px + 2em);
+            padding: 1em;
+            @include breakpoint(950px) {
+                display: none;
+            }
+            span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background-color: $white;
+                +span {
+                    margin-top: 6px;
+                }
+            }
+            &.opened {
+                span {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    +span {
+                        margin-top: 0;
+                    }
+                    &:first-child {
+                        @include transform(translateY(300%) rotate(45deg));
+                    }
+                    &:last-child {
+                        @include transform(translateY(300%) rotate(-45deg));
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+        ul {
+            @include listrest(0, 0, none);
+            @include breakpoint(max-width 949px) {
+                position: absolute;
+                display: none;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 100vh;
+                padding: 60px 40px;
+                background-color: $black;
+                z-index: -1;
+            }
+            li {
+                @include breakpoint(max-width 949px) {
+                    border-bottom: 1px solid $gray-500;
+                }
+                @include breakpoint(950px) {
+                    display: inline-block;
+                }
+                a {
+                    display: block;
+                    padding: 1em 0;
+                    color: $white;
+                    font-size: 1em;
+                    @include breakpoint(950px) {
+                        padding: 1em;
+                        font-size: 0.875em;
+                    }
+                    @include breakpoint(1100px) {
+                        font-size: 1em;
+                    }
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

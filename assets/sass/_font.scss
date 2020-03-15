@@ -1,5 +1,6 @@
 $icomoon-font-family: "mrmasuit" !default;
 $icomoon-font-path: "../fonts" !default;
+$icon-chevron-left: "\e909";
 $icon-play_arrow: "\e901";
 $icon-close: "\e902";
 $icon-facebook: "\e903";
@@ -32,6 +33,12 @@ $icon-logo: "\e900";
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-left {
+    &:before {
+        content: $icon-chevron-left;
+    }
 }
 
 .icon-play_arrow {
