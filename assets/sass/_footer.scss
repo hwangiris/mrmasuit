@@ -63,6 +63,10 @@ footer {
     }
     .col-instagram {
         @include breakpoint(768px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include breakpoint(1200px) {
             padding-left: 60px;
             padding-right: 60px;
         }

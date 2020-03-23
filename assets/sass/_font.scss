@@ -35,6 +35,10 @@ $icon-logo: "\e900";
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-headphones:before {
+    content: "\e900";
+}
+
 .icon-chevron-left {
     &:before {
         content: $icon-chevron-left;
