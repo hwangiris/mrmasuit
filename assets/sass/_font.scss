@@ -1,7 +1,9 @@
 $icomoon-font-family: "mrmasuit" !default;
 $icomoon-font-path: "../fonts" !default;
+
 $icon-chevron-left: "\e909";
 $icon-play_arrow: "\e901";
+$icon-scroll: "\e90a";
 $icon-close: "\e902";
 $icon-facebook: "\e903";
 $icon-line: "\e904";
@@ -10,6 +12,7 @@ $icon-map: "\e906";
 $icon-phone: "\e907";
 $icon-search: "\e908";
 $icon-logo: "\e900";
+
 @font-face {
     font-family: '#{$icomoon-font-family}';
     src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yolxyp');
@@ -34,7 +37,12 @@ $icon-logo: "\e900";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-scroll {
+    &:before {
+      content: $icon-scroll; 
+    }
+  }
+  
 .icon-headphones:before {
     content: "\e900";
 }

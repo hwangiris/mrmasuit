@@ -15,7 +15,66 @@
 .text-center {
     text-align: center;
 }
-
+.blank {
+    position: absolute;
+    background: rgba($black, 0.7);
+    z-index: 9;
+}
+body.opened .blank {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+#scroll{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    color: $white;
+    font-size: 36px;
+    @include opacity(0.7);
+    @include translateX(-50%);
+    @include transition(opacity 0.3s);
+    z-index: 5;
+    @include breakpoint(1024px) {
+        font-size: 48px;
+    }
+    @include breakpoint(1366px) {
+        font-size: 60px;
+    }
+    &:hover {
+        @include opacity(1);
+    }
+}
+#top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    padding: 17px 10px 12px;
+    color: $white;
+    line-height: 1;
+    text-align: center;
+    background-color: $black;
+    @include border-radius(50%);
+    cursor: pointer;
+    z-index: 5;
+    @include breakpoint(1024px) {
+        width: 65px;
+        height: 65px;
+        padding: 20px 15px;
+    }
+    > * {
+        display: block;
+        text-transform: uppercase;
+    }
+    i {
+        font-size: 0.75rem;
+        @include transform(rotate(-90deg) scale(0.75));
+    }
+}
 [class*='col-'] {
     @include breakpoint(max-width 1023px) {
         padding-left: 30px;
@@ -62,7 +121,9 @@
     }
     &.text-group-sp {
         p {
-            margin-top: 0;
+            @include breakpoint(1024px) {
+                margin-top: 0;
+            }
         }
     }
     .news-list {
@@ -187,26 +248,54 @@
 .number-group {
     height: 100%;
     align-content: flex-end;
+    justify-content: center;
+    @include breakpoint(max-width 1023px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .number-item {
         color: $white;
         font-size: 16px;
         text-align: center;
         line-height: 1.25;
         text-shadow: 0 0 15px $black;
-        @include breakpoint(max-width 1023px) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
         @include breakpoint(1024px) {
             font-size: 24px;
         }
-        span {
+        +.number-item {
+            margin-left: 20px;
+        }
+        >.count {
+            position: relative;
             display: inline-block;
+            height: calc(24px * 1.25);
             padding: 0 3px;
             font-size: 24px;
             font-weight: 500;
+            vertical-align: bottom;
+            overflow: hidden;
             @include breakpoint(1024px) {
+                height: calc(28px * 1.25);
                 font-size: 28px;
+            }
+            .count-group {
+                position: relative;
+                i {
+                    display: block;
+                    font-style: inherit;
+                    text-align: right;
+                }
+            }
+            &.active {
+                .count-group-4 {
+                    @include animation(count-4-step 1s alternate forwards);
+                }
+                .count-group-5 {
+                    @include animation(count-5-step 1s alternate forwards);
+                }
+                .count-group-6 {
+                    @include animation(count-6-step 1s alternate forwards);
+                }        
             }
         }
         @include breakpoint(max-width 1023px) {
@@ -216,7 +305,6 @@
         }
     }
 }
-
 .news-list {
     @include listrest(0, 0, none);
     li {
@@ -588,22 +676,26 @@ section {
         @include breakpoint(max-width 1023px) {
             height: 90vh;
         }
-        &::before,
-        &::after {
-            @include beforeafter('', block);
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            @include opacity(0.5);
-        }
-        &::before {
-            top: 0;
-            @include background-image(linear-gradient(top, $black 0%, rgba($black, 0) 100%));
-        }
-        &::after {
-            bottom: 0;
-            @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+        .video {
+            position: relative;
+            height: 100%;
+            &::before,
+            &::after {
+                @include beforeafter('', block);
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                @include opacity(0.5);
+            }
+            &::before {
+                top: 0;
+                @include background-image(linear-gradient(top, $black 0%, rgba($black, 0) 100%));
+            }
+            &::after {
+                bottom: 0;
+                @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+            }
         }
         .fp-scroller,
         .fp-scroller {
@@ -643,11 +735,24 @@ section {
             background-position: center bottom;
             background-image: url('../images/about.jpg');
         }
+        .number-group {
+            .number-item {
+                width: calc((100% - 40px) / 3);
+            }
+        }
     }
     &.suit {
         .half-img-banner {
             background-position: center;
             background-image: url('../images/wedding.jpg');
+        }
+        .number-group {
+            .number-item {
+                width: calc((100% - 20px) / 2);
+                @include breakpoint(1024px) {
+                    width: calc((100% - 20px) / 3);
+                }
+            }
         }
     }
     &.news {
@@ -755,7 +860,7 @@ section {
             bottom: calc(38.5vw - 65px);
             width: calc(100% - 30px);
             @include breakpoint(768px) {
-                bottom: 65px; //150-45-40
+                bottom: 115px; //150-45-40
             }
             @include breakpoint(1200px) {
                 bottom: 165px; //250-45-40
@@ -772,8 +877,8 @@ section {
             color: $white;
             z-index: 2;
             @include breakpoint(768px) {
-                padding-top: 150px;
-                padding-bottom: 150px;
+                padding-top: 200px;
+                padding-bottom: 200px;
             }
             @include breakpoint(1200px) {
                 padding-top: 250px;
@@ -874,6 +979,32 @@ section {
     }
     &.interest-section {
         background-color: $gray-100;
+    }
+    &.active {
+        .count-group-4 {
+            @include breakpoint(1024px){
+                @include animation(count4stepd 0.75s alternate forwards );
+            }
+            @include breakpoint(max-width 1023px) {
+                @include animation(count4stepm 0.75s alternate forwards );
+            }
+        }
+        .count-group-5 {
+            @include breakpoint(1024px){
+                @include animation(count5stepd 1.25s alternate forwards);
+            }
+            @include breakpoint(max-width 1023px) {
+                @include animation(count5stepm 1.25s alternate forwards);
+            }
+        }
+        .count-group-6 {
+            @include breakpoint(1024px){
+                @include animation(count6stepd 1.5s alternate forwards);
+            }
+            @include breakpoint(max-width 1023px) {
+                @include animation(count6stepm 1.5s alternate forwards);
+            }
+        }        
     }
 }
 
@@ -1129,6 +1260,23 @@ form {
         .d-flex {
             height: 100%;
         }
+        @include breakpoint(1024px) {
+            .wow {
+                visibility: initial !important;
+                @include opacity(0);
+                @include transition(opacity 0.3s);
+                @include animation-duration(1s);
+                @include animation-fill-mode(both);
+            }
+            &.active {
+                .fadeInUp {
+                    animation-name: fadeInUp !important;
+                }
+                .fadeIn {
+                    animation-name: fadeIn !important;
+                }
+            }
+        }
     }
 }
 
@@ -1167,5 +1315,134 @@ form {
         padding-top: 25px;
         padding-bottom: 25px;
         line-height: 1.875;
+    }
+}
+@include keyframes(count4stepd) {
+    0%{
+        top: 0;
+    }
+    25%{
+        top: -35px;
+    }
+    50%{
+        top: -70px;
+    }
+    75%{
+        top: -105px;
+    }
+    100%{
+        top: -140px;
+    }
+}
+@include keyframes(count5stepd) {
+    0%{
+        top: 0;
+    }
+    20%{
+        top: -35px;
+    }
+    40%{
+        top: -70px;
+    }
+    60%{
+        top: -140px;
+    }
+    80%{
+        top: -175px;
+    }
+    100%{
+        top: -210px;
+    }
+}
+@include keyframes(count6stepd) {
+    0%{
+        top: 0;
+    }
+    13%{
+        top: -35px;
+    }
+    26%{
+        top: -70px;
+    }
+    39%{
+        top: -105px;
+    }
+    52%{
+        top: -140px;
+    }
+    65%{
+        top: -175px;
+    }
+    78%{
+        top: -210px;
+    }
+    100%{
+        top: -245px;
+    }
+}
+@include keyframes(count4stepm) {
+    0%{
+        top: 0;
+    }
+    25%{
+        top: -30px;
+    }
+    50%{
+        top: -60px;
+    }
+    75%{
+        top: -90px;
+    }
+    100%{
+        top: -120px;
+    }
+}
+@include keyframes(count5stepm) {
+    0%{
+        top: 0;
+    }
+    16%{
+        top: -30px;
+    }
+    32%{
+        top: -60px;
+    }
+    48%{
+        top: -90px;
+    }
+    64%{
+        top: -120px;
+    }
+    72%{
+        top: -150px;
+    }
+    100%{
+        top: -180px;
+    }
+}
+@include keyframes(count6stepm) {
+    0%{
+        top: 0;
+    }
+    13%{
+        top: -30px;
+    }
+    26%{
+        top: -60px;
+    }
+    39%{
+        top: -90px;
+    }
+    52%{
+        top: -120px;
+    }
+    65%{
+        top: -150px;
+    }
+    78%{
+        top: -180px;
+    }
+    100%{
+        top: -210px;
     }
 }
