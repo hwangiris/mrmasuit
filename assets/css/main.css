@@ -1085,6 +1085,9 @@ body.opened .blank {
 .grid-group {
   height: 100%;
 }
+.grid-group span {
+  display: block;
+}
 .grid-group .grid-item {
   padding-left: 0;
   padding-right: 0;
@@ -1512,8 +1515,13 @@ section.service .service-list {
 section.service .service-list .label {
   display: inline-block;
   padding: 5px;
+  color: #171717;
   line-height: 1;
   border: 1px solid #171717;
+}
+section.service .service-list .label:hover {
+  color: #D3AC2B;
+  border-color: #D3AC2B;
 }
 section.service .square-area {
   background-color: #fafafa;

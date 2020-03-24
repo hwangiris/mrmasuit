@@ -339,6 +339,9 @@ body.opened .blank {
 
 .grid-group {
     height: 100%;
+    span {
+        display: block;
+    }
     .grid-item {
         padding-left: 0;
         padding-right: 0;
@@ -718,8 +721,13 @@ section {
             .label {
                 display: inline-block;
                 padding: 5px;
+                color: $black;
                 line-height: 1;
                 border: 1px solid $black;
+                &:hover {
+                    color: $primary;
+                    border-color: $primary;
+                }
             }
         }
         .square-area {
