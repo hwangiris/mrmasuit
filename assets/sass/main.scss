@@ -1,17 +1,17 @@
-@charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
-@import "_normalize";
+@charset"UTF-8";
+@import"Compass";
+@import"breakpoint";
+@import"_normalize";
 // 元件
-@import "_variable";
-@import "_mixin";
-@import "_font";
+@import"_variable";
+@import"_mixin";
+@import"_font";
 // 通用
-@import "_common";
-@import "_header";
-@import "_footer";
-@import "_pagination";
-@import "_search";
+@import"_common";
+@import"_header";
+@import"_footer";
+@import"_pagination";
+@import"_search";
 .text-center {
     text-align: center;
 }
@@ -843,6 +843,27 @@ section {
         .video {
             position: relative;
             height: 100%;
+            iframe,
+            video {
+                display: block;
+                width: 101%;
+                height: 101%;
+                object-fit: cover;
+            }
+        }
+        .slick-slide img {
+            position: absolute;
+            width: 101%;
+            height: 101%;
+            object-fit: cover;
+        }
+        .fp-scroller,
+        .fp-scroller {
+            height: 100%;
+        }
+        .slider-opening {
+            position: relative;
+            height: 100%;
             &::before,
             &::after {
                 @include beforeafter('', block);
@@ -851,6 +872,7 @@ section {
                 width: 100%;
                 height: 100px;
                 @include opacity(0.5);
+                z-index: 1;
             }
             &::before {
                 top: 0;
@@ -860,16 +882,10 @@ section {
                 bottom: 0;
                 @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
             }
-        }
-        .fp-scroller,
-        .fp-scroller {
-            height: 100%;
-        }
-        video {
-            display: block;
-            width: 101%;
-            height: 101%;
-            object-fit: cover;
+            .slick-list,
+            .slick-track {
+                height: 100%;
+            }
         }
     }
     &.service {

@@ -1,15 +1,14 @@
-@charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+@charset"UTF-8";
+@import"Compass";
+@import"breakpoint";
 // 元件
-@import "_variable";
-@import "_mixin";
+@import"_variable";
+@import"_mixin";
 .slick-slide {
     img {
         width: 100%;
     }
 }
-
 
 .slick-dots {
     @include listrest(10px 0 0, 0, none);
@@ -43,6 +42,7 @@
         }
     }
 }
+
 .slick-navi {
     position: absolute;
     top: 50%;
@@ -59,16 +59,20 @@
         display: block;
         font-size: 30px;
         line-height: 1;
+        text-shadow: 0 0 5px rgba($black, 0.5), 0 0 10px rgba($black, 0.5);
     }
 }
+
 .slick-prev {
     left: 0;
     @include transform(translateY(-50%) rotate(180deg));
 }
+
 .slick-next {
     right: 0;
     @include translateY(-50%);
 }
+
 .slider-instagram {
     .slick-dots {
         button {
@@ -84,8 +88,9 @@
                 @include opacity(0.5);
             }
         }
-    }    
+    }
 }
+
 .slider-guest {
     .slick-dots {
         li {
@@ -118,5 +123,5 @@
                 }
             }
         }
-    }    
+    }
 }

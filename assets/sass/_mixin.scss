@@ -23,6 +23,7 @@
 
 @mixin button($defaultColor, $hoverColor) {
     display: inline-block;
+    padding-top: 3px;
     min-width: 140px;
     color: $defaultColor;
     font-size: 0.875rem;
@@ -30,6 +31,7 @@
     text-align: center;
     background-color: transparent;
     border: 1px solid $defaultColor;
+    cursor: pointer;
     @include breakpoint(1024px) {
         min-width: 150px;
     }

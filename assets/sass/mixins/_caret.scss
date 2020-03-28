@@ -31,7 +31,7 @@
       display: inline-block;
       margin-left: $caret-width * .85;
       vertical-align: $caret-width * .85;
-      content: "";
+      content:"";
       @if $direction == down {
         @include caret-down;
       } @else if $direction == up {
@@ -50,7 +50,7 @@
         display: inline-block;
         margin-right: $caret-width * .85;
         vertical-align: $caret-width * .85;
-        content: "";
+        content:"";
         @include caret-left;
       }
     }

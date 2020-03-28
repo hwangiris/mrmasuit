@@ -117,7 +117,7 @@
     text-decoration: none;
   }
 
-  // Opinionated: add "hand" cursor to non-disabled .navbar-toggler elements
+  // Opinionated: add"hand" cursor to non-disabled .navbar-toggler elements
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
   }
@@ -130,7 +130,7 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  content: "";
+  content:"";
   background: no-repeat center center;
   background-size: 100% 100%;
 }

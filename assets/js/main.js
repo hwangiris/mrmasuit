@@ -34,7 +34,7 @@ $(function() {
     var url = window.location.href,
         id = url.split('id=')[1];
     console.log(id);
-    if (id != undefined || id != '') {
+    if (id != undefined) {
         $('body').addClass('modal-open');
         $('.' + id + ', .modal-backdrop').fadeIn();
     }
@@ -61,6 +61,16 @@ $(function() {
         $(this).hide();
         $(this).parent().siblings('.collapse-text').addClass('collapse-hide');
     })
+    $('.slider-opening').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-left'></i></button>"
+    });
     $('.slider-instagram').slick({
         dots: true,
         arrows: false,

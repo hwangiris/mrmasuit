@@ -61,7 +61,7 @@
         background-position: center right calc(#{$input-height-inner} / 4);
         background-size: calc(#{$input-height-inner} / 2) calc(#{$input-height-inner} / 2);
 
-        @if $state == "valid" {
+        @if $state =="valid" {
           background-image: $form-feedback-icon-valid;
         } @else {
           background-image: $form-feedback-icon-invalid;
@@ -97,7 +97,7 @@
       border-color: $color;
 
       @if $enable-validation-icons {
-        $form-feedback-icon: if($state == "valid", $form-feedback-icon-valid, $form-feedback-icon-invalid);
+        $form-feedback-icon: if($state =="valid", $form-feedback-icon-valid, $form-feedback-icon-invalid);
         padding-right: $custom-select-feedback-icon-padding-right;
         background: $custom-select-background, $form-feedback-icon no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
       }

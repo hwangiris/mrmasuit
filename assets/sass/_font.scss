@@ -1,17 +1,17 @@
-$icomoon-font-family: "mrmasuit" !default;
-$icomoon-font-path: "../fonts" !default;
+$icomoon-font-family:"mrmasuit" !default;
+$icomoon-font-path:"../fonts" !default;
 
-$icon-chevron-left: "\e909";
-$icon-play_arrow: "\e901";
-$icon-scroll: "\e90a";
-$icon-close: "\e902";
-$icon-facebook: "\e903";
-$icon-line: "\e904";
-$icon-mail: "\e905";
-$icon-map: "\e906";
-$icon-phone: "\e907";
-$icon-search: "\e908";
-$icon-logo: "\e900";
+$icon-chevron-left:"\e909";
+$icon-play_arrow:"\e901";
+$icon-scroll:"\e90a";
+$icon-close:"\e902";
+$icon-facebook:"\e903";
+$icon-line:"\e904";
+$icon-mail:"\e905";
+$icon-map:"\e906";
+$icon-phone:"\e907";
+$icon-search:"\e908";
+$icon-logo:"\e900";
 
 @font-face {
     font-family: '#{$icomoon-font-family}';
@@ -44,7 +44,7 @@ $icon-logo: "\e900";
   }
   
 .icon-headphones:before {
-    content: "\e900";
+    content:"\e900";
 }
 
 .icon-chevron-left {
