@@ -1,4 +1,6 @@
 footer {
+    width: 100%;
+    overflow: hidden;
     .column-text {
         margin-bottom: 20px;
         @include breakpoint(768px) {
