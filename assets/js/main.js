@@ -97,6 +97,12 @@ $(function() {
         fade: true,
         cssEase: 'linear',
     });
+    if (!location.href.match(/wedding/)) {
+        $('.list-section').each(function() {
+            $(this).parent().children('.list-section').last().addClass('pb-80');
+        })
+    }
+    $('.jumbotron > .container').has('.btn-group').addClass('has-btn');
     $(window).resize(function() {
         if (width >= 1024) {
             $('.half-banner-group').each(function() {

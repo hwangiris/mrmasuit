@@ -1,17 +1,17 @@
-@charset"UTF-8";
-@import"Compass";
-@import"breakpoint";
-@import"_normalize";
+@charset "UTF-8";
+@import "Compass";
+@import "breakpoint";
+@import "_normalize";
 // 元件
-@import"_variable";
-@import"_mixin";
-@import"_font";
+@import "_variable";
+@import "_mixin";
+@import "_font";
 // 通用
-@import"_common";
-@import"_header";
-@import"_footer";
-@import"_pagination";
-@import"_search";
+@import "_common";
+@import "_header";
+@import "_footer";
+@import "_pagination";
+@import "_search";
 .text-center {
     text-align: center;
 }
@@ -120,10 +120,8 @@ body.opened .blank {
             line-height: 1.7;
         }
         @include breakpoint(1366px) {
-            line-height: 2;
-        }
-        @include breakpoint(max-width 1023px) {
             margin-top: 30px;
+            line-height: 2;
         }
     }
     &.text-group-sp {
@@ -189,7 +187,6 @@ body.opened .blank {
     }
     input[type*='submit'],
     a.btn {
-        padding-top: 3px;
         margin-right: 20px;
         @include button($text, $primary);
         &:last-child {
@@ -218,11 +215,11 @@ body.opened .blank {
     height: 0;
     padding-top: 66.666667%;
     overflow: hidden;
-    @include breakpoint(768px) {
-        padding-top: 100%;
-    }
     @include breakpoint(1024px) {
         padding-top: 66.666667%;
+    }
+    @include breakpoint(768px) {
+        padding-top: 100%;
     }
     @include breakpoint(max-width 767px) {
         margin-top: 30px;
@@ -255,18 +252,21 @@ body.opened .blank {
 }
 
 .number-group {
-    @include breakpoint(1024px) {
-        align-content: flex-end;
-        justify-content: center;
-        height: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 100%;
+    height: auto !important;
+    margin: auto !important;
+    justify-content: center;
+    @include translateX(-50%);
+    @include breakpoint(1200px) {
+        bottom: 50px;
+    }
+    @include breakpoint(1920px) {
+        bottom: 75px;
     }
     @include breakpoint(max-width 1023px) {
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        width: 100%;
-        height: auto !important;
-        margin: 0 !important;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -1050,29 +1050,31 @@ section {
             height: 100%;
             @include translate(-50%,
             -50%);
-            @include breakpoint(max-width 1023px) {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
             @include breakpoint(1024px) {
                 width: 100%;
                 height: auto;
             }
         }
         .btn-group {
-            position: absolute;
-            bottom: calc(38.5vw - 65px);
-            width: calc(100% - 30px);
-            @include breakpoint(768px) {
-                bottom: 115px; //150-45-40
-            }
-            @include breakpoint(1200px) {
-                bottom: 165px; //250-45-40
-            }
+            // position: absolute;
+            // bottom: calc(38.5vw - 65px);
+            // width: calc(100% - 30px);
+            // @include breakpoint(768px) {
+            //     bottom: 115px; //150-45-40
+            // }
+            // @include breakpoint(1200px) {
+            //     bottom: 165px; //250-45-40
+            // }
+            font-size: 0;
             a.btn {
                 @include button($white,
                 $primary);
+                margin: 10px 10px 0;
+                @include breakpoint(max-width 767px) {
+                    min-width: auto;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
             }
         }
         .container {
@@ -1088,6 +1090,15 @@ section {
             @include breakpoint(1200px) {
                 padding-top: 250px;
                 padding-bottom: 250px;
+            }
+            &.has-btn {
+                padding-bottom: 28.5vw;
+                @include breakpoint(768px) {
+                    padding-bottom: 150px;
+                }
+                @include breakpoint(1200px) {
+                    padding-bottom: 200px;
+                }
             }
         }
         h1 {
