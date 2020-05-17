@@ -85,7 +85,7 @@
                 </nav>
             </div>
         </header>
-        <section class="section opening">
+        <section id="opening" class="section opening">
             <div class="slider-opening">
                 <div>
                     <div class="video">
@@ -117,20 +117,28 @@
                             </p>
                             <ul class="service-list">
                                 <li class="wow fadeInUp" data-wow-delay="0.5s">
-                                    <a class="label" href="suit.html">西裝訂製</a>
-                                    <p class="mt-1 mb-3">合適的西裝不但能凸顯個人品味，並且能完美修飾身形。</p>
+                                    <a class="label" href="suit.html">
+                                        <span class="label-title">西裝訂製</span>
+                                        <span class="mt-1 mb-3">合適的西裝不但能凸顯個人品味，並且能完美修飾身形。</span>
+                                    </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-delay="0.6s">
-                                    <a class="label" href="shirt.html">襯衫訂製</a>
-                                    <p class="mt-1 mb-3">想先嘗試看看訂製的感覺？那襯衫是你最好的選擇。</p>
+                                    <a class="label" href="shirt.html">
+                                        <span class="label-title">襯衫訂製</span>
+                                        <span class="mt-1 mb-3">想先嘗試看看訂製的感覺？那襯衫是你最好的選擇。</span>
+                                    </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-delay="0.7s">
-                                    <a class="label" href="design.html">專屬設計</a>
-                                    <p class="mt-1 mb-3">獨一無二的客製化設計，從布料、鈕扣、版型都可以為你獨家設計。</p>
+                                    <a class="label" href="design.html">
+                                        <span class="label-title">專屬設計</span>
+                                        <span class="mt-1 mb-3">獨一無二的客製化設計，從布料、鈕扣、版型都可以為你獨家設計。</span>
+                                    </a>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-delay="0.8s">
-                                    <a class="label" href="wedding.html">完美婚禮</a>
-                                    <p class="mt-1 mb-3">完美的婚禮需要搭配完美的服裝，我們能打造合乎你需求的特別禮服。</p>
+                                    <a class="label" href="wedding.html">
+                                        <span class="label-title">完美婚禮</span>
+                                        <span class="mt-1 mb-3">完美的婚禮需要搭配完美的服裝，我們能打造合乎你需求的特別禮服。</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -419,10 +427,10 @@
             </footer>
         </section>
     </main>
-    <div class="top" id="top">
+    <a href="#opening" class="top" id="top">
         <span class="serif">top</span>
         <i class="icon icon-chevron-left"></i>
-    </div>
+    </a>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
@@ -458,6 +466,13 @@
                     $('section.suit').addClass('active');
                 } else {
                     $('section.suit').removeClass('active');
+                }
+            });
+            $(window).on('hashchange', function(e) {
+                if ($(".opening").hasClass('active')) {
+                    $('#top').fadeOut();
+                } else {
+                    $('#top').fadeIn();
                 }
             });
         })

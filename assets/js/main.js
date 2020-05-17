@@ -31,20 +31,6 @@ $(function() {
             $('.' + idx + ', .modal-backdrop').fadeIn();
         })
     });
-    var url = window.location.href,
-        id = url.split('id=')[1];
-    console.log(id);
-    if (id != undefined) {
-        $('body').addClass('modal-open');
-        $('.' + id + ', .modal-backdrop').fadeIn();
-    }
-    $('.modal-backdrop, .modal, .modal-dialog, .modal-close').click(function() {
-        $('body').removeClass('modal-open');
-        $('.modal, .modal-backdrop').fadeOut();
-    });
-    $('.modal-content').click(function(e) {
-        e.stopPropagation()
-    });
     $('.collapse-text').each(function() {
         if ($(this).outerHeight() >= 220) {
             $(this).addClass('collapse-hide');
@@ -87,6 +73,30 @@ $(function() {
         prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
         nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-left'></i></button>"
     });
+    $('.slide-img-grid').slick({
+        infinite: false,
+        speed: 500,
+        prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-left'></i></button>",
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+
+    });
     $('.slider-guest').slick({
         dots: true,
         arrows: false,
@@ -96,6 +106,21 @@ $(function() {
         speed: 500,
         fade: true,
         cssEase: 'linear',
+    });
+    var url = window.location.href,
+        id = url.split('id=')[1];
+    console.log(id);
+    if (id != undefined) {
+        $('body').addClass('modal-open');
+        $('.' + id + ', .modal-backdrop').fadeIn();
+        $('.slide-img-grid').slick("slickSetOption", "draggable", true, true);
+    }
+    $('.modal-backdrop, .modal, .modal-dialog, .modal-close').click(function() {
+        $('body').removeClass('modal-open');
+        $('.modal, .modal-backdrop').fadeOut();
+    });
+    $('.modal-content').click(function(e) {
+        e.stopPropagation()
     });
     if (!location.href.match(/wedding/)) {
         $('.list-section').each(function() {

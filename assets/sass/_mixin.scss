@@ -23,7 +23,7 @@
 
 @mixin button($defaultColor, $hoverColor) {
     display: inline-block;
-    padding-top: 3px;
+    // padding-top: 3px;
     min-width: 140px;
     color: $defaultColor;
     font-size: 0.875rem;
