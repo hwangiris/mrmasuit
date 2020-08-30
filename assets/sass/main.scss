@@ -37,7 +37,7 @@ body.opened .blank {
 
 #scroll {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 50%;
     color: $white;
     font-size: 36px;
@@ -45,6 +45,7 @@ body.opened .blank {
     @include translateX(-50%);
     @include transition(opacity 0.3s);
     z-index: 5;
+    @include animation(updown 4s infinite running);
     @include breakpoint(1024px) {
         font-size: 48px;
     }
@@ -53,6 +54,21 @@ body.opened .blank {
     }
     &:hover {
         @include opacity(1);
+    }
+}
+
+@include keyframes(updown) {
+    0% {
+        bottom: 40px;
+    }
+    30% {
+        bottom: 40px;
+    }
+    60% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 40px;
     }
 }
 
@@ -196,6 +212,7 @@ body.opened .blank {
     a.btn {
         margin-right: 20px;
         @include button($text, $primary);
+        @include border-radius(50px);
         &:last-child {
             margin-right: 0;
         }
@@ -207,6 +224,7 @@ body.opened .blank {
     a.btn {
         margin-top: 10px;
         @include button($text, $primary);
+        @include border-radius(50px);
         +a.btn {
             margin-left: 20px;
         }
@@ -425,7 +443,7 @@ body.opened .blank {
 
 .square-area {
     @include breakpoint(max-width 1023px) {
-        height: 100vw;
+        height: 100vw !important;
     }
 }
 
@@ -785,15 +803,18 @@ section {
                     display: block;
                     &.label-title {
                         display: inline-block;
-                        padding: 5px;
+                        padding: 5px 10px;
                         line-height: 1;
                         border: 1px solid $black;
+                        @include border-radius(50px);
                         @include transition(all 0.3s);
                     }
                 }
                 &:hover>span.label-title {
-                    color: $primary;
-                    border-color: $primary;
+                    @include breakpoint(1024px) {
+                        color: $primary;
+                        border-color: $primary;
+                    }
                 }
             }
         }
@@ -802,6 +823,10 @@ section {
             img {
                 max-width: 100%;
                 max-height: calc(100vh - 150px);
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -1010,7 +1035,7 @@ section {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: $black;
+        // background-color: $black;
         @include opacity(0.6);
         z-index: 1;
     }
@@ -1048,6 +1073,8 @@ section {
             @include button($white,
             $primary);
             margin: 10px 10px 0;
+            background-color: rgba($black, 0.5);
+            @include border-radius(50px);
         }
     }
     .container {
@@ -1135,6 +1162,7 @@ section {
         padding: 0 7px;
         line-height: 2;
         vertical-align: middle;
+        @include border-radius(50px);
         @include breakpoint(1024px) {
             min-width: auto;
         }
@@ -1453,6 +1481,20 @@ form {
         padding-top: 25px;
         padding-bottom: 25px;
         line-height: 1.875;
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 

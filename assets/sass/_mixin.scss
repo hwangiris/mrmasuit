@@ -34,10 +34,10 @@
     cursor: pointer;
     @include breakpoint(1024px) {
         min-width: 150px;
-    }
-    &:hover {
-        color: $hoverColor;
-        border-color: $hoverColor;
+        &:hover {
+            color: $hoverColor;
+            border-color: $hoverColor;
+        }
     }
 }
 
