@@ -966,7 +966,42 @@ section {
         .container {
             position: relative;
             z-index: 2;
-            .col-md-7 {
+            &.container-lg {
+                @include breakpoint(1600px) {
+                    max-width: 1560px;
+                }
+            }
+            .col-md-img {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                @include breakpoint(1024px) {
+                    max-width: 45%;
+                }
+                @include breakpoint(1600px) {
+                    max-width: 685px;
+                }
+                @include breakpoint(max-width 1023px) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+            .col-md-txt {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                @include breakpoint(1024px) {
+                    max-width: 55%;
+                }
+                @include breakpoint(1600px) {
+                    max-width: calc(100% - 685px);
+                }
+                @include breakpoint(max-width 1023px) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+            .col-md-7, .col-md-txt {
                 @include breakpoint(max-width 1023px) {
                     padding-left: 30px;
                     padding-right: 30px;
