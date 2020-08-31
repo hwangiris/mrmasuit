@@ -805,15 +805,20 @@ section {
                         display: inline-block;
                         padding: 5px 10px;
                         line-height: 1;
+                        color: $black;
                         border: 1px solid $black;
                         @include border-radius(50px);
                         @include transition(all 0.3s);
                     }
                 }
+                &:active>span.label-title {
+                    color: $white;
+                    background-color: $black;
+                }
                 &:hover>span.label-title {
                     @include breakpoint(1024px) {
-                        color: $primary;
-                        border-color: $primary;
+                        color: $white;
+                        background-color: $black;
                     }
                 }
             }
@@ -968,7 +973,7 @@ section {
             z-index: 2;
             &.container-lg {
                 @include breakpoint(1600px) {
-                    max-width: 1560px;
+                    max-width: 85%;
                 }
             }
             .col-md-img {
@@ -977,9 +982,6 @@ section {
                 padding-right: 15px;
                 @include breakpoint(1024px) {
                     max-width: 45%;
-                }
-                @include breakpoint(1600px) {
-                    max-width: 685px;
                 }
                 @include breakpoint(max-width 1023px) {
                     padding-left: 30px;
@@ -992,9 +994,6 @@ section {
                 padding-right: 15px;
                 @include breakpoint(1024px) {
                     max-width: 55%;
-                }
-                @include breakpoint(1600px) {
-                    max-width: calc(100% - 685px);
                 }
                 @include breakpoint(max-width 1023px) {
                     padding-left: 30px;
@@ -1064,6 +1063,9 @@ section {
     text-align: center;
     overflow: hidden;
     z-index: 0;
+    @media screen and (orientation: portrait) {
+        min-height: 120vw;
+    }
     &::before {
         @include beforeafter('',
         block);
@@ -1090,6 +1092,17 @@ section {
             height: auto;
             @include translate(-50%,
             -50%);
+        }
+        &.mobile {
+            display: none;
+        }
+        @media screen and (orientation: portrait) {
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
         }
     }
     .btn-group {
@@ -1275,7 +1288,7 @@ section {
                 font-weight: 600;
             }
             &:hover {
-                color: $primary;
+                color: $dark;
             }
         }
     }
@@ -1433,6 +1446,7 @@ form {
                 }
             }
             .py-75 {
+                height: 100%;
                 padding-top: 30px;
                 padding-bottom: 30px;
                 @include breakpoint(1200px) {
@@ -1515,7 +1529,26 @@ form {
     .article-body {
         padding-top: 25px;
         padding-bottom: 25px;
+        color: $black;
         line-height: 1.875;
+        word-break: break-word;
+        a {
+            color: $black;
+            text-decoration: underline;
+            &:active {
+                color: $primary;
+            }
+            @include breakpoint(1024px) {
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
     }
 }
 
