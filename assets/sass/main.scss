@@ -52,7 +52,7 @@ body.opened .blank {
     @include breakpoint(1366px) {
         font-size: 60px;
     }
-    &:hover {
+    &:hover, &:active, &:focus {
         @include opacity(1);
     }
 }
@@ -370,7 +370,7 @@ body.opened .blank {
             color: $black;
             font-size: 1rem;
             @include lineclamp(1);
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -435,8 +435,10 @@ body.opened .blank {
                 display: none;
             }
         }
-        &:hover .grid-hover {
-            @include opacity(1);
+        &:hover, &:active, &:focus {
+            .grid-hover {
+                @include opacity(1);
+            }
         }
     }
 }
@@ -520,7 +522,7 @@ body.opened .blank {
             color: $text;
             font-size: 20px;
             font-weight: 400;
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -535,7 +537,7 @@ body.opened .blank {
                 vertical-align: middle;
                 margin-left: 20px;
             }
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -591,7 +593,7 @@ body.opened .blank {
             @include breakpoint(1024px) {
                 height: 3em;
             }
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -602,7 +604,7 @@ body.opened .blank {
                 vertical-align: middle;
                 margin-left: 20px;
             }
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -622,7 +624,7 @@ body.opened .blank {
             color: $text;
             font-size: 2.25rem;
             @include transition(color 0.3s);
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $primary;
             }
         }
@@ -665,7 +667,7 @@ aside {
                     vertical-align: middle;
                     margin-right: 12px;
                 }
-                &:hover {
+                &:hover, &:active, &:focus {
                     color: $primary;
                 }
             }
@@ -689,7 +691,7 @@ aside {
                 color: $black;
                 font-size: 1rem;
                 font-weight: 400;
-                &:hover {
+                &:hover, &:active, &:focus {
                     color: $primary;
                 }
             }
@@ -815,8 +817,8 @@ section {
                     color: $white;
                     background-color: $black;
                 }
-                &:hover>span.label-title {
-                    @include breakpoint(1024px) {
+                &:hover, &:active, &:focus {
+                    >span.label-title {
                         color: $white;
                         background-color: $black;
                     }
@@ -1123,6 +1125,10 @@ section {
             margin: 10px 10px 0;
             background-color: rgba($black, 0.5);
             @include border-radius(50px);
+            &:hover, &:active, &:focus {
+                background-color: $black;
+                border-color: $black;
+            }
         }
     }
     .container {
@@ -1180,7 +1186,7 @@ section {
             }
             a {
                 color: $white;
-                &:hover {
+                &:hover, &:active, &:focus {
                     color: $primary;
                 }
             }
@@ -1287,7 +1293,7 @@ section {
                 display: block;
                 font-weight: 600;
             }
-            &:hover {
+            &:hover, &:active, &:focus {
                 color: $dark;
             }
         }
@@ -1538,10 +1544,8 @@ form {
             &:active {
                 color: $primary;
             }
-            @include breakpoint(1024px) {
-                &:hover {
-                    color: $primary;
-                }
+            &:hover, &:active, &:focus {
+                color: $primary;
             }
         }
         img {
