@@ -16,9 +16,9 @@ body {
         font-family: 'Roboto', 'Noto Sans TC', Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', "新細明體", 'PMingLiU', sans-serif;
         font-weight: 300;
     }
-    @include breakpoint(max-width 1023px) {
-        padding-bottom: 60px;
-    }
+    // @include breakpoint(max-width 1023px) {
+    //     padding-bottom: 60px;
+    // }
     &.opened {
         overflow: hidden;
     }

@@ -114,7 +114,12 @@ body.opened .blank {
     }
 }
 
+.fp-scroller {
+    height: 100%;
+}
+
 .text-group {
+    width: 100%;
     .h2 {
         line-height: 1;
         +.h2 {
@@ -446,6 +451,18 @@ body.opened .blank {
 .square-area {
     @include breakpoint(max-width 1023px) {
         height: 100vw !important;
+    }
+    &.square-youtube{
+        position: relative;
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
     }
 }
 
@@ -870,8 +887,12 @@ section {
         .news-list {
             li {
                 @include breakpoint(max-width 1023px) {
-                    &:nth-last-child(-n+3) {
-                        display: none;
+                    display: none;
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                        display: block
+                    }
+                    &:last-child {
+                        border-bottom: 0;
                     }
                 }
             }
@@ -975,7 +996,7 @@ section {
             z-index: 2;
             &.container-lg {
                 @include breakpoint(1600px) {
-                    max-width: 85%;
+                    max-width: 95%;
                 }
             }
             .col-md-img {
@@ -1012,6 +1033,9 @@ section {
                         padding-left: 55px;
                         padding-right: 15px;
                     }
+                    @include breakpoint(1600px) {
+                        padding-left: 75px;
+                    }
                     @include breakpoint(max-width 1023px) {
                         padding-top: 0;
                     }
@@ -1020,6 +1044,9 @@ section {
                     @include breakpoint(1024px) {
                         padding-left: 15px;
                         padding-right: 55px;
+                    }
+                    @include breakpoint(1600px) {
+                        padding-right: 75px;
                     }
                     @include breakpoint(max-width 1023px) {
                         padding-top: 0;

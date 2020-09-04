@@ -146,7 +146,7 @@
                             <a href="contact.html" class="btn">立即訂購</a>
                         </div>
                     </div>
-                    <div class="col-xxl-9 col-lg-8 order-md-2 order-1 p-0 square-area d-flex align-items-center justify-content-center">
+                    <div class="col-xxl-9 col-lg-8 order-md-2 order-1 p-0 square-area square-youtube d-flex align-items-center justify-content-center">
                         <div id="ytplayer" class="js-youtube"></div>
                     </div>
                 </div>
@@ -497,7 +497,7 @@
             player = new YT.Player('ytplayer', {
                 width: '100%',
                 videoId: 'UTvHbjVfF9U',
-                playerVars: { 'autoplay': 1, 'playsinline': 1 },
+                playerVars: { 'autoplay': 1, 'playsinline': 1, 'rel': 0, 'showinfo': 0, 'playlist': 'UTvHbjVfF9U', 'loop': 1 },
                 events: {
                     'onReady': onPlayerReady
                 }
