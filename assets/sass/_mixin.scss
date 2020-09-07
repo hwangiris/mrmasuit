@@ -32,12 +32,12 @@
     background-color: transparent;
     border: 1px solid $defaultColor;
     cursor: pointer;
-    &:hover, &:active, &:focus {
-        color: $white;
-        background-color: $defaultColor;
-    }
     @include breakpoint(1024px) {
         min-width: 150px;
+        &:hover, &:active, &.active, &:focus {
+            color: $white;
+            background-color: $defaultColor;
+        }    
     }
 }
 

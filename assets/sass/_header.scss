@@ -108,12 +108,12 @@ header {
         ul {
             @include listrest(0, 0, none);
             @include breakpoint(max-width 949px) {
-                position: absolute;
+                position: fixed;
                 display: none;
                 top: 0;
+                bottom: 0;
                 right: 0;
                 width: 200px;
-                height: 100vh;
                 padding: 60px 40px;
                 background-color: $black;
                 overflow: hidden scroll;

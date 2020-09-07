@@ -128,6 +128,25 @@ $(function() {
         })
     }
     $('.jumbotron > .container').has('.btn-group').addClass('has-btn');
+    // $('a').each(function(e){
+    //     e.preventDefault();
+    //     if (width < 1024) {
+    //         var link = $(this).attr('href');
+    //         if( link != '#' || link != '#!' ) {
+    //             $(this).click(function(){
+    //                 $(this).addClass('active');
+    //                 setTimeout(function(){
+    //                     $(this).removeClass('active');
+    //                 }, 300)
+    //                 if('target*=["_blank"]') {
+    //                     window.open(link);
+    //                 } else {
+    //                     window.href = link;
+    //                 }
+    //             })
+    //         }
+    //     }
+    // })
     $(window).resize(function() {
         if (width >= 1024) {
             $('.half-banner-group').each(function() {
