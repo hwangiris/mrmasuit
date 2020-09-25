@@ -218,6 +218,10 @@ body.opened .blank {
         margin-right: 20px;
         @include button($black, $primary);
         @include border-radius(50px);
+        &.active {
+            color: $white;
+            background-color: $black;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -1312,6 +1316,10 @@ section {
         @include border-radius(50px);
         @include breakpoint(1024px) {
             min-width: auto;
+        }
+        &.active {
+            color: $white;
+            background-color: $black;        
         }
         i.icon {
             display: block;
