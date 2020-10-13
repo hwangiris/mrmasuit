@@ -43,11 +43,11 @@ body.opened .blank {
     font-size: 36px;
     @include opacity(0.7);
     @include translateX(-50%);
-    @include transition(opacity 0.3s);
     z-index: 5;
     @include animation(updown 4s infinite running);
     @include breakpoint(1024px) {
         font-size: 48px;
+        @include transition(opacity 0.3s);
     }
     @include breakpoint(1366px) {
         font-size: 60px;
@@ -238,6 +238,10 @@ body.opened .blank {
         +a.btn {
             margin-left: 20px;
         }
+        &.active, &:hover {
+            color: $white;
+            background-color: $black;
+        }
         @include breakpoint(1024px) {
             margin-top: 30px;
         }
@@ -427,7 +431,9 @@ body.opened .blank {
             height: 100%;
             background-color: rgba($black, 0.6);
             @include opacity(0);
-            @include transition(opacity 0.3s);
+            @include breakpoint(1024px) {
+                @include transition(opacity 0.3s);
+            }
             z-index: 1;
             .text {
                 position: relative;
@@ -470,7 +476,7 @@ body.opened .blank {
         height: 100vw !important;
     }
     &.square-youtube{
-        position: relative;
+        position: relative;overflow: hidden;
         &::after {
             @include beforeafter('', block);
             position: absolute;
@@ -479,6 +485,15 @@ body.opened .blank {
             left: 0;
             right: 0;
             z-index: 5;
+        }
+        .embed-responsive {
+            @include breakpoint(1024px) {
+                position: absolute;
+                width: 177.777778vh;
+            }
+            @include breakpoint(max-width 1023px) {
+                height: 56.25vw !important;
+            }
         }
     }
 }
@@ -677,7 +692,9 @@ body.opened .blank {
             display: block;
             color: $text;
             font-size: 2.25rem;
-            @include transition(color 0.3s);
+            @include breakpoint(1024px) {
+                @include transition(color 0.3s);
+            }
             &.active {
                 color: $primary;
             }
@@ -829,6 +846,17 @@ section {
             width: 101%;
             height: 101%;
             object-fit: cover;
+            &.mobile {
+                display: none;
+            }
+            @media screen and (orientation: portrait) {
+                &.desktop {
+                    display: none;
+                }
+                &.mobile {
+                    display: block;
+                }
+            }    
         }
         .fp-scroller,
         .fp-scroller {
@@ -879,7 +907,9 @@ section {
                         color: $black;
                         border: 1px solid $black;
                         @include border-radius(50px);
-                        @include transition(all 0.3s);
+                        @include breakpoint(1024px) {
+                            @include transition(all 0.3s);
+                        }
                     }
                 }
                 &:active>span.label-title {
@@ -1055,6 +1085,7 @@ section {
             position: relative;
             z-index: 2;
             &.container-lg {
+                max-width: 85%;
                 @include breakpoint(1600px) {
                     max-width: 95%;
                 }
@@ -1090,11 +1121,11 @@ section {
                 }
                 &:last-child {
                     @include breakpoint(1024px) {
-                        padding-left: 55px;
+                        padding-left: 75px;
                         padding-right: 15px;
                     }
                     @include breakpoint(1600px) {
-                        padding-left: 75px;
+                        padding-left: 125px;
                     }
                     @include breakpoint(max-width 1023px) {
                         padding-top: 0;
@@ -1103,10 +1134,10 @@ section {
                 &:first-child {
                     @include breakpoint(1024px) {
                         padding-left: 15px;
-                        padding-right: 55px;
+                        padding-right: 75px;
                     }
                     @include breakpoint(1600px) {
-                        padding-right: 75px;
+                        padding-right: 125px;
                     }
                     @include breakpoint(max-width 1023px) {
                         padding-top: 0;
@@ -1387,9 +1418,9 @@ section {
             padding: 12px;
             color: $text;
             cursor: pointer;
-            @include transition(color 0.3s);
             @include breakpoint(1024px) {
                 padding: 25px;
+                @include transition(color 0.3s);
             }
             i.icon {
                 display: block;
@@ -1676,6 +1707,31 @@ form {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    &::before {
+        @include beforeafter('', block);
+        padding-top: 56.25%;
+    }
+    > .embed-responsive-item,
+    > embed,
+    > iframe,
+    > object,
+    > video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
 }
 
