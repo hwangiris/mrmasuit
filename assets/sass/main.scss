@@ -194,6 +194,14 @@ body.opened .blank {
 
 .collapse-text {
     position: relative;
+    + .btn-group {
+        .btn-collapse {
+            display: none;
+        }
+        .btn-hide {
+            display: inline-block;
+        }
+    }
     &.collapse-hide {
         height: 12.25em; //4行(2.25)+mt-3
         overflow: hidden;
@@ -206,6 +214,14 @@ body.opened .blank {
             height: 6.75em;
             @include background-image(linear-gradient(top, rgba($white, 0) 0%, $white 100%));
         }
+        + .btn-group {
+            .btn-collapse {
+                display: inline-block;
+            }
+            .btn-hide {
+                display: none;
+            }
+        }    
     }
 }
 
@@ -219,7 +235,7 @@ body.opened .blank {
         margin-right: 20px;
         @include button($black, $primary);
         @include border-radius(50px);
-        &.active {
+        &:hover, &:active, &.active, &:focus {
             color: $white;
             background-color: $black;
         }
@@ -388,9 +404,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
         &:last-child {
@@ -463,9 +477,7 @@ body.opened .blank {
         }
         &:hover, &:active, &.active, &:focus {
             .grid-hover {
-                @include breakpoint(1024px) {
-                    @include opacity(1);
-                }
+                @include opacity(1);
             }
         }
     }
@@ -476,7 +488,11 @@ body.opened .blank {
         height: 100vw !important;
     }
     &.square-youtube{
-        position: relative;overflow: hidden;
+        position: relative;
+        overflow: hidden;
+        @include breakpoint(max-width 1023px) {
+            height: auto !important;
+        }    
         &::after {
             @include beforeafter('', block);
             position: absolute;
@@ -575,9 +591,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
         .card-essay {
@@ -595,9 +609,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
     }
@@ -656,9 +668,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
         .news-btn {
@@ -672,9 +682,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
     }
@@ -699,9 +707,7 @@ body.opened .blank {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
     }
@@ -747,9 +753,7 @@ aside {
                     color: $primary;
                 }
                 &:hover, &:active, &.active, &:focus {
-                    @include breakpoint(1024px) {
-                        color: $primary;
-                    }
+                    color: $primary;
                 }
             }
         }
@@ -776,9 +780,7 @@ aside {
                     color: $primary;
                 }
                 &:hover, &:active, &.active, &:focus {
-                    @include breakpoint(1024px) {
-                        color: $primary;
-                    }
+                    color: $primary;
                 }
             }
         }
@@ -897,6 +899,7 @@ section {
                 margin-top: 30px;
             }
             .label {
+                display: block;
                 color: $black;
                 >span {
                     display: block;
@@ -912,22 +915,10 @@ section {
                         }
                     }
                 }
-                &:active>span.label-title {
-                    color: $white;
-                    background-color: $black;
-                }
-                &.active {
+                &:hover, &:active, &.active, &:focus {
                     >span.label-title {
                         color: $white;
                         background-color: $black;
-                    }
-                }
-                &:hover, &:active, &.active, &:focus {
-                    >span.label-title {
-                        @include breakpoint(1024px) {
-                            color: $white;
-                            background-color: $black;
-                        }
                     }
                 }
             }
@@ -1243,16 +1234,6 @@ section {
             margin: 10px 10px 0;
             background-color: rgba($black, 0.5);
             @include border-radius(50px);
-            &.active {
-                background-color: $black;
-                border-color: $black;
-            }
-            &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    background-color: $black;
-                    border-color: $black;
-                }
-            }
         }
     }
     .container {
@@ -1314,9 +1295,7 @@ section {
                     color: $primary;
                 }
                 &:hover, &:active, &.active, &:focus {
-                    @include breakpoint(1024px) {
-                        color: $primary;
-                    }
+                    color: $primary;
                 }
             }
         }
@@ -1349,7 +1328,7 @@ section {
         @include breakpoint(1024px) {
             min-width: auto;
         }
-        &.active {
+        &:hover, &:active, &.active, &:focus {
             color: $white;
             background-color: $black;        
         }
@@ -1430,9 +1409,7 @@ section {
                 color: $dark;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $dark;
-                }
+                color: $dark;
             }
         }
     }
@@ -1555,6 +1532,12 @@ form {
         }
         .list-content {
             width: calc(100% - 55px);
+            a {
+                color: $text;
+                &:hover, &:active, &.active, &:focus {
+                    color: $primary;
+                }    
+            }
         }
     }
 }
@@ -1683,9 +1666,7 @@ form {
                 color: $primary;
             }
             &:hover, &:active, &.active, &:focus {
-                @include breakpoint(1024px) {
-                    color: $primary;
-                }
+                color: $primary;
             }
         }
         img {
