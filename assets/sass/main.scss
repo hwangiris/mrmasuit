@@ -1229,11 +1229,14 @@ section {
         font-size: 0;
         z-index: 2;
         a.btn {
-            @include button($white,
-            $primary);
+            @include button($white, $primary);
             margin: 10px 10px 0;
             background-color: rgba($black, 0.5);
             @include border-radius(50px);
+            &:hover, &:active, &.active, &:focus {
+                color: $black;
+                background-color: $white;
+            }        
         }
     }
     .container {
