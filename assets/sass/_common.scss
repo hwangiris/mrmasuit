@@ -31,7 +31,7 @@ body {
   }
 }
 
-a {
+a, button {
   text-decoration: none;
   @include breakpoint(1024px) {
     @include transition(color 0.3s, background 0.3s, border 0.3s);

@@ -1,0 +1,46 @@
+a.btn, button {
+    display: inline-block;
+    min-width: 130px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.25;
+    outline: 0;
+    @media screen and (min-width: 1024px) {
+        min-width: 160px;
+    }
+}
+button[type*='submit'] {
+    color: $white;
+    background-color: $primary;
+    border: 0;
+    @include border-radius(5px);
+    &:hover {
+        background-color: $red-400;
+    }
+}
+.btn {
+    @include border-radius(25px);
+    &.btn-outlined {
+        color: $primary;
+        background-color: transparent;
+        border: 1px solid $primary;
+        &:hover {
+            color: $primary-variant;
+            border-color: $primary-variant;
+        }
+        &.btn-grayscale {
+            color: $gray-600;
+            border-color: $gray-600;
+            &:hover {
+                color: $black;
+                border-color: $black;
+            }
+        }
+    }
+    &.btn-contained {
+        color: $white;
+        background-color: $primary;
+        border: 1px solid $primary;
+    }
+}

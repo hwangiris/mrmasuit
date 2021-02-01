@@ -1,0 +1,400 @@
+.title {
+    .h4 {
+        font-size: 1.75rem;
+    }
+    .h5 {
+        color: $gray-600;
+        font-size: 1rem;
+    }
+}
+.pagination {
+    @include listrest(0, 0, none);
+    li {
+        display: inline-block;
+        a, span {
+            display: block;
+            padding: 5px;
+        }
+        a {
+            color: $black;
+            &:hover {
+                color: $primary;
+            }
+        }
+        span {
+            color: $gray-300;
+            cursor: not-allowed;
+        }
+    }
+}
+
+section {
+    &.page-opening {
+        height: 450px;
+        background-repeat: no-repeat;
+        @include background-size(cover);
+        background-position: center;
+    }
+    .nav-list {
+        @include listrest(0, 20px 0 120px, none);
+        font-size: 0;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            + li {
+                margin-left: 10px;
+            }
+            a.active {
+                color: $primary !important;
+                border-color: $primary !important;
+            }
+        }
+    }
+    &.loop-content {
+        .container-fluid {
+            margin-bottom: 60px;
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 120px;
+            }        
+            .row {
+                align-items: center;
+            }
+            &:nth-child(even) .row {
+                flex-direction: row-reverse;
+            }
+            .h3 {
+                color: $primary;
+                font-size: 1.375rem;
+            }
+            .txt > * {
+                display: none;
+                &:first-child {
+                    display: block;
+                }
+            }
+            .btn-toggle {
+                span.close {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.voc {
+        position: relative;
+        background-repeat: no-repeat;
+        @include background-size(cover);
+        background-position: center;
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $primary-variant;
+            @include opacity(0.5);
+        }
+        .container {
+            position: relative;
+            background-color: rgba($red-100, 0.9);
+            z-index: 1;
+        }
+        .title {
+            color: $primary;
+        }
+        .voc-content {
+            .h6 {
+                font-size: 1.125rem;
+            }
+        }
+    }
+    &.contact {
+        background-color: $red-150;
+    }
+}
+
+.lawyer-list {
+    .row {
+        justify-content: space-between;
+    }
+    .col-sm-10 {
+        position: relative;
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+        }
+    }
+    .lawyer-item {
+        border-bottom: 1px solid $black;
+        span {
+            display: block;
+            text-align: center;
+            &.img {
+                position: relative;
+                width: 100%;
+                padding-top: 110.526316%;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                span {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 100px;
+                    padding: 30px;
+                    color: $white;
+                    font-size: 1.125rem;
+                    line-height: 1.25;
+                    background-color: rgba($primary, 0.9);
+                    @include translateX(-50%);
+                    @include border-radius(50%);
+                    @include opacity(0);
+                }
+            }
+            &.txt {
+                .name {
+                    color: $primary;
+                    font-size: 1.375rem;
+                }
+                .title {
+                    color: $black;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &:hover {
+            span.img span {
+                @include opacity(1);
+            }
+        }
+    }
+}
+.lawyer-single {
+    > .container-fluid + .container-fluid {
+        .col-md-11 {
+            border-top: 1px solid $black;
+        }
+    }
+    .row {
+        @media screen and (max-width: 1023px) {
+            flex-direction: column-reverse;
+            align-content: center;
+        }
+        .lawyer-title {
+            text-align: center;
+            h1 {
+                position: relative;
+                margin-bottom: 10px;
+                color: $primary;
+                font-size: 1.75rem;
+                &::before {
+                    @include beforeafter('', block);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: $primary;
+                    z-index: 0;
+                }
+                span {
+                    display: inline-block;
+                    position: relative;
+                    padding: 0 5%;
+                    background-color: $white;
+                    z-index: 1;
+                }
+            }
+            .title {
+                font-size: 1.25rem;
+            }
+        }
+        .lawyer-intro {
+            > div {
+                .h5 {
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                    color: $primary;
+                    font-size: 1.125rem;
+                    border-bottom: 1px solid $gray-300;
+                }
+                ul {
+                    @include listrest(20px 0, 0, none);
+                    li {
+                        margin-bottom: 5px;
+                        line-height: 1.25;
+                    }
+                }
+            }
+        }
+        .lawyer-profile {
+            @media screen and (min-width: 1024px) {
+                margin-top: -100px;
+            }
+            .connect, .social {
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                    }
+                    i.icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        @include border-radius(50%);
+                        &::before {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+            .connect {
+                @include listrest(40px 0 20px, 0, none);
+                li {
+                    + li {
+                        margin-top: 10px;
+                    }
+                    a {
+                        color: $gray-600;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                    i.icon {
+                        margin-right: 20px;
+                        &.icon-envelope, &.icon-phone {
+                            color: $gray-600;
+                            border: 1px solid $gray-600;
+                        }
+                        &.icon-line {
+                            color: $white;
+                            background-color: $line;
+                        }
+                    }
+                }
+            }
+            .social {
+                @include listrest(0, 0, none);
+                font-size: 0;
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    font-size: 1rem;
+                    + li {
+                        margin-right: 10px;
+                    }
+                    i.icon {
+                        color: $white;
+                        &.icon-fb {
+                            color: $facebook;
+                            &::before {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        &.icon-twitter {
+                            background-color: $twitter;
+                        }
+                        &.icon-sinaweibo {
+                            background-color: $weibo;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news-list {
+    a {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $gray-100;
+        span {
+            display: block;
+            line-height: 1.25;
+            &.preface {
+                width: calc(100% - 7em);
+            }
+            &.date {
+                width: 7em;
+                text-align: right;
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+        > span {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &.title {
+                color: $primary;
+                font-size: 1.125rem;
+                .icon {
+                    margin-right: 5px;
+                    font-size: 1.5rem;
+                }
+            }
+            &.detail {
+                margin-top: 10px;
+                color: $gray-600;
+                justify-content: space-between;
+            }
+        }
+        &:hover {
+            > span {
+                &.title {
+                    color: $red-400;
+                }
+                &.detail {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.news-article {
+    .article-head {
+        .date {
+            > * {
+                display: inline-block;
+                vertical-align: middle;
+                color: $gray-500;
+            }
+        }
+        .title {
+            color: $primary;
+            font-size: 1.75rem;
+        }
+    }
+    .article-body {
+        font-size: 1.125rem;
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    }
+}
