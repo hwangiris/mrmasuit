@@ -1,3 +1,17 @@
+@charset"UTF-8";
+@import"Compass";
+@import"breakpoint";
+
+@import 'normalize-version';
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+// @import 'normalize/typography';
+@import 'normalize/embeds';
+@import 'normalize/groups';
+@import 'normalize/forms';
+@import 'normalize/tables';
+
 @mixin listrest($margin, $padding, $style) {
     margin: $margin;
     padding: $padding;

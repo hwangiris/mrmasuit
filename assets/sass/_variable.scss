@@ -5,8 +5,11 @@ $gray-300: #CBD0D8 !default; //secondary
 $gray-500: darken($gray-300, 15%) !default; //secondary-variant
 $gray-600: #898989 !default; //secondary
 // 
-$red-300: #D3AC2B !default; //primary
-$red-500: darken($red-300, 15%) !default; //primary-variant
+$red-100: #fdf5e9 !default; //primary
+$red-300: #8a6d58 !default; //primary
+$red-200: lighten($red-300, 10%) !default; //primary
+$red-400: darken($red-300, 10%) !default; //primary
+$red-500: #1e1d1d !default; //primary-variant
 // 
 $white: #fff !default; //background
 $gray: #fafafa !default; //background

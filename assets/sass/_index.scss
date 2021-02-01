@@ -1,0 +1,445 @@
+.index-page {
+}
+section {
+    .btn {
+        display: inline-block;
+        min-width: 130px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+        color: $white;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.25;
+        background-color: $primary;
+        @include border-radius(5px);
+        @media screen and (min-width: 1024px) {
+            min-width: 160px;
+        }
+        &:hover {
+            background-color: $red-400;
+        }
+    }
+    .container, .container-fluid {
+        position: relative;
+        height: 100%;
+        @media screen and (min-width: 1024px) and (orientation: landscape) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .row {
+            height: 100%;
+        }
+        .txt-col {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 0;
+            @media screen and (min-width: 1280px) and (orientation: landscape) {
+                padding-left: 80px;
+                padding-right: 120px;
+            }
+            @media screen and (max-width: 1279px) and (min-width: 500px) and (orientation: portrait) {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            @media screen and (max-width: 1279px) {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        }
+        .img-col {
+            position: relative;
+            @media screen and (max-width: 1279px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .h2 {
+            color: $primary;
+            line-height: 1.15;
+            @media screen and (min-width: 1280px) {
+                font-size: 3.75rem;
+            }
+            @media screen and (max-width: 1279px) {
+                font-size: 3.25rem;
+            }
+        }
+        .h3 {
+            color: $primary;
+            line-height: 1.15;
+            @media screen and (min-width: 1280px) {
+                font-size: 2.25rem;
+            }
+            @media screen and (max-width: 1279px) {
+                font-size: 1.75rem;
+            }
+        }
+        .txt {
+            @media screen and (min-width: 1280px) {
+                padding-top: 40px;
+                padding-bottom: 60px;
+                font-size: 1.125rem;
+                line-height: 2;
+            }
+            @media screen and (max-width: 1279px) {
+                padding-top: 20px;
+                padding-bottom: 40px;
+                font-size: 1rem;
+                line-height: 1.75;
+            }
+        }
+        .btn-group {
+            @media screen and (min-width: 1024px) {
+                margin-right: -60px;
+            }
+        }
+    }
+    &.opening {
+        position: relative;
+        height: calc(100vh - 60px);
+        @media screen and (min-width: 1280px) {
+            height: calc(100vh - 100px);
+        }
+        .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .title {
+            position: absolute;
+            font-size: 0;
+            @media screen and (min-width: 768px) {
+                bottom: 20px;
+                right: 80px;
+                @include translateY(-100%);
+            }
+            @media screen and (max-width: 767px) {
+                top: 50%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .h3 {
+                color: $white;
+            }
+            a{
+                + a {
+                    @media screen and (min-width: 768px) {
+                        margin-left: 30px;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.about {
+        background-color: $red-100;
+        .row {
+            @media screen and (min-width: 1024px) and (orientation: landscape) {
+                flex-direction: row-reverse;
+            }
+        }
+        .img-col {
+            padding-right: 0;
+            @media screen and (max-width: 1279px) {
+                padding-left: 0;
+            }
+            @media screen and (min-width: 1280px) and (orientation: landscape) {
+                padding-right: 80px;
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1279px) {
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    &.team {
+        background-image: url('../images/index-texture.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include background-size(cover);
+        .container-fluid {
+            padding-top: 0;
+            padding-bottom: 0;
+            .col-md-8 {
+                padding-left: 0;
+                padding-right: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &.service {
+        position: relative;
+        @media screen and (min-width: 1024px) and (orientation: landscape) {
+            height: 100vh;
+            min-height: 100vh;
+            .row {
+                flex-direction: row-reverse;
+            }
+        }
+        .container-fluid {
+            padding-top: 0;
+            padding-bottom: 0;
+            [class^="col-"], [class*=" col-"] {
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 0;
+                }
+            }
+            .txt-col {
+                > * {
+                    position: relative;
+                    z-index: 1;
+                }
+                &::after {
+                    @include beforeafter('', block);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: $red-100;
+                    @include opacity(0.9);
+                    z-index: 0;
+                }
+            }
+            .img-col {
+                padding-left: 0;
+                padding-right: 0;
+                @media screen and (max-width: 1023px) {
+                    height: 50vh;
+                }
+            }
+        }
+        .grid-list {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            z-index: 1;
+            .grid {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                width: 33.33333%;
+                height: 33.33333%;
+                padding: 10px;
+                &:nth-child(even) {
+                    background-color: rgba($primary, 0.9);
+                }
+                &:nth-child(odd) {
+                    background-color: rgba($black, 0.5);
+                }
+                @media screen and (min-width: 768px) {
+                    padding: 20px;
+                }
+                @media screen and (min-width: 1280px) {
+                    padding: 70px 80px;
+                }
+                .h4 {
+                    display: block;
+                    width: 100%;
+                    color: $white;
+                    font-size: 1.125rem;
+                    text-align: center;
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.5rem;
+                    }
+                    @media screen and (min-width: 1280px) {
+                        font-size: 2rem;
+                    }
+                    @media screen and (max-width: 1279px) {
+                        line-height: 1.25;
+                    }
+                    span {
+                        @media screen and (min-width: 768px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+                p {
+                    display: none;
+                    width: 100%;
+                    color: $white;
+                    font-size: 1rem;
+                    @media screen and (min-width: 1280px) {
+                        font-size: 1.125rem;
+                    }
+                }
+                &:hover {
+                    @media screen and (min-width: 1280px) {
+                        background-color: rgba($red-100, 0.9);
+                        .h4 {
+                            color: $primary;
+                        }
+                        p {
+                            display: block;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.news {
+        @media screen and (min-width: 1024px) and (orientation: landscape) {
+            min-height: 100vh;
+        }
+        @media screen and (min-width: 1280px) {
+            height: 100vh;
+        }
+        .container-fluid {
+            padding-top: 0;
+            padding-bottom: 0;
+            .img-col {
+                position: relative;
+                padding-left: 0;
+                padding-right: 0;
+                img {
+                    @media screen and (min-width: 1024px) {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 0;
+                    }
+                }
+                .slogan {
+                    position: absolute;
+                    left: 0;
+                    bottom: 5vh;
+                    padding: 20px;
+                    color: $white;
+                    font-size: 2rem;
+                    @include background-image(linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%));
+                    z-index: 1;
+                    @media screen and (min-width: 768px) {
+                        padding: 40px;
+                    }
+                    @media screen and (min-width: 1280px) {
+                        bottom: 10vh;
+                        padding: 80px;
+                        font-size: 3.75rem;
+                    }
+                }
+            }
+            .txt-col {
+                background-color: $red-100;
+            }
+        }
+        .news-list {
+            @include listrest(0, 0, none);
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $gray-500;
+                a {
+                    display: block;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    color: $black;
+                    line-height: 1.5;
+                    &:hover {
+                        color: $primary;
+                    }
+                    span {
+                        display: block;
+                        &.title {
+                            @include lineclamp(2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.contact {
+        position: relative;
+        background-image: url('../images/index-contact.jpg');
+        @include background-size(cover);
+        background-position: center;
+        background-repeat: no-repeat;
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $black;
+            @include opacity(0.75);
+        }
+        .form-column {
+            margin: 20px;
+            padding: 20px 25px;
+            background-color: $red-100;
+            @include border-radius(1.5rem);
+            @media screen and (min-width: 375px) {
+                margin: 40px;
+            }
+            @media screen and (min-width: 768px) {
+                margin: 40px auto;
+            }
+            @media screen and (min-width: 1024px) {
+                padding: 80px 100px;
+            }
+            .title {
+                text-align: center;
+            }
+            p {
+                color: $primary;
+            }
+        }
+        form {
+            color: $primary;
+            input[type='text'], input[type='tel'], input[type='email'], textarea {
+                width: 100%;
+                padding: 5px;
+                color: $primary;
+                border: 1px solid $primary;
+                outline: 0;
+            }
+            textarea {
+                min-height: 100px;
+            }
+            label{
+                display: inline-block;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                + label {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,80 +1,146 @@
 footer {
-    width: 100%;
-    overflow: hidden;
-    .column-text {
-        margin-bottom: 20px;
-        @include breakpoint(768px) {
-            margin-bottom: 40px;
-        }
-        .column-title {
-            margin-bottom: 20px;
-            font-size: 20px;
-            @include breakpoint(768px) {
-                margin-bottom: 40px;
-            }
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 0;
+    position: relative;
+    background-color: $red-100;
+    > .container {
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        z-index: 1;
+        @media screen and (max-width: 1023px) and (min-width: 500px) {
+            padding-left: 100px;
+            padding-right: 100px;
         }
     }
-    .contact-icon-list {
+    > .container-fluid {
+        position: relative;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        color: $white;
+        text-align: center;
+        background-color: $primary;
+        z-index: 1;
+    }
+    > .frame-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        @include opacity(0.1);
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    ul {
         @include listrest(0, 0, none);
-        li {
-            padding-bottom: 13px;
-            font-size: 0;
-            border-bottom: 1px solid rgba($gray-600, 0.5);
-            +li {
-                padding-top: 13px;
+    }
+    .contact-list {
+        @media screen and (max-width: 413px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 414px) and (max-width: 767px) {
+            width: calc(100% - 170px);
+        }
+        .title {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+            line-height: 1;
+            span {
+                font-size: 1.3125em;
             }
-            >* {
-                display: inline-block;
-                vertical-align: text-top;
+            @media screen and (min-width: 414px) and (max-width: 767px) {
+                margin-right: -170px;
             }
-            .icon {
-                margin-right: 20px;
-                color: $gray-600;
-                font-size: 1.125rem;
-            }
-            .list-content {
-                width: calc(100% - 40px);
-                font-size: 1rem;
+        }
+        ul {
+            li {
                 a {
                     display: block;
-                    color: $white;
+                    padding: 12px 0;
+                    color: $black;
+                    border-bottom: 1px solid $primary;
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    i.icon {
+                        margin-right: 0.5rem;
+                    }
+                    span {
+                        width: calc(100% - 1.5rem);
+                        @media screen and (max-width: 767px) {
+                            line-height: 1.25;
+                            word-break: break-word;
+                        }
+                    }
                     &:hover {
-                        color: $gray-600;
+                        color: $primary;
                     }
                 }
             }
         }
     }
-    .container-fluid {
-        &.contact {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            color: $white;
-            background-color: #2e2e2e;
+    .btn-list {
+        @media screen and (max-width: 413px) {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
         }
-        &.copyright {
-            padding-top: 18px;
-            padding-bottom: 18px;
-            color: $gray-600;
-            background-color: $black;
+        @media screen and (min-width: 414px) and (max-width: 767px) {
+            width: 170px;
         }
-    }
-    .col-instagram {
-        @include breakpoint(768px) {
-            padding-left: 30px;
-            padding-right: 30px;
+        @media screen and (min-width: 414px) {
+            padding-top: 4.5rem;
         }
-        @include breakpoint(1200px) {
-            padding-left: 60px;
-            padding-right: 60px;
-        }
-        @include breakpoint(max-width 767px) {
-            padding-top: 60px;
-            padding-bottom: 60px;
+        ul {
+            li {
+                text-align: center;
+                + li {
+                    margin-top: 10px;
+                    @media screen and (min-width: 414px) {
+                        margin-top: 20px;
+                    }            
+                }
+                a.btn {
+                    display: block;
+                    padding: 10px;
+                    color: $white;
+                    font-size: 1rem;
+                    line-height: 1.25;
+                    background-color: $primary;
+                    @include border-radius(5px);
+                    &:hover {
+                        background-color: $red-400;
+                    }
+                }
+                &.facebook {
+                    color: $facebook;
+                    a.btn {
+                        background-color: $facebook;
+                        &:hover {
+                            background-color: darken($facebook, 10%);
+                        }
+                        i.icon {
+                            display: block;
+                            font-size: 1.25em;
+                        }
+                    }
+                    span {
+                        display: block;
+                        padding-top: 0.5em;
+                        font-size: 0.875rem;
+                        line-height: 1;
+                    }
+                }
+            }
         }
     }
 }

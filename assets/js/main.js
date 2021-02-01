@@ -5,11 +5,11 @@ $(function() {
     $('#top').click(function() {
         $(window).scrollTop(0);
     })
-    $('body').append('<div class="blank"></div>');
-    $('.ham, .blank').click(function() {
-        $('.ham').toggleClass('opened');
-        $('body').toggleClass('opened');
-        $('nav ul').fadeToggle();
+    $('body').prepend('<div class="blank"></div>');
+    $('.hamburger, .blank').click(function() {
+        $('.hamburger').toggleClass('active');
+        $('body, .blank').toggleClass('opened');
+        $('nav ul').toggle();
     });
     if (width >= 1024) {
         $('.half-banner-group').each(function() {

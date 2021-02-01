@@ -1,0 +1,247 @@
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint (1280px) {
+        width: 1240px;
+    }
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+[class^="col-"],
+[class*=" col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+$unit: (1/12)*100%;
+$space: 0, 5, 10, 15, 20, 30, 40, 50, 60;
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: #{$i*$unit};
+    }
+}
+@for $i from 1 through length($space) {
+    .m-#{nth($space,$i)} {
+        margin: #{nth($space, $i)}px;
+    }
+    .my-#{nth($space,$i)} {
+        margin-top: #{nth($space, $i)}px;
+        margin-bottom: #{nth($space, $i)}px;
+    }
+    .mx-#{nth($space,$i)} {
+        margin-left: #{nth($space, $i)}px;
+        margin-right: #{nth($space, $i)}px;
+    }
+    .mt-#{nth($space,$i)} {
+        margin-top: #{nth($space, $i)}px;
+    }
+    .mb-#{nth($space,$i)} {
+        margin-bottom: #{nth($space, $i)}px;
+    }
+    .ml-#{nth($space,$i)} {
+        margin-left: #{nth($space, $i)}px;
+    }
+    .mr-#{nth($space,$i)} {
+        margin-right: #{nth($space, $i)}px;
+    }
+    .p-#{nth($space,$i)} {
+        padding: #{nth($space, $i)}px;
+    }
+    .py-#{nth($space,$i)} {
+        padding-top: #{nth($space, $i)}px;
+        padding-bottom: #{nth($space, $i)}px;
+    }
+    .px-#{nth($space,$i)} {
+        padding-left: #{nth($space, $i)}px;
+        padding-right: #{nth($space, $i)}px;
+    }
+    .pt-#{nth($space,$i)} {
+        padding-top: #{nth($space, $i)}px;
+    }
+    .pb-#{nth($space,$i)} {
+        padding-bottom: #{nth($space, $i)}px;
+    }
+    .pl-#{nth($space,$i)} {
+        padding-left: #{nth($space, $i)}px;
+    }
+    .pr-#{nth($space,$i)} {
+        padding-right: #{nth($space, $i)}px;
+    }
+}
+@include breakpoint(768px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            width: #{$i*$unit};
+        }
+    }
+    @for $i from 1 through length($space) {
+        .m-sm-#{nth($space,$i)} {
+            margin: #{nth($space, $i)}px;
+        }
+        .my-sm-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .mx-sm-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+            margin-right: #{nth($space, $i)}px;
+        }
+        .mt-sm-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+        }
+        .mb-sm-#{nth($space,$i)} {
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .ml-sm-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+        }
+        .mr-sm-#{nth($space,$i)} {
+            margin-right: #{nth($space, $i)}px;
+        }
+        .p-sm-#{nth($space,$i)} {
+            padding: #{nth($space, $i)}px;
+        }
+        .py-sm-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .px-sm-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+            padding-right: #{nth($space, $i)}px;
+        }
+        .pt-sm-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+        }
+        .pb-sm-#{nth($space,$i)} {
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .pl-sm-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+        }
+        .pr-sm-#{nth($space,$i)} {
+            padding-right: #{nth($space, $i)}px;
+        }
+    }
+}
+@include breakpoint(1024px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            width: #{$i*$unit};
+        }
+    }
+    @for $i from 1 through length($space) {
+        .m-md-#{nth($space,$i)} {
+            margin: #{nth($space, $i)}px;
+        }
+        .my-md-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .mx-md-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+            margin-right: #{nth($space, $i)}px;
+        }
+        .mt-md-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+        }
+        .mb-md-#{nth($space,$i)} {
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .ml-md-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+        }
+        .mr-md-#{nth($space,$i)} {
+            margin-right: #{nth($space, $i)}px;
+        }
+        .p-md-#{nth($space,$i)} {
+            padding: #{nth($space, $i)}px;
+        }
+        .py-md-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .px-md-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+            padding-right: #{nth($space, $i)}px;
+        }
+        .pt-md-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+        }
+        .pb-md-#{nth($space,$i)} {
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .pl-md-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+        }
+        .pr-md-#{nth($space,$i)} {
+            padding-right: #{nth($space, $i)}px;
+        }
+    }
+}
+@include breakpoint(1280px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            width: #{$i*$unit};
+        }
+    }
+    @for $i from 1 through length($space) {
+        .m-lg-#{nth($space,$i)} {
+            margin: #{nth($space, $i)}px;
+        }
+        .my-lg-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .mx-lg-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+            margin-right: #{nth($space, $i)}px;
+        }
+        .mt-lg-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px;
+        }
+        .mb-lg-#{nth($space,$i)} {
+            margin-bottom: #{nth($space, $i)}px;
+        }
+        .ml-lg-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px;
+        }
+        .mr-lg-#{nth($space,$i)} {
+            margin-right: #{nth($space, $i)}px;
+        }
+        .p-lg-#{nth($space,$i)} {
+            padding: #{nth($space, $i)}px;
+        }
+        .py-lg-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .px-lg-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+            padding-right: #{nth($space, $i)}px;
+        }
+        .pt-lg-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px;
+        }
+        .pb-lg-#{nth($space,$i)} {
+            padding-bottom: #{nth($space, $i)}px;
+        }
+        .pl-lg-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px;
+        }
+        .pr-lg-#{nth($space,$i)} {
+            padding-right: #{nth($space, $i)}px;
+        }
+    }
+}
