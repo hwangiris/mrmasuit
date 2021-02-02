@@ -11,6 +11,7 @@ $icon-facebook: "\e900";
 $icon-map-marker: "\f041";
 $icon-phone: "\f095";
 $icon-envelope: "\f0e0";
+$icon-angle-up: "\f106";
 $icon-fax: "\f1ac";
 
 @font-face {
@@ -93,6 +94,11 @@ $icon-fax: "\f1ac";
 .icon-envelope {
   &:before {
     content: $icon-envelope;
+  }
+}
+.icon-angle-up {
+  &:before {
+    content: $icon-angle-up; 
   }
 }
 .icon-fax {

@@ -8,3 +8,99 @@
 @import "_footer";
 @import "_index";
 @import "_inner";
+
+section.contact {
+    position: relative;
+    .h2 {
+        color: $primary;
+        line-height: 1.15;
+        @media screen and (min-width: 1280px) {
+            font-size: 3.75rem;
+        }
+        @media screen and (max-width: 1279px) {
+            font-size: 3.25rem;
+        }
+    }
+    .h3 {
+        color: $primary;
+        line-height: 1.15;
+        @media screen and (min-width: 1280px) {
+            font-size: 2.25rem;
+        }
+        @media screen and (max-width: 1279px) {
+            font-size: 1.75rem;
+        }
+    }
+    .form-column {
+        margin: 20px;
+        padding: 20px 25px;
+        background-color: $red-100;
+        @include border-radius(1.5rem);
+        @media screen and (min-width: 375px) {
+            margin: 40px;
+        }
+        @media screen and (min-width: 768px) {
+            margin: 40px auto;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 80px 100px;
+        }
+        .title {
+            text-align: center;
+        }
+        p {
+            color: $primary;
+        }
+    }
+    form.contact-form {
+        color: $primary;
+        input[type='text'], input[type='tel'], input[type='email'], textarea {
+            width: 100%;
+            padding: 5px;
+            color: $primary;
+            border: 1px solid $primary;
+            outline: 0;
+        }
+        textarea {
+            min-height: 100px;
+        }
+        label{
+            display: inline-block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            + label {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+#top {
+    display: none;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    padding: 17px 10px 12px;
+    color: $white;
+    line-height: 1;
+    text-align: center;
+    background-color: $black;
+    @include border-radius(50%);
+    cursor: pointer;
+    z-index: 5;
+    @include breakpoint(1024px) {
+        bottom: 20px;
+        width: 65px;
+        height: 65px;
+        padding: 20px 15px;
+    }
+    >* {
+        display: block;
+        text-transform: uppercase;
+    }
+    i.icon {
+        font-size: 1rem;
+    }
+}
