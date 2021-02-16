@@ -183,23 +183,83 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot?#iefix) format("embedded-opentype"), url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff2) format("woff2"), url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff) format("woff"), url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf) format("truetype");
+  unicode-range: U+4E00-9FFF;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFoWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFMWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFsWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFQWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFgWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFkWaDq8fMVxMw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'custom-cwTeXKai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNfFcWaDq8fMU.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  font-family: "Noto Serif", "標楷體", "DFKai-sb", serif;
+  font-family: "custom-cwTeXKai", serif;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
-}
-@media (min-width: 1024px) {
-  body {
-    font-weight: 300;
-  }
 }
 body.opened {
   overflow: hidden;
@@ -268,6 +328,7 @@ textarea {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media (min-width: 1280px) {
   .container {
@@ -339,663 +400,663 @@ textarea {
 }
 
 .m-0 {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 .my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .mt-0 {
-  margin-top: 0px;
+  margin-top: 0px !important;
 }
 
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .ml-0 {
-  margin-left: 0px;
+  margin-left: 0px !important;
 }
 
 .mr-0 {
-  margin-right: 0px;
+  margin-right: 0px !important;
 }
 
 .p-0 {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .pt-0 {
-  padding-top: 0px;
+  padding-top: 0px !important;
 }
 
 .pb-0 {
-  padding-bottom: 0px;
+  padding-bottom: 0px !important;
 }
 
 .pl-0 {
-  padding-left: 0px;
+  padding-left: 0px !important;
 }
 
 .pr-0 {
-  padding-right: 0px;
+  padding-right: 0px !important;
 }
 
 .m-5 {
-  margin: 5px;
+  margin: 5px !important;
 }
 
 .my-5 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
 }
 
 .mx-5 {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
 
 .mt-5 {
-  margin-top: 5px;
+  margin-top: 5px !important;
 }
 
 .mb-5 {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 
 .ml-5 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .mr-5 {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 
 .p-5 {
-  padding: 5px;
+  padding: 5px !important;
 }
 
 .py-5 {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
 .px-5 {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
 }
 
 .pt-5 {
-  padding-top: 5px;
+  padding-top: 5px !important;
 }
 
 .pb-5 {
-  padding-bottom: 5px;
+  padding-bottom: 5px !important;
 }
 
 .pl-5 {
-  padding-left: 5px;
+  padding-left: 5px !important;
 }
 
 .pr-5 {
-  padding-right: 5px;
+  padding-right: 5px !important;
 }
 
 .m-10 {
-  margin: 10px;
+  margin: 10px !important;
 }
 
 .my-10 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 .mx-10 {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
 }
 
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .ml-10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .mr-10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .p-10 {
-  padding: 10px;
+  padding: 10px !important;
 }
 
 .py-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .px-10 {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .pt-10 {
-  padding-top: 10px;
+  padding-top: 10px !important;
 }
 
 .pb-10 {
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 
 .pl-10 {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
 
 .pr-10 {
-  padding-right: 10px;
+  padding-right: 10px !important;
 }
 
 .m-15 {
-  margin: 15px;
+  margin: 15px !important;
 }
 
 .my-15 {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 .mx-15 {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
 }
 
 .mt-15 {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 
 .mb-15 {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
 }
 
 .ml-15 {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 
 .mr-15 {
-  margin-right: 15px;
+  margin-right: 15px !important;
 }
 
 .p-15 {
-  padding: 15px;
+  padding: 15px !important;
 }
 
 .py-15 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
 }
 
 .px-15 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 .pt-15 {
-  padding-top: 15px;
+  padding-top: 15px !important;
 }
 
 .pb-15 {
-  padding-bottom: 15px;
+  padding-bottom: 15px !important;
 }
 
 .pl-15 {
-  padding-left: 15px;
+  padding-left: 15px !important;
 }
 
 .pr-15 {
-  padding-right: 15px;
+  padding-right: 15px !important;
 }
 
 .m-20 {
-  margin: 20px;
+  margin: 20px !important;
 }
 
 .my-20 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 .mx-20 {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .ml-20 {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 .mr-20 {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 
 .p-20 {
-  padding: 20px;
+  padding: 20px !important;
 }
 
 .py-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .px-20 {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 .pt-20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 .pb-20 {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
 }
 
 .pl-20 {
-  padding-left: 20px;
+  padding-left: 20px !important;
 }
 
 .pr-20 {
-  padding-right: 20px;
+  padding-right: 20px !important;
 }
 
 .m-30 {
-  margin: 30px;
+  margin: 30px !important;
 }
 
 .my-30 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .mx-30 {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
 }
 
 .mt-30 {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .ml-30 {
-  margin-left: 30px;
+  margin-left: 30px !important;
 }
 
 .mr-30 {
-  margin-right: 30px;
+  margin-right: 30px !important;
 }
 
 .p-30 {
-  padding: 30px;
+  padding: 30px !important;
 }
 
 .py-30 {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 
 .px-30 {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
 }
 
 .pt-30 {
-  padding-top: 30px;
+  padding-top: 30px !important;
 }
 
 .pb-30 {
-  padding-bottom: 30px;
+  padding-bottom: 30px !important;
 }
 
 .pl-30 {
-  padding-left: 30px;
+  padding-left: 30px !important;
 }
 
 .pr-30 {
-  padding-right: 30px;
+  padding-right: 30px !important;
 }
 
 .m-40 {
-  margin: 40px;
+  margin: 40px !important;
 }
 
 .my-40 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
 }
 
 .mx-40 {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
 }
 
 .mt-40 {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 .mb-40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .ml-40 {
-  margin-left: 40px;
+  margin-left: 40px !important;
 }
 
 .mr-40 {
-  margin-right: 40px;
+  margin-right: 40px !important;
 }
 
 .p-40 {
-  padding: 40px;
+  padding: 40px !important;
 }
 
 .py-40 {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 .px-40 {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
 .pt-40 {
-  padding-top: 40px;
+  padding-top: 40px !important;
 }
 
 .pb-40 {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
 }
 
 .pl-40 {
-  padding-left: 40px;
+  padding-left: 40px !important;
 }
 
 .pr-40 {
-  padding-right: 40px;
+  padding-right: 40px !important;
 }
 
 .m-50 {
-  margin: 50px;
+  margin: 50px !important;
 }
 
 .my-50 {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
 }
 
 .mx-50 {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
 }
 
 .mt-50 {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 
 .mb-50 {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .ml-50 {
-  margin-left: 50px;
+  margin-left: 50px !important;
 }
 
 .mr-50 {
-  margin-right: 50px;
+  margin-right: 50px !important;
 }
 
 .p-50 {
-  padding: 50px;
+  padding: 50px !important;
 }
 
 .py-50 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
 }
 
 .px-50 {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 
 .pt-50 {
-  padding-top: 50px;
+  padding-top: 50px !important;
 }
 
 .pb-50 {
-  padding-bottom: 50px;
+  padding-bottom: 50px !important;
 }
 
 .pl-50 {
-  padding-left: 50px;
+  padding-left: 50px !important;
 }
 
 .pr-50 {
-  padding-right: 50px;
+  padding-right: 50px !important;
 }
 
 .m-60 {
-  margin: 60px;
+  margin: 60px !important;
 }
 
 .my-60 {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
 }
 
 .mx-60 {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 60px !important;
+  margin-right: 60px !important;
 }
 
 .mt-60 {
-  margin-top: 60px;
+  margin-top: 60px !important;
 }
 
 .mb-60 {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .ml-60 {
-  margin-left: 60px;
+  margin-left: 60px !important;
 }
 
 .mr-60 {
-  margin-right: 60px;
+  margin-right: 60px !important;
 }
 
 .p-60 {
-  padding: 60px;
+  padding: 60px !important;
 }
 
 .py-60 {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
 }
 
 .px-60 {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
 }
 
 .pt-60 {
-  padding-top: 60px;
+  padding-top: 60px !important;
 }
 
 .pb-60 {
-  padding-bottom: 60px;
+  padding-bottom: 60px !important;
 }
 
 .pl-60 {
-  padding-left: 60px;
+  padding-left: 60px !important;
 }
 
 .pr-60 {
-  padding-right: 60px;
+  padding-right: 60px !important;
 }
 
 .m-70 {
-  margin: 70px;
+  margin: 70px !important;
 }
 
 .my-70 {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
 }
 
 .mx-70 {
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 70px !important;
+  margin-right: 70px !important;
 }
 
 .mt-70 {
-  margin-top: 70px;
+  margin-top: 70px !important;
 }
 
 .mb-70 {
-  margin-bottom: 70px;
+  margin-bottom: 70px !important;
 }
 
 .ml-70 {
-  margin-left: 70px;
+  margin-left: 70px !important;
 }
 
 .mr-70 {
-  margin-right: 70px;
+  margin-right: 70px !important;
 }
 
 .p-70 {
-  padding: 70px;
+  padding: 70px !important;
 }
 
 .py-70 {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
 }
 
 .px-70 {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
 }
 
 .pt-70 {
-  padding-top: 70px;
+  padding-top: 70px !important;
 }
 
 .pb-70 {
-  padding-bottom: 70px;
+  padding-bottom: 70px !important;
 }
 
 .pl-70 {
-  padding-left: 70px;
+  padding-left: 70px !important;
 }
 
 .pr-70 {
-  padding-right: 70px;
+  padding-right: 70px !important;
 }
 
 .m-80 {
-  margin: 80px;
+  margin: 80px !important;
 }
 
 .my-80 {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 80px !important;
+  margin-bottom: 80px !important;
 }
 
 .mx-80 {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 80px !important;
+  margin-right: 80px !important;
 }
 
 .mt-80 {
-  margin-top: 80px;
+  margin-top: 80px !important;
 }
 
 .mb-80 {
-  margin-bottom: 80px;
+  margin-bottom: 80px !important;
 }
 
 .ml-80 {
-  margin-left: 80px;
+  margin-left: 80px !important;
 }
 
 .mr-80 {
-  margin-right: 80px;
+  margin-right: 80px !important;
 }
 
 .p-80 {
-  padding: 80px;
+  padding: 80px !important;
 }
 
 .py-80 {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
 }
 
 .px-80 {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
 }
 
 .pt-80 {
-  padding-top: 80px;
+  padding-top: 80px !important;
 }
 
 .pb-80 {
-  padding-bottom: 80px;
+  padding-bottom: 80px !important;
 }
 
 .pl-80 {
-  padding-left: 80px;
+  padding-left: 80px !important;
 }
 
 .pr-80 {
-  padding-right: 80px;
+  padding-right: 80px !important;
 }
 
 .text-left {
@@ -1060,663 +1121,663 @@ textarea {
   }
 
   .m-sm-0 {
-    margin: 0px;
+    margin: 0px !important;
   }
 
   .my-sm-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   .mx-sm-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
   .mt-sm-0 {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
 
   .mb-sm-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
 
   .ml-sm-0 {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 
   .mr-sm-0 {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
 
   .p-sm-0 {
-    padding: 0px;
+    padding: 0px !important;
   }
 
   .py-sm-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .px-sm-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 
   .pt-sm-0 {
-    padding-top: 0px;
+    padding-top: 0px !important;
   }
 
   .pb-sm-0 {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
   }
 
   .pl-sm-0 {
-    padding-left: 0px;
+    padding-left: 0px !important;
   }
 
   .pr-sm-0 {
-    padding-right: 0px;
+    padding-right: 0px !important;
   }
 
   .m-sm-5 {
-    margin: 5px;
+    margin: 5px !important;
   }
 
   .my-sm-5 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
 
   .mx-sm-5 {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
   }
 
   .mt-sm-5 {
-    margin-top: 5px;
+    margin-top: 5px !important;
   }
 
   .mb-sm-5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
   }
 
   .ml-sm-5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
   }
 
   .mr-sm-5 {
-    margin-right: 5px;
+    margin-right: 5px !important;
   }
 
   .p-sm-5 {
-    padding: 5px;
+    padding: 5px !important;
   }
 
   .py-sm-5 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
   }
 
   .px-sm-5 {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   .pt-sm-5 {
-    padding-top: 5px;
+    padding-top: 5px !important;
   }
 
   .pb-sm-5 {
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
   }
 
   .pl-sm-5 {
-    padding-left: 5px;
+    padding-left: 5px !important;
   }
 
   .pr-sm-5 {
-    padding-right: 5px;
+    padding-right: 5px !important;
   }
 
   .m-sm-10 {
-    margin: 10px;
+    margin: 10px !important;
   }
 
   .my-sm-10 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
   .mx-sm-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 
   .mt-sm-10 {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 
   .mb-sm-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .ml-sm-10 {
-    margin-left: 10px;
+    margin-left: 10px !important;
   }
 
   .mr-sm-10 {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 
   .p-sm-10 {
-    padding: 10px;
+    padding: 10px !important;
   }
 
   .py-sm-10 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   .px-sm-10 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .pt-sm-10 {
-    padding-top: 10px;
+    padding-top: 10px !important;
   }
 
   .pb-sm-10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
   }
 
   .pl-sm-10 {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
 
   .pr-sm-10 {
-    padding-right: 10px;
+    padding-right: 10px !important;
   }
 
   .m-sm-15 {
-    margin: 15px;
+    margin: 15px !important;
   }
 
   .my-sm-15 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   .mx-sm-15 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
 
   .mt-sm-15 {
-    margin-top: 15px;
+    margin-top: 15px !important;
   }
 
   .mb-sm-15 {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
 
   .ml-sm-15 {
-    margin-left: 15px;
+    margin-left: 15px !important;
   }
 
   .mr-sm-15 {
-    margin-right: 15px;
+    margin-right: 15px !important;
   }
 
   .p-sm-15 {
-    padding: 15px;
+    padding: 15px !important;
   }
 
   .py-sm-15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
   .px-sm-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   .pt-sm-15 {
-    padding-top: 15px;
+    padding-top: 15px !important;
   }
 
   .pb-sm-15 {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
   }
 
   .pl-sm-15 {
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
 
   .pr-sm-15 {
-    padding-right: 15px;
+    padding-right: 15px !important;
   }
 
   .m-sm-20 {
-    margin: 20px;
+    margin: 20px !important;
   }
 
   .my-sm-20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 
   .mx-sm-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
 
   .mt-sm-20 {
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
 
   .mb-sm-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
 
   .ml-sm-20 {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 
   .mr-sm-20 {
-    margin-right: 20px;
+    margin-right: 20px !important;
   }
 
   .p-sm-20 {
-    padding: 20px;
+    padding: 20px !important;
   }
 
   .py-sm-20 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   .px-sm-20 {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .pt-sm-20 {
-    padding-top: 20px;
+    padding-top: 20px !important;
   }
 
   .pb-sm-20 {
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
   }
 
   .pl-sm-20 {
-    padding-left: 20px;
+    padding-left: 20px !important;
   }
 
   .pr-sm-20 {
-    padding-right: 20px;
+    padding-right: 20px !important;
   }
 
   .m-sm-30 {
-    margin: 30px;
+    margin: 30px !important;
   }
 
   .my-sm-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .mx-sm-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
 
   .mt-sm-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
 
   .mb-sm-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 
   .ml-sm-30 {
-    margin-left: 30px;
+    margin-left: 30px !important;
   }
 
   .mr-sm-30 {
-    margin-right: 30px;
+    margin-right: 30px !important;
   }
 
   .p-sm-30 {
-    padding: 30px;
+    padding: 30px !important;
   }
 
   .py-sm-30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
   }
 
   .px-sm-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 
   .pt-sm-30 {
-    padding-top: 30px;
+    padding-top: 30px !important;
   }
 
   .pb-sm-30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important;
   }
 
   .pl-sm-30 {
-    padding-left: 30px;
+    padding-left: 30px !important;
   }
 
   .pr-sm-30 {
-    padding-right: 30px;
+    padding-right: 30px !important;
   }
 
   .m-sm-40 {
-    margin: 40px;
+    margin: 40px !important;
   }
 
   .my-sm-40 {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 
   .mx-sm-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
 
   .mt-sm-40 {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 
   .mb-sm-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 
   .ml-sm-40 {
-    margin-left: 40px;
+    margin-left: 40px !important;
   }
 
   .mr-sm-40 {
-    margin-right: 40px;
+    margin-right: 40px !important;
   }
 
   .p-sm-40 {
-    padding: 40px;
+    padding: 40px !important;
   }
 
   .py-sm-40 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   .px-sm-40 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 
   .pt-sm-40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
   }
 
   .pb-sm-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
 
   .pl-sm-40 {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
 
   .pr-sm-40 {
-    padding-right: 40px;
+    padding-right: 40px !important;
   }
 
   .m-sm-50 {
-    margin: 50px;
+    margin: 50px !important;
   }
 
   .my-sm-50 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
   }
 
   .mx-sm-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
 
   .mt-sm-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
 
   .mb-sm-50 {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
   }
 
   .ml-sm-50 {
-    margin-left: 50px;
+    margin-left: 50px !important;
   }
 
   .mr-sm-50 {
-    margin-right: 50px;
+    margin-right: 50px !important;
   }
 
   .p-sm-50 {
-    padding: 50px;
+    padding: 50px !important;
   }
 
   .py-sm-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
 
   .px-sm-50 {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
   }
 
   .pt-sm-50 {
-    padding-top: 50px;
+    padding-top: 50px !important;
   }
 
   .pb-sm-50 {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
   }
 
   .pl-sm-50 {
-    padding-left: 50px;
+    padding-left: 50px !important;
   }
 
   .pr-sm-50 {
-    padding-right: 50px;
+    padding-right: 50px !important;
   }
 
   .m-sm-60 {
-    margin: 60px;
+    margin: 60px !important;
   }
 
   .my-sm-60 {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
   }
 
   .mx-sm-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
 
   .mt-sm-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
 
   .mb-sm-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
 
   .ml-sm-60 {
-    margin-left: 60px;
+    margin-left: 60px !important;
   }
 
   .mr-sm-60 {
-    margin-right: 60px;
+    margin-right: 60px !important;
   }
 
   .p-sm-60 {
-    padding: 60px;
+    padding: 60px !important;
   }
 
   .py-sm-60 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   .px-sm-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
   }
 
   .pt-sm-60 {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
 
   .pb-sm-60 {
-    padding-bottom: 60px;
+    padding-bottom: 60px !important;
   }
 
   .pl-sm-60 {
-    padding-left: 60px;
+    padding-left: 60px !important;
   }
 
   .pr-sm-60 {
-    padding-right: 60px;
+    padding-right: 60px !important;
   }
 
   .m-sm-70 {
-    margin: 70px;
+    margin: 70px !important;
   }
 
   .my-sm-70 {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 70px !important;
+    margin-bottom: 70px !important;
   }
 
   .mx-sm-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
 
   .mt-sm-70 {
-    margin-top: 70px;
+    margin-top: 70px !important;
   }
 
   .mb-sm-70 {
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
   }
 
   .ml-sm-70 {
-    margin-left: 70px;
+    margin-left: 70px !important;
   }
 
   .mr-sm-70 {
-    margin-right: 70px;
+    margin-right: 70px !important;
   }
 
   .p-sm-70 {
-    padding: 70px;
+    padding: 70px !important;
   }
 
   .py-sm-70 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
   }
 
   .px-sm-70 {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
 
   .pt-sm-70 {
-    padding-top: 70px;
+    padding-top: 70px !important;
   }
 
   .pb-sm-70 {
-    padding-bottom: 70px;
+    padding-bottom: 70px !important;
   }
 
   .pl-sm-70 {
-    padding-left: 70px;
+    padding-left: 70px !important;
   }
 
   .pr-sm-70 {
-    padding-right: 70px;
+    padding-right: 70px !important;
   }
 
   .m-sm-80 {
-    margin: 80px;
+    margin: 80px !important;
   }
 
   .my-sm-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
   }
 
   .mx-sm-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
 
   .mt-sm-80 {
-    margin-top: 80px;
+    margin-top: 80px !important;
   }
 
   .mb-sm-80 {
-    margin-bottom: 80px;
+    margin-bottom: 80px !important;
   }
 
   .ml-sm-80 {
-    margin-left: 80px;
+    margin-left: 80px !important;
   }
 
   .mr-sm-80 {
-    margin-right: 80px;
+    margin-right: 80px !important;
   }
 
   .p-sm-80 {
-    padding: 80px;
+    padding: 80px !important;
   }
 
   .py-sm-80 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
 
   .px-sm-80 {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
   }
 
   .pt-sm-80 {
-    padding-top: 80px;
+    padding-top: 80px !important;
   }
 
   .pb-sm-80 {
-    padding-bottom: 80px;
+    padding-bottom: 80px !important;
   }
 
   .pl-sm-80 {
-    padding-left: 80px;
+    padding-left: 80px !important;
   }
 
   .pr-sm-80 {
-    padding-right: 80px;
+    padding-right: 80px !important;
   }
 
   .text-sm-left {
@@ -1781,663 +1842,663 @@ textarea {
   }
 
   .m-md-0 {
-    margin: 0px;
+    margin: 0px !important;
   }
 
   .my-md-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   .mx-md-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
   .mt-md-0 {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
 
   .mb-md-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
 
   .ml-md-0 {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 
   .mr-md-0 {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
 
   .p-md-0 {
-    padding: 0px;
+    padding: 0px !important;
   }
 
   .py-md-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .px-md-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 
   .pt-md-0 {
-    padding-top: 0px;
+    padding-top: 0px !important;
   }
 
   .pb-md-0 {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
   }
 
   .pl-md-0 {
-    padding-left: 0px;
+    padding-left: 0px !important;
   }
 
   .pr-md-0 {
-    padding-right: 0px;
+    padding-right: 0px !important;
   }
 
   .m-md-5 {
-    margin: 5px;
+    margin: 5px !important;
   }
 
   .my-md-5 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
 
   .mx-md-5 {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
   }
 
   .mt-md-5 {
-    margin-top: 5px;
+    margin-top: 5px !important;
   }
 
   .mb-md-5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
   }
 
   .ml-md-5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
   }
 
   .mr-md-5 {
-    margin-right: 5px;
+    margin-right: 5px !important;
   }
 
   .p-md-5 {
-    padding: 5px;
+    padding: 5px !important;
   }
 
   .py-md-5 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
   }
 
   .px-md-5 {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   .pt-md-5 {
-    padding-top: 5px;
+    padding-top: 5px !important;
   }
 
   .pb-md-5 {
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
   }
 
   .pl-md-5 {
-    padding-left: 5px;
+    padding-left: 5px !important;
   }
 
   .pr-md-5 {
-    padding-right: 5px;
+    padding-right: 5px !important;
   }
 
   .m-md-10 {
-    margin: 10px;
+    margin: 10px !important;
   }
 
   .my-md-10 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
   .mx-md-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 
   .mt-md-10 {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 
   .mb-md-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .ml-md-10 {
-    margin-left: 10px;
+    margin-left: 10px !important;
   }
 
   .mr-md-10 {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 
   .p-md-10 {
-    padding: 10px;
+    padding: 10px !important;
   }
 
   .py-md-10 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   .px-md-10 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .pt-md-10 {
-    padding-top: 10px;
+    padding-top: 10px !important;
   }
 
   .pb-md-10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
   }
 
   .pl-md-10 {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
 
   .pr-md-10 {
-    padding-right: 10px;
+    padding-right: 10px !important;
   }
 
   .m-md-15 {
-    margin: 15px;
+    margin: 15px !important;
   }
 
   .my-md-15 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   .mx-md-15 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
 
   .mt-md-15 {
-    margin-top: 15px;
+    margin-top: 15px !important;
   }
 
   .mb-md-15 {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
 
   .ml-md-15 {
-    margin-left: 15px;
+    margin-left: 15px !important;
   }
 
   .mr-md-15 {
-    margin-right: 15px;
+    margin-right: 15px !important;
   }
 
   .p-md-15 {
-    padding: 15px;
+    padding: 15px !important;
   }
 
   .py-md-15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
   .px-md-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   .pt-md-15 {
-    padding-top: 15px;
+    padding-top: 15px !important;
   }
 
   .pb-md-15 {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
   }
 
   .pl-md-15 {
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
 
   .pr-md-15 {
-    padding-right: 15px;
+    padding-right: 15px !important;
   }
 
   .m-md-20 {
-    margin: 20px;
+    margin: 20px !important;
   }
 
   .my-md-20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 
   .mx-md-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
 
   .mt-md-20 {
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
 
   .mb-md-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
 
   .ml-md-20 {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 
   .mr-md-20 {
-    margin-right: 20px;
+    margin-right: 20px !important;
   }
 
   .p-md-20 {
-    padding: 20px;
+    padding: 20px !important;
   }
 
   .py-md-20 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   .px-md-20 {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .pt-md-20 {
-    padding-top: 20px;
+    padding-top: 20px !important;
   }
 
   .pb-md-20 {
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
   }
 
   .pl-md-20 {
-    padding-left: 20px;
+    padding-left: 20px !important;
   }
 
   .pr-md-20 {
-    padding-right: 20px;
+    padding-right: 20px !important;
   }
 
   .m-md-30 {
-    margin: 30px;
+    margin: 30px !important;
   }
 
   .my-md-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .mx-md-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
 
   .mt-md-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
 
   .mb-md-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 
   .ml-md-30 {
-    margin-left: 30px;
+    margin-left: 30px !important;
   }
 
   .mr-md-30 {
-    margin-right: 30px;
+    margin-right: 30px !important;
   }
 
   .p-md-30 {
-    padding: 30px;
+    padding: 30px !important;
   }
 
   .py-md-30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
   }
 
   .px-md-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 
   .pt-md-30 {
-    padding-top: 30px;
+    padding-top: 30px !important;
   }
 
   .pb-md-30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important;
   }
 
   .pl-md-30 {
-    padding-left: 30px;
+    padding-left: 30px !important;
   }
 
   .pr-md-30 {
-    padding-right: 30px;
+    padding-right: 30px !important;
   }
 
   .m-md-40 {
-    margin: 40px;
+    margin: 40px !important;
   }
 
   .my-md-40 {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 
   .mx-md-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
 
   .mt-md-40 {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 
   .mb-md-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 
   .ml-md-40 {
-    margin-left: 40px;
+    margin-left: 40px !important;
   }
 
   .mr-md-40 {
-    margin-right: 40px;
+    margin-right: 40px !important;
   }
 
   .p-md-40 {
-    padding: 40px;
+    padding: 40px !important;
   }
 
   .py-md-40 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   .px-md-40 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 
   .pt-md-40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
   }
 
   .pb-md-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
 
   .pl-md-40 {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
 
   .pr-md-40 {
-    padding-right: 40px;
+    padding-right: 40px !important;
   }
 
   .m-md-50 {
-    margin: 50px;
+    margin: 50px !important;
   }
 
   .my-md-50 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
   }
 
   .mx-md-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
 
   .mt-md-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
 
   .mb-md-50 {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
   }
 
   .ml-md-50 {
-    margin-left: 50px;
+    margin-left: 50px !important;
   }
 
   .mr-md-50 {
-    margin-right: 50px;
+    margin-right: 50px !important;
   }
 
   .p-md-50 {
-    padding: 50px;
+    padding: 50px !important;
   }
 
   .py-md-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
 
   .px-md-50 {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
   }
 
   .pt-md-50 {
-    padding-top: 50px;
+    padding-top: 50px !important;
   }
 
   .pb-md-50 {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
   }
 
   .pl-md-50 {
-    padding-left: 50px;
+    padding-left: 50px !important;
   }
 
   .pr-md-50 {
-    padding-right: 50px;
+    padding-right: 50px !important;
   }
 
   .m-md-60 {
-    margin: 60px;
+    margin: 60px !important;
   }
 
   .my-md-60 {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
   }
 
   .mx-md-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
 
   .mt-md-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
 
   .mb-md-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
 
   .ml-md-60 {
-    margin-left: 60px;
+    margin-left: 60px !important;
   }
 
   .mr-md-60 {
-    margin-right: 60px;
+    margin-right: 60px !important;
   }
 
   .p-md-60 {
-    padding: 60px;
+    padding: 60px !important;
   }
 
   .py-md-60 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   .px-md-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
   }
 
   .pt-md-60 {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
 
   .pb-md-60 {
-    padding-bottom: 60px;
+    padding-bottom: 60px !important;
   }
 
   .pl-md-60 {
-    padding-left: 60px;
+    padding-left: 60px !important;
   }
 
   .pr-md-60 {
-    padding-right: 60px;
+    padding-right: 60px !important;
   }
 
   .m-md-70 {
-    margin: 70px;
+    margin: 70px !important;
   }
 
   .my-md-70 {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 70px !important;
+    margin-bottom: 70px !important;
   }
 
   .mx-md-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
 
   .mt-md-70 {
-    margin-top: 70px;
+    margin-top: 70px !important;
   }
 
   .mb-md-70 {
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
   }
 
   .ml-md-70 {
-    margin-left: 70px;
+    margin-left: 70px !important;
   }
 
   .mr-md-70 {
-    margin-right: 70px;
+    margin-right: 70px !important;
   }
 
   .p-md-70 {
-    padding: 70px;
+    padding: 70px !important;
   }
 
   .py-md-70 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
   }
 
   .px-md-70 {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
 
   .pt-md-70 {
-    padding-top: 70px;
+    padding-top: 70px !important;
   }
 
   .pb-md-70 {
-    padding-bottom: 70px;
+    padding-bottom: 70px !important;
   }
 
   .pl-md-70 {
-    padding-left: 70px;
+    padding-left: 70px !important;
   }
 
   .pr-md-70 {
-    padding-right: 70px;
+    padding-right: 70px !important;
   }
 
   .m-md-80 {
-    margin: 80px;
+    margin: 80px !important;
   }
 
   .my-md-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
   }
 
   .mx-md-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
 
   .mt-md-80 {
-    margin-top: 80px;
+    margin-top: 80px !important;
   }
 
   .mb-md-80 {
-    margin-bottom: 80px;
+    margin-bottom: 80px !important;
   }
 
   .ml-md-80 {
-    margin-left: 80px;
+    margin-left: 80px !important;
   }
 
   .mr-md-80 {
-    margin-right: 80px;
+    margin-right: 80px !important;
   }
 
   .p-md-80 {
-    padding: 80px;
+    padding: 80px !important;
   }
 
   .py-md-80 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
 
   .px-md-80 {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
   }
 
   .pt-md-80 {
-    padding-top: 80px;
+    padding-top: 80px !important;
   }
 
   .pb-md-80 {
-    padding-bottom: 80px;
+    padding-bottom: 80px !important;
   }
 
   .pl-md-80 {
-    padding-left: 80px;
+    padding-left: 80px !important;
   }
 
   .pr-md-80 {
-    padding-right: 80px;
+    padding-right: 80px !important;
   }
 
   .text-md-left {
@@ -2502,663 +2563,663 @@ textarea {
   }
 
   .m-lg-0 {
-    margin: 0px;
+    margin: 0px !important;
   }
 
   .my-lg-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   .mx-lg-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
   .mt-lg-0 {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
 
   .mb-lg-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
 
   .ml-lg-0 {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 
   .mr-lg-0 {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
 
   .p-lg-0 {
-    padding: 0px;
+    padding: 0px !important;
   }
 
   .py-lg-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .px-lg-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 
   .pt-lg-0 {
-    padding-top: 0px;
+    padding-top: 0px !important;
   }
 
   .pb-lg-0 {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
   }
 
   .pl-lg-0 {
-    padding-left: 0px;
+    padding-left: 0px !important;
   }
 
   .pr-lg-0 {
-    padding-right: 0px;
+    padding-right: 0px !important;
   }
 
   .m-lg-5 {
-    margin: 5px;
+    margin: 5px !important;
   }
 
   .my-lg-5 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
 
   .mx-lg-5 {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
   }
 
   .mt-lg-5 {
-    margin-top: 5px;
+    margin-top: 5px !important;
   }
 
   .mb-lg-5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
   }
 
   .ml-lg-5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
   }
 
   .mr-lg-5 {
-    margin-right: 5px;
+    margin-right: 5px !important;
   }
 
   .p-lg-5 {
-    padding: 5px;
+    padding: 5px !important;
   }
 
   .py-lg-5 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
   }
 
   .px-lg-5 {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   .pt-lg-5 {
-    padding-top: 5px;
+    padding-top: 5px !important;
   }
 
   .pb-lg-5 {
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
   }
 
   .pl-lg-5 {
-    padding-left: 5px;
+    padding-left: 5px !important;
   }
 
   .pr-lg-5 {
-    padding-right: 5px;
+    padding-right: 5px !important;
   }
 
   .m-lg-10 {
-    margin: 10px;
+    margin: 10px !important;
   }
 
   .my-lg-10 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
 
   .mx-lg-10 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 
   .mt-lg-10 {
-    margin-top: 10px;
+    margin-top: 10px !important;
   }
 
   .mb-lg-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .ml-lg-10 {
-    margin-left: 10px;
+    margin-left: 10px !important;
   }
 
   .mr-lg-10 {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 
   .p-lg-10 {
-    padding: 10px;
+    padding: 10px !important;
   }
 
   .py-lg-10 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   .px-lg-10 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .pt-lg-10 {
-    padding-top: 10px;
+    padding-top: 10px !important;
   }
 
   .pb-lg-10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
   }
 
   .pl-lg-10 {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
 
   .pr-lg-10 {
-    padding-right: 10px;
+    padding-right: 10px !important;
   }
 
   .m-lg-15 {
-    margin: 15px;
+    margin: 15px !important;
   }
 
   .my-lg-15 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   .mx-lg-15 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
 
   .mt-lg-15 {
-    margin-top: 15px;
+    margin-top: 15px !important;
   }
 
   .mb-lg-15 {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
 
   .ml-lg-15 {
-    margin-left: 15px;
+    margin-left: 15px !important;
   }
 
   .mr-lg-15 {
-    margin-right: 15px;
+    margin-right: 15px !important;
   }
 
   .p-lg-15 {
-    padding: 15px;
+    padding: 15px !important;
   }
 
   .py-lg-15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
   .px-lg-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   .pt-lg-15 {
-    padding-top: 15px;
+    padding-top: 15px !important;
   }
 
   .pb-lg-15 {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
   }
 
   .pl-lg-15 {
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
 
   .pr-lg-15 {
-    padding-right: 15px;
+    padding-right: 15px !important;
   }
 
   .m-lg-20 {
-    margin: 20px;
+    margin: 20px !important;
   }
 
   .my-lg-20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 
   .mx-lg-20 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
   }
 
   .mt-lg-20 {
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
 
   .mb-lg-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
 
   .ml-lg-20 {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 
   .mr-lg-20 {
-    margin-right: 20px;
+    margin-right: 20px !important;
   }
 
   .p-lg-20 {
-    padding: 20px;
+    padding: 20px !important;
   }
 
   .py-lg-20 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   .px-lg-20 {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .pt-lg-20 {
-    padding-top: 20px;
+    padding-top: 20px !important;
   }
 
   .pb-lg-20 {
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
   }
 
   .pl-lg-20 {
-    padding-left: 20px;
+    padding-left: 20px !important;
   }
 
   .pr-lg-20 {
-    padding-right: 20px;
+    padding-right: 20px !important;
   }
 
   .m-lg-30 {
-    margin: 30px;
+    margin: 30px !important;
   }
 
   .my-lg-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .mx-lg-30 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
 
   .mt-lg-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
 
   .mb-lg-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 
   .ml-lg-30 {
-    margin-left: 30px;
+    margin-left: 30px !important;
   }
 
   .mr-lg-30 {
-    margin-right: 30px;
+    margin-right: 30px !important;
   }
 
   .p-lg-30 {
-    padding: 30px;
+    padding: 30px !important;
   }
 
   .py-lg-30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
   }
 
   .px-lg-30 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 
   .pt-lg-30 {
-    padding-top: 30px;
+    padding-top: 30px !important;
   }
 
   .pb-lg-30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important;
   }
 
   .pl-lg-30 {
-    padding-left: 30px;
+    padding-left: 30px !important;
   }
 
   .pr-lg-30 {
-    padding-right: 30px;
+    padding-right: 30px !important;
   }
 
   .m-lg-40 {
-    margin: 40px;
+    margin: 40px !important;
   }
 
   .my-lg-40 {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 
   .mx-lg-40 {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
   }
 
   .mt-lg-40 {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 
   .mb-lg-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 
   .ml-lg-40 {
-    margin-left: 40px;
+    margin-left: 40px !important;
   }
 
   .mr-lg-40 {
-    margin-right: 40px;
+    margin-right: 40px !important;
   }
 
   .p-lg-40 {
-    padding: 40px;
+    padding: 40px !important;
   }
 
   .py-lg-40 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   .px-lg-40 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 
   .pt-lg-40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
   }
 
   .pb-lg-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
 
   .pl-lg-40 {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
 
   .pr-lg-40 {
-    padding-right: 40px;
+    padding-right: 40px !important;
   }
 
   .m-lg-50 {
-    margin: 50px;
+    margin: 50px !important;
   }
 
   .my-lg-50 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
   }
 
   .mx-lg-50 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
   }
 
   .mt-lg-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
 
   .mb-lg-50 {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
   }
 
   .ml-lg-50 {
-    margin-left: 50px;
+    margin-left: 50px !important;
   }
 
   .mr-lg-50 {
-    margin-right: 50px;
+    margin-right: 50px !important;
   }
 
   .p-lg-50 {
-    padding: 50px;
+    padding: 50px !important;
   }
 
   .py-lg-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
 
   .px-lg-50 {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
   }
 
   .pt-lg-50 {
-    padding-top: 50px;
+    padding-top: 50px !important;
   }
 
   .pb-lg-50 {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
   }
 
   .pl-lg-50 {
-    padding-left: 50px;
+    padding-left: 50px !important;
   }
 
   .pr-lg-50 {
-    padding-right: 50px;
+    padding-right: 50px !important;
   }
 
   .m-lg-60 {
-    margin: 60px;
+    margin: 60px !important;
   }
 
   .my-lg-60 {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
   }
 
   .mx-lg-60 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 60px !important;
+    margin-right: 60px !important;
   }
 
   .mt-lg-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
 
   .mb-lg-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
 
   .ml-lg-60 {
-    margin-left: 60px;
+    margin-left: 60px !important;
   }
 
   .mr-lg-60 {
-    margin-right: 60px;
+    margin-right: 60px !important;
   }
 
   .p-lg-60 {
-    padding: 60px;
+    padding: 60px !important;
   }
 
   .py-lg-60 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   .px-lg-60 {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
   }
 
   .pt-lg-60 {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
 
   .pb-lg-60 {
-    padding-bottom: 60px;
+    padding-bottom: 60px !important;
   }
 
   .pl-lg-60 {
-    padding-left: 60px;
+    padding-left: 60px !important;
   }
 
   .pr-lg-60 {
-    padding-right: 60px;
+    padding-right: 60px !important;
   }
 
   .m-lg-70 {
-    margin: 70px;
+    margin: 70px !important;
   }
 
   .my-lg-70 {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 70px !important;
+    margin-bottom: 70px !important;
   }
 
   .mx-lg-70 {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px !important;
+    margin-right: 70px !important;
   }
 
   .mt-lg-70 {
-    margin-top: 70px;
+    margin-top: 70px !important;
   }
 
   .mb-lg-70 {
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
   }
 
   .ml-lg-70 {
-    margin-left: 70px;
+    margin-left: 70px !important;
   }
 
   .mr-lg-70 {
-    margin-right: 70px;
+    margin-right: 70px !important;
   }
 
   .p-lg-70 {
-    padding: 70px;
+    padding: 70px !important;
   }
 
   .py-lg-70 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
   }
 
   .px-lg-70 {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
 
   .pt-lg-70 {
-    padding-top: 70px;
+    padding-top: 70px !important;
   }
 
   .pb-lg-70 {
-    padding-bottom: 70px;
+    padding-bottom: 70px !important;
   }
 
   .pl-lg-70 {
-    padding-left: 70px;
+    padding-left: 70px !important;
   }
 
   .pr-lg-70 {
-    padding-right: 70px;
+    padding-right: 70px !important;
   }
 
   .m-lg-80 {
-    margin: 80px;
+    margin: 80px !important;
   }
 
   .my-lg-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
   }
 
   .mx-lg-80 {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
   }
 
   .mt-lg-80 {
-    margin-top: 80px;
+    margin-top: 80px !important;
   }
 
   .mb-lg-80 {
-    margin-bottom: 80px;
+    margin-bottom: 80px !important;
   }
 
   .ml-lg-80 {
-    margin-left: 80px;
+    margin-left: 80px !important;
   }
 
   .mr-lg-80 {
-    margin-right: 80px;
+    margin-right: 80px !important;
   }
 
   .p-lg-80 {
-    padding: 80px;
+    padding: 80px !important;
   }
 
   .py-lg-80 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
 
   .px-lg-80 {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
   }
 
   .pt-lg-80 {
-    padding-top: 80px;
+    padding-top: 80px !important;
   }
 
   .pb-lg-80 {
-    padding-bottom: 80px;
+    padding-bottom: 80px !important;
   }
 
   .pl-lg-80 {
-    padding-left: 80px;
+    padding-left: 80px !important;
   }
 
   .pr-lg-80 {
-    padding-right: 80px;
+    padding-right: 80px !important;
   }
 
   .text-lg-left {
@@ -3338,11 +3399,21 @@ header h1 a {
   display: block;
   color: #000;
 }
+@media screen and (min-width: 768px) {
+  header h1 a {
+    text-shadow: 0 0 1px #000;
+  }
+}
 header h1 span {
   font-size: 1.26086957em;
 }
 header .container-fluid {
   position: relative;
+}
+@media screen and (max-width: 1279px) {
+  header .container-fluid .row {
+    justify-content: flex-start;
+  }
 }
 @media screen and (min-width: 1280px) {
   header .container {
@@ -3438,13 +3509,13 @@ nav ul {
     margin-right: 30px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   nav ul li {
     display: inline-block;
     vertical-align: middle;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1279px) {
   nav ul li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -3454,8 +3525,9 @@ nav ul li a {
   display: block;
   color: #fff;
   font-size: 1.25rem;
+  text-shadow: 0 0 0 #000, 0 0 0 #000, 0 0 0 #000, 0 0 0.5px #000;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   nav ul li a {
     padding-left: 30px;
     padding-right: 30px;
@@ -3464,15 +3536,18 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #8a6d58;
+  text-shadow: 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0.5px #8a6d58;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   nav ul li.phone a {
     padding-right: 0;
     color: #8a6d58;
     font-size: 1rem;
+    text-shadow: 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0.5px #8a6d58;
   }
   nav ul li.phone a:hover {
     color: #6b5444;
+    text-shadow: 0 0 0 #6b5444, 0 0 0 #6b5444, 0 0 0 #6b5444, 0 0 0.5px #6b5444;
   }
 }
 nav ul li.phone a > * {
@@ -3519,6 +3594,7 @@ nav ul.lang li a {
   color: #fff;
   font-size: 1rem;
   line-height: 1.25;
+  text-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff, 0 0 0.5px #fff;
 }
 @media screen and (min-width: 1280px) {
   nav ul.lang li a {
@@ -3582,6 +3658,9 @@ footer > .container-fluid {
   background-color: #8a6d58;
   z-index: 1;
 }
+footer > .container-fluid span {
+  display: inline-block;
+}
 footer > .frame-bg {
   position: absolute;
   top: 0;
@@ -3600,6 +3679,9 @@ footer > .frame-bg::before {
   bottom: 0;
   left: 0;
   right: 0;
+}
+footer > .frame-bg iframe {
+  display: block;
 }
 footer ul {
   margin: 0;
@@ -3735,7 +3817,12 @@ footer .btn-list ul li.facebook span {
 }
 @media screen and (min-width: 1024px) {
   .index-page section .btn {
-    min-width: 160px;
+    min-width: 120px;
+  }
+}
+@media screen and (min-width: 1780px) {
+  .index-page section .btn {
+    min-width: 150px;
   }
 }
 .index-page section .btn:hover {
@@ -3745,7 +3832,13 @@ footer .btn-list ul li.facebook span {
   position: relative;
   height: 100%;
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
+  .index-page section .container, .index-page section .container-fluid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1280px) and (orientation: landscape) {
   .index-page section .container, .index-page section .container-fluid {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -3760,27 +3853,34 @@ footer .btn-list ul li.facebook span {
   flex-direction: column;
   align-items: self-start;
   justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 0;
 }
-@media screen and (min-width: 1280px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
   .index-page section .container .txt-col, .index-page section .container-fluid .txt-col {
-    padding-left: 80px;
-    padding-right: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
-@media screen and (max-width: 1279px) and (min-width: 500px) and (orientation: portrait) {
+@media screen and (min-width: 1280px) {
   .index-page section .container .txt-col, .index-page section .container-fluid .txt-col {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 3%;
+    padding-right: 5%;
   }
 }
-@media screen and (max-width: 1279px) {
+@media screen and (min-width: 1920px) {
   .index-page section .container .txt-col, .index-page section .container-fluid .txt-col {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 4%;
+    padding-right: 6%;
   }
+}
+.index-page section .container .txt-col > *, .index-page section .container-fluid .txt-col > * {
+  width: 100%;
 }
 .index-page section .container .img-col, .index-page section .container-fluid .img-col {
   position: relative;
@@ -3795,12 +3895,12 @@ footer .btn-list ul li.facebook span {
   color: #8a6d58;
   line-height: 1.15;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1414px) {
   .index-page section .container .h2, .index-page section .container-fluid .h2 {
     font-size: 3.75rem;
   }
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1415px) {
   .index-page section .container .h2, .index-page section .container-fluid .h2 {
     font-size: 3.25rem;
   }
@@ -3819,20 +3919,20 @@ footer .btn-list ul li.facebook span {
     font-size: 1.75rem;
   }
 }
+.index-page section .container .txt, .index-page section .container-fluid .txt {
+  line-height: 1.75;
+}
 @media screen and (min-width: 1280px) {
   .index-page section .container .txt, .index-page section .container-fluid .txt {
     padding-top: 40px;
     padding-bottom: 60px;
-    font-size: 1.125rem;
-    line-height: 2;
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 1279px) {
   .index-page section .container .txt, .index-page section .container-fluid .txt {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    font-size: 1rem;
-    line-height: 1.75;
+    padding-bottom: 20px;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -3858,6 +3958,15 @@ footer .btn-list ul li.facebook span {
   .index-page section.opening > div.mobile {
     display: block;
   }
+}
+.index-page section.opening .container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .index-page section.opening .img {
   position: absolute;
@@ -3920,36 +4029,32 @@ footer .btn-list ul li.facebook span {
 .index-page section.about {
   background-color: #fdf5e9;
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
   .index-page section.about .row {
     flex-direction: row-reverse;
   }
 }
 .index-page section.about .img-col {
+  position: relative;
+  padding-left: 0;
   padding-right: 0;
+  min-height: 50vh;
 }
-@media screen and (max-width: 1279px) {
-  .index-page section.about .img-col {
-    padding-left: 0;
-  }
+.index-page section.about .img-col img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
-@media screen and (min-width: 1280px) and (orientation: landscape) {
+@media screen and (min-width: 1280px) {
   .index-page section.about .img-col {
     padding-right: 80px;
   }
-}
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .index-page section.about .img-col {
-    position: relative;
-  }
   .index-page section.about .img-col img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+    width: calc(100% - 80px);
   }
 }
 .index-page section.team {
@@ -3977,7 +4082,7 @@ footer .btn-list ul li.facebook span {
 .index-page section.service {
   position: relative;
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
   .index-page section.service {
     height: 100vh;
     min-height: 100vh;
@@ -4129,16 +4234,19 @@ footer .btn-list ul li.facebook span {
   padding-left: 0;
   padding-right: 0;
 }
-@media screen and (min-width: 1024px) {
-  .index-page section.news .container-fluid .img-col img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+@media screen and (max-width: 1023px) {
+  .index-page section.news .container-fluid .img-col {
+    height: 50vh;
   }
+}
+.index-page section.news .container-fluid .img-col img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 .index-page section.news .container-fluid .img-col .slogan {
   position: absolute;
@@ -4174,6 +4282,7 @@ footer .btn-list ul li.facebook span {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 .index-page section.news .news-list li {
   padding-top: 10px;
@@ -4199,6 +4308,16 @@ footer .btn-list ul li.facebook span {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin-top: 10px;
+}
+@media screen and (min-width: 1280px) and (min-width: 1024px) {
+  .index-page section.news .news-list li:nth-child(4) ~ li {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .index-page section.news .news-list li:nth-child(3) ~ li {
+    display: none;
+  }
 }
 .index-page section.contact {
   background-image: url("../images/index-contact.jpg");
@@ -4279,11 +4398,22 @@ section.page-opening img {
     display: block;
   }
 }
+section .nav-over-scroll {
+  overflow: scroll hidden;
+}
+section .nav-over-scroll > .nav-list {
+  text-align: left;
+}
 section .nav-list {
-  margin: 0;
-  padding: 20px 0 120px;
+  margin: 0 auto;
+  padding: 20px 0 10px;
   list-style: none;
   font-size: 0;
+}
+@media screen and (min-width: 1024px) {
+  section .nav-list {
+    padding-bottom: 0;
+  }
 }
 section .nav-list li {
   display: inline-block;
@@ -4298,11 +4428,11 @@ section .nav-list li a.active {
   border-color: #8a6d58 !important;
 }
 section.loop-content {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
   section.loop-content {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 section.loop-content.mt-0 {
@@ -4372,11 +4502,11 @@ section.contact {
 }
 
 .lawyer-list {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
   .lawyer-list {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 .lawyer-list.mt-0 {
@@ -4457,11 +4587,11 @@ section.contact {
 }
 
 .lawyer-single {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
   .lawyer-single {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 .lawyer-single.mt-0 {
@@ -4506,21 +4636,35 @@ section.contact {
 .lawyer-single .row .lawyer-title .title {
   font-size: 1.25rem;
 }
-.lawyer-single .row .lawyer-intro > div .h5 {
+.lawyer-single .row .lawyer-intro {
+  font-size: 1.125rem;
+  word-break: break-word;
+}
+.lawyer-single .row .lawyer-intro .h5 {
   padding-top: 20px;
   padding-bottom: 10px;
   color: #8a6d58;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   border-bottom: 1px solid #CBD0D8;
 }
-.lawyer-single .row .lawyer-intro > div ul {
+.lawyer-single .row .lawyer-intro ul {
   margin: 20px 0;
   padding: 0;
   list-style: none;
 }
-.lawyer-single .row .lawyer-intro > div ul li {
+.lawyer-single .row .lawyer-intro ul li {
   margin-bottom: 5px;
   line-height: 1.25;
+}
+.lawyer-single .row .lawyer-intro a {
+  color: #8a6d58;
+  text-decoration: underline;
+}
+.lawyer-single .row .lawyer-intro a:hover {
+  color: #1e1d1d;
+}
+.lawyer-single .row .lawyer-profile {
+  font-size: 1.125rem;
 }
 @media screen and (min-width: 1024px) {
   .lawyer-single .row .lawyer-profile {
@@ -4554,6 +4698,7 @@ section.contact {
 }
 .lawyer-single .row .lawyer-profile .connect li a {
   color: #898989;
+  font-size: 1rem;
 }
 .lawyer-single .row .lawyer-profile .connect li a:hover {
   color: #8a6d58;
@@ -4627,11 +4772,11 @@ section.contact {
 }
 
 .inner-page .news-list {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
   .inner-page .news-list {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 .inner-page .news-list.mt-0 {
@@ -4642,22 +4787,39 @@ section.contact {
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
-.inner-page .news-list a span.date {
-  width: 7em;
-  text-align: right;
+@media screen and (min-width: 768px) {
+  .inner-page .news-list a {
+    justify-content: space-between;
+  }
+}
+.inner-page .news-list a span {
+  width: auto;
+}
+@media screen and (max-width: 767px) {
+  .inner-page .news-list a > span {
+    width: 100%;
+  }
 }
 .inner-page .news-list a > span.title {
   color: #8a6d58;
   font-size: 1.125rem;
 }
 .inner-page .news-list a > span.title .icon {
-  margin-right: 5px;
+  margin-right: 10px;
   font-size: 1.5rem;
 }
 .inner-page .news-list a > span.detail {
-  margin-top: 10px;
   color: #898989;
-  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .inner-page .news-list a > span.detail {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 768px) {
+  .inner-page .news-list a > span.detail {
+    margin-top: 0;
+  }
 }
 .inner-page .news-list a:hover > span.title {
   color: #6b5444;
@@ -4667,11 +4829,11 @@ section.contact {
 }
 
 .news-article {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1024px) {
   .news-article {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 .news-article.mt-0 {
@@ -4691,7 +4853,6 @@ section.contact {
 }
 .news-article .article-body img {
   max-width: 100%;
-  width: 300px;
 }
 
 .contact-page section.contact {
@@ -4790,7 +4951,7 @@ section.contact .h3 {
 }
 section.contact .form-column {
   margin: 20px;
-  padding: 20px 25px;
+  padding: 25px;
   background-color: #fdf5e9;
   -moz-border-radius: 1.5rem;
   -webkit-border-radius: 1.5rem;

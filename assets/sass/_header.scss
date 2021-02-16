@@ -28,6 +28,9 @@ header {
         a {
             display: block;
             color: $black;
+            @media screen and (min-width: 768px) {
+                text-shadow: 0 0 1px $black;
+            }
         }
         span {
             font-size: 1.26086957em;
@@ -35,6 +38,11 @@ header {
     }
     .container-fluid {
         position: relative;
+        .row {
+            @media screen and (max-width: 1279px) {
+                justify-content: flex-start;
+            }
+        }
     }
     .container {
         @media screen and (min-width: 1280px) {
@@ -113,11 +121,11 @@ nav {
             margin-right: 30px;
         }
         li {
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1280px) {
                 display: inline-block;
                 vertical-align: middle;
             }
-            @media screen and (max-width: 1023px) {
+            @media screen and (max-width: 1279px) {
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
@@ -125,22 +133,26 @@ nav {
                 display: block;
                 color: $white;
                 font-size: 1.25rem;
-                @media screen and (min-width: 1024px) {
+                text-shadow: 0 0 0 $black, 0 0 0 $black, 0 0 0 $black, 0 0 0.5px $black;
+                @media screen and (min-width: 1280px) {
                     padding-left: 30px;
                     padding-right: 30px;
                     color: $black;
                 }
                 &:hover {
                     color: $primary;
+                    text-shadow: 0 0 0 $primary, 0 0 0 $primary, 0 0 0 $primary, 0 0 0.5px $primary;
                 }
             }
             &.phone a {
-                @media screen and (min-width: 1024px) {
+                @media screen and (min-width: 1280px) {
                     padding-right: 0;
                     color: $primary;
                     font-size: 1rem;
+                    text-shadow: 0 0 0 $primary, 0 0 0 $primary, 0 0 0 $primary, 0 0 0.5px $primary;
                     &:hover {
                         color: $red-400;
+                        text-shadow: 0 0 0 $red-400, 0 0 0 $red-400, 0 0 0 $red-400, 0 0 0.5px $red-400;
                     }
                 }
                 > * {
@@ -181,6 +193,7 @@ nav {
                     color: $white;
                     font-size: 1rem;
                     line-height: 1.25;
+                    text-shadow: 0 0 0 $white, 0 0 0 $white, 0 0 0 $white, 0 0 0.5px $white;
                     @media screen and (min-width: 1280px) {
                         border-bottom: 1px solid transparent;
                     }

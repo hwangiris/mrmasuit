@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>紳仕上癮 Mr. Ma & Suit</title>
+    <title>宏道法律事務所</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <meta name="description" content="在顧客溝通想法與挑選完布料後，我們會進行量身，並用量身的數據，製作出專屬每位顧客的個人紙版，紙版上每一個線段的長度、角度皆是按照顧客的體型去打造，過程中會有一次半成品的試穿與調整，試穿完畢後師傅會根據試穿時的數據在裁片上做修正，經過一連串縝密、費時的手工後，才會完成成品並交衣。完全訂製強調西裝的版型以及精緻細膩手工，顧客可以根據自己的喜好與使用習慣，選擇喜歡的領型、調整各處的尺寸，甚至指定想要的版型，除此之外，我們也提供完全訂製的客人最完善的售後服務。"
     />
@@ -52,8 +52,21 @@
         </div>
     </header>
     <main>
-        <section class="opening">
-            <img class="img" src="assets/images/opening.jpg" alt="">
+        <section id="opening" class="section opening">
+            <div class="desktop">
+                <div class="slider-opening">
+                    <div>
+                        <img class="img" src="assets/images/opening.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="slider-opening">
+                    <div>
+                        <img class="img" src="assets/images/opening.jpg" alt="">
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="title">
                     <div class="h3 sans mb-md-20">Justice is our signature </div>
@@ -111,7 +124,7 @@
                         <img src="assets/images/index-service.jpg" width="100%" alt="">
                         <div class="grid-list">
                             <div class="grid">
-                                <span class="h4">民事訴訟代理</span>
+                                <span class="h4"><span>民事訴訟</span><span>代理</span></span>
                                 <p>刑事自訴人應委任律師代理。被告就其所犯罪名最重本刑為拘役或專科罰金之案件，得委任律師代理訴訟。被告得委任律師為辯護人 (至多委任3人)。</p>
                             </div>
                             <div class="grid">
@@ -119,7 +132,7 @@
                                 <p>刑事自訴人應委任律師代理。被告就其所犯罪名最重本刑為拘役或專科罰金之案件，得委任律師代理訴訟。被告得委任律師為辯護人 (至多委任3人)。</p>
                             </div>
                             <div class="grid">
-                                <span class="h4">行政訴訟代理</span>
+                                <span class="h4"><span>行政訴訟</span><span>代理</span></span>
                                 <p>刑事自訴人應委任律師代理。被告就其所犯罪名最重本刑為拘役或專科罰金之案件，得委任律師代理訴訟。被告得委任律師為辯護人 (至多委任3人)。</p>
                             </div>
                             <div class="grid">
@@ -235,27 +248,15 @@
                         </div>
                         <form class="contact-form" action="#!" method="post">
                             <div class="row">
-                                <div class="col-md-3 mt-md-0 mt-20">
+                                <div class="col-md-4 mt-md-0 mt-20">
                                     <div class="h5">姓名*</div>
                                     <input type="text" name="name" id="name" placeholder="請輸入姓名">
                                 </div>
-                                <div class="col-md-3 mt-md-0 mt-20">
-                                    <div class="h5">性別</div>
-                                    <label for="male">
-                                        <input type="radio" id="male" name="gender" value="male"> 先生
-                                    </label>
-                                    <label for="female">
-                                        <input type="radio" id="female" name="gender" value="female"> 女士
-                                    </label>
-                                    <label for="other">
-                                        <input type="radio" id="other" name="gender" value="other"> 其他
-                                    </label>
-                                </div>
-                                <div class="col-md-3 mt-md-0 mt-20">
+                                <div class="col-md-4 mt-md-0 mt-20">
                                     <div class="h5">電話*</div>
                                     <input type="tel" name="phone" id="phone" placeholder="請輸入電話">
                                 </div>
-                                <div class="col-md-3 mt-md-0 mt-20">
+                                <div class="col-md-4 mt-md-0 mt-20">
                                     <div class="h5">信箱</div>
                                     <input type="email" name="email" id="email" placeholder="請輸入信箱">
                                 </div>
@@ -303,7 +304,10 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">Copyright © 2021 宏道法律事務所 All rights reserved.</div>
+        <div class="container-fluid">
+            <span>Copyright © 2021 宏道法律事務所</span>
+            <span>All rights reserved.</span>
+        </div>
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

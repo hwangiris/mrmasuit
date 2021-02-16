@@ -19,6 +19,9 @@ footer {
         text-align: center;
         background-color: $primary;
         z-index: 1;
+        span {
+            display: inline-block;
+        }
     }
     > .frame-bg {
         position: absolute;
@@ -35,6 +38,9 @@ footer {
             bottom: 0;
             left: 0;
             right: 0;
+        }
+        iframe {
+            display: block;
         }
     }
     ul {
