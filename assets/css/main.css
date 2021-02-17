@@ -254,7 +254,8 @@ html {
 
 body {
   position: relative;
-  font-family: "custom-cwTeXKai", serif;
+  font-family: "custom-cwTeXKai", "標楷體", serif;
+  font-size: 1.125rem;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -3525,7 +3526,8 @@ nav ul li a {
   display: block;
   color: #fff;
   font-size: 1.25rem;
-  text-shadow: 0 0 0 #000, 0 0 0 #000, 0 0 0 #000, 0 0 0.5px #000;
+  -webkit-text-stroke: 0.5px #000;
+  text-stroke: 0.5px #000;
 }
 @media screen and (min-width: 1280px) {
   nav ul li a {
@@ -3536,18 +3538,21 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #8a6d58;
-  text-shadow: 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0.5px #8a6d58;
+  -webkit-text-stroke: 0.5px #8a6d58;
+  text-stroke: 0.5px #8a6d58;
 }
 @media screen and (min-width: 1280px) {
   nav ul li.phone a {
     padding-right: 0;
     color: #8a6d58;
     font-size: 1rem;
-    text-shadow: 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0 #8a6d58, 0 0 0.5px #8a6d58;
+    -webkit-text-stroke: 0.5px #8a6d58;
+    text-stroke: 0.5px #8a6d58;
   }
   nav ul li.phone a:hover {
     color: #6b5444;
-    text-shadow: 0 0 0 #6b5444, 0 0 0 #6b5444, 0 0 0 #6b5444, 0 0 0.5px #6b5444;
+    -webkit-text-stroke: 0.5px #6b5444;
+    text-stroke: 0.5px #6b5444;
   }
 }
 nav ul li.phone a > * {
@@ -3594,7 +3599,8 @@ nav ul.lang li a {
   color: #fff;
   font-size: 1rem;
   line-height: 1.25;
-  text-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff, 0 0 0.5px #fff;
+  -webkit-text-stroke: 0.5px #fff;
+  text-stroke: 0.5px #fff;
 }
 @media screen and (min-width: 1280px) {
   nav ul.lang li a {
@@ -3687,6 +3693,9 @@ footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+footer .contact-list {
+  font-size: 1rem;
 }
 @media screen and (max-width: 413px) {
   footer .contact-list {
@@ -3820,7 +3829,12 @@ footer .btn-list ul li.facebook span {
     min-width: 120px;
   }
 }
-@media screen and (min-width: 1780px) {
+@media screen and (min-width: 1920px) {
+  .index-page section .btn {
+    min-width: 130px;
+  }
+}
+@media screen and (min-width: 2560px) {
   .index-page section .btn {
     min-width: 150px;
   }
@@ -3875,6 +3889,10 @@ footer .btn-list ul li.facebook span {
   .index-page section .container .txt-col, .index-page section .container-fluid .txt-col {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .index-page section .container .txt-col, .index-page section .container-fluid .txt-col {
     padding-left: 4%;
     padding-right: 6%;
   }
@@ -3933,11 +3951,6 @@ footer .btn-list ul li.facebook span {
   .index-page section .container .txt, .index-page section .container-fluid .txt {
     padding-bottom: 20px;
     font-size: 1.125rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .index-page section .container .btn-group, .index-page section .container-fluid .btn-group {
-    margin-right: -60px;
   }
 }
 .index-page section.opening {
@@ -4084,7 +4097,6 @@ footer .btn-list ul li.facebook span {
 }
 @media screen and (min-width: 1024px) {
   .index-page section.service {
-    height: 100vh;
     min-height: 100vh;
   }
   .index-page section.service .row {
@@ -4094,6 +4106,14 @@ footer .btn-list ul li.facebook span {
 .index-page section.service .container-fluid {
   padding-top: 0;
   padding-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .index-page section.service .container-fluid {
+    min-height: 100vh;
+  }
+  .index-page section.service .container-fluid > .row {
+    min-height: 100vh;
+  }
 }
 .index-page section.service .container-fluid [class^="col-"], .index-page section.service .container-fluid [class*=" col-"] {
   position: relative;
@@ -4215,19 +4235,27 @@ footer .btn-list ul li.facebook span {
     color: #000;
   }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
+  .index-page section.service .btn-group {
+    width: calc(100% + 60px);
+  }
+}
+@media screen and (min-width: 1024px) {
   .index-page section.news {
     min-height: 100vh;
   }
-}
-@media screen and (min-width: 1280px) {
-  .index-page section.news {
-    height: 100vh;
+  .index-page section.news > .row {
+    min-height: 100vh;
   }
 }
 .index-page section.news .container-fluid {
   padding-top: 0;
   padding-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .index-page section.news .container-fluid {
+    min-height: 100vh;
+  }
 }
 .index-page section.news .container-fluid .img-col {
   position: relative;
@@ -4255,6 +4283,7 @@ footer .btn-list ul li.facebook span {
   padding: 20px;
   color: #fff;
   font-size: 2rem;
+  font-weight: bold;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #000000), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));

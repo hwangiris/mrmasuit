@@ -107,20 +107,6 @@ $(function() {
         fade: true,
         cssEase: 'linear',
     });
-    var containerWidth = $('.container').width();
-    $('.nav-list').each(function(){
-        var t = $(this),
-            tWidth = 0;
-        $('li', t).each(function(){
-            tWidth += Math.ceil($(this).outerWidth(true)) + 0.5;
-            console.log(tWidth);
-        });
-        t.css('width',tWidth + 15 + t.outerWidth(true) - t.width());
-        console.log(containerWidth , t.width());
-        if ( containerWidth < t.width() ) {
-            t.parent().addClass('nav-over-scroll');
-        }
-    });
     var url = window.location.href,
         id = url.split('id=')[1];
     if (id != undefined) {
@@ -167,6 +153,22 @@ $(function() {
             }
         }
     })
+    $(window).on('load', function() {
+        var containerWidth = $('.container').width();
+        $('.nav-list').each(function(){
+            var t = $(this),
+                tWidth = 0;
+            $('li', t).each(function(){
+                tWidth += Math.ceil($(this).outerWidth(true)) + 0.5;
+                console.log(tWidth);
+            });
+            t.css('width',tWidth + 15 + t.outerWidth(true) - t.width());
+            console.log(containerWidth , t.width());
+            if ( containerWidth < t.width() ) {
+                t.parent().addClass('nav-over-scroll');
+            }
+        });
+    });
     $(window).resize(function() {
         if (width >= 1024) {
             $('.half-banner-group').each(function() {

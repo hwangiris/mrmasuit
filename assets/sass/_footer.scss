@@ -47,6 +47,7 @@ footer {
         @include listrest(0, 0, none);
     }
     .contact-list {
+        font-size: 1rem;
         @media screen and (max-width: 413px) {
             width: 100%;
         }

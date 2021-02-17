@@ -15,7 +15,10 @@
             @media screen and (min-width: 1024px) {
                 min-width: 120px;
             }
-            @media screen and (min-width: 1780px) {
+            @media screen and (min-width: 1920px) {
+                min-width: 130px;
+            }
+            @media screen and (min-width: 2560px) {
                 min-width: 150px;
             }        
             &:hover {
@@ -58,6 +61,8 @@
                 @media screen and (min-width: 1920px) {
                     padding-top: 80px;
                     padding-bottom: 80px;
+                }
+                @media screen and (min-width: 2560px) {
                     padding-left: 4%;
                     padding-right: 6%;
                 }
@@ -102,11 +107,6 @@
                 @media screen and (max-width: 1279px) {
                     padding-bottom: 20px;
                     font-size: 1.125rem;
-                }
-            }
-            .btn-group {
-                @media screen and (min-width: 1024px) {
-                    margin-right: -60px;
                 }
             }
         }
@@ -239,7 +239,6 @@
         &.service {
             position: relative;
             @media screen and (min-width: 1024px) {
-                height: 100vh;
                 min-height: 100vh;
                 .row {
                     flex-direction: row-reverse;
@@ -248,6 +247,12 @@
             .container-fluid {
                 padding-top: 0;
                 padding-bottom: 0;
+                @media screen and (min-width: 1024px) {
+                    min-height: 100vh;
+                    > .row {
+                        min-height: 100vh;
+                    }
+                }
                 [class^="col-"], [class*=" col-"] {
                     position: relative;
                     img {
@@ -355,17 +360,25 @@
                     }
                 }
             }
+            .btn-group {
+                @media screen and (min-width: 1024px) {
+                    width: calc(100% + 60px);
+                }
+            }
         }
         &.news {
-            @media screen and (min-width: 1024px) and (orientation: landscape) {
+            @media screen and (min-width: 1024px) {
                 min-height: 100vh;
-            }
-            @media screen and (min-width: 1280px) {
-                height: 100vh;
+                > .row {
+                    min-height: 100vh;
+                }
             }
             .container-fluid {
                 padding-top: 0;
                 padding-bottom: 0;
+                @media screen and (min-width: 1024px) {
+                    min-height: 100vh;
+                }
                 .img-col {
                     position: relative;
                     padding-left: 0;
@@ -389,6 +402,7 @@
                         padding: 20px;
                         color: $white;
                         font-size: 2rem;
+                        font-weight: bold;
                         @include background-image(linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%));
                         z-index: 1;
                         @media screen and (min-width: 768px) {
