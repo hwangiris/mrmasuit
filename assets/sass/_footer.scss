@@ -47,7 +47,7 @@ footer {
         @include listrest(0, 0, none);
     }
     .contact-list {
-        font-size: 1rem;
+        font-size: $h5;
         @media screen and (max-width: 413px) {
             width: 100%;
         }
@@ -56,11 +56,20 @@ footer {
         }
         .title {
             margin-bottom: 10px;
-            font-size: 2rem;
-            letter-spacing: 0.15em;
+            font-size: $h2;
+            font-weight: bold;
+            letter-spacing: 0.075em;
             line-height: 1;
+            text-shadow: 0 0 1px $black;
+            @media screen and (min-width: 768px) {
+                margin-right: -50px;
+                font-size: $h5 * 2;
+            }
+            @media screen and (min-width: 1280px) {
+                font-size: $h2 * 2;
+            }
             span {
-                font-size: 1.3125em;
+                font-size: 1.26086957em;
             }
             @media screen and (min-width: 414px) and (max-width: 767px) {
                 margin-right: -170px;
@@ -81,7 +90,7 @@ footer {
                         margin-right: 0.5rem;
                     }
                     span {
-                        width: calc(100% - 1.5rem);
+                        width: calc(100% - 1.625rem);
                         @media screen and (max-width: 767px) {
                             line-height: 1.25;
                             word-break: break-word;
@@ -105,7 +114,10 @@ footer {
             width: 170px;
         }
         @media screen and (min-width: 414px) {
-            padding-top: 4.5rem;
+            padding-top: calc((1.625rem * 1.26086957) + 30px);
+        }
+        @media screen and (min-width: 1024px) {
+            padding-top: calc((1.625rem * 2 * 1.26086957) + 30px);
         }
         ul {
             li {
@@ -120,7 +132,7 @@ footer {
                     display: block;
                     padding: 10px;
                     color: $white;
-                    font-size: 1rem;
+                    font-size: $h5;
                     line-height: 1.25;
                     background-color: $primary;
                     @include border-radius(5px);
@@ -137,13 +149,13 @@ footer {
                         }
                         i.icon {
                             display: block;
-                            font-size: 1.25em;
+                            font-size: $h3;
                         }
                     }
                     span {
                         display: block;
                         padding-top: 0.5em;
-                        font-size: 0.875rem;
+                        font-size: $h6;
                         line-height: 1;
                     }
                 }

@@ -1,10 +1,10 @@
 .title {
     .h4 {
-        font-size: 1.75rem;
+        font-size: $h1;
     }
     .h5 {
         color: $gray-600;
-        font-size: 1rem;
+        font-size: $h5;
     }
 }
 .pagination {
@@ -97,7 +97,7 @@ section {
             }
             .h3 {
                 color: $primary;
-                font-size: 1.375rem;
+                font-size: $h3 * 1.1;
             }
             .txt > * {
                 display: none;
@@ -137,7 +137,7 @@ section {
         }
         .voc-content {
             .h6 {
-                font-size: 1.125rem;
+                font-size: $h4;
             }
         }
     }
@@ -198,7 +198,7 @@ section {
                     height: 100px;
                     padding: 30px;
                     color: $white;
-                    font-size: 1.125rem;
+                    font-size: $h4;
                     line-height: 1.25;
                     background-color: rgba($primary, 0.9);
                     @include translateX(-50%);
@@ -209,11 +209,11 @@ section {
             &.txt {
                 .name {
                     color: $primary;
-                    font-size: 1.375rem;
+                    font-size: $h3 * 1.1;
                 }
                 .title {
                     color: $black;
-                    font-size: 1rem;
+                    font-size: $h5;
                 }
             }
         }
@@ -249,7 +249,7 @@ section {
                 position: relative;
                 margin-bottom: 10px;
                 color: $primary;
-                font-size: 1.75rem;
+                font-size: $h1;
                 &::before {
                     @include beforeafter('', block);
                     position: absolute;
@@ -269,17 +269,17 @@ section {
                 }
             }
             .title {
-                font-size: 1.25rem;
+                font-size: $h3;
             }
         }
         .lawyer-intro {
-            font-size: 1.125rem;
+            font-size: $h4;
             word-break: break-word;
             .h5 {
                 padding-top: 20px;
                 padding-bottom: 10px;
                 color: $primary;
-                font-size: 1.25rem;
+                font-size: $h3;
                 border-bottom: 1px solid $gray-300;
             }
             ul {
@@ -298,7 +298,7 @@ section {
             }
         }
         .lawyer-profile {
-            font-size: 1.125rem;
+            font-size: $h4;
             @media screen and (min-width: 1024px) {
                 margin-top: -100px;
             }
@@ -312,11 +312,11 @@ section {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 1.5rem;
-                        height: 1.5rem;
+                        width: $h2;
+                        height: $h2;
                         @include border-radius(50%);
                         &::before {
-                            font-size: 0.875rem;
+                            font-size: $h6;
                         }
                     }
                 }
@@ -329,7 +329,7 @@ section {
                     }
                     a {
                         color: $gray-600;
-                        font-size: 1rem;
+                        font-size: $h5;
                         &:hover {
                             color: $primary;
                         }
@@ -354,7 +354,7 @@ section {
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: 5px;
-                    font-size: 1rem;
+                    font-size: $h5;
                     + li {
                         margin-right: 10px;
                     }
@@ -363,7 +363,7 @@ section {
                         &.icon-fb {
                             color: $facebook;
                             &::before {
-                                font-size: 1.5rem;
+                                font-size: $h2;
                             }
                         }
                         &.icon-twitter {
@@ -434,10 +434,10 @@ section {
                 }
                 &.title {
                     color: $primary;
-                    font-size: 1.125rem;
+                    font-size: $h4;
                     .icon {
                         margin-right: 10px;
-                        font-size: 1.5rem;
+                        font-size: $h2;
                     }
                 }
                 &.detail {
@@ -482,11 +482,11 @@ section {
         }
         .title {
             color: $primary;
-            font-size: 1.75rem;
+            font-size: $h1;
         }
     }
     .article-body {
-        font-size: 1.125rem;
+        font-size: $h4;
         img {
             max-width: 100%;
             // width: 300px;
@@ -528,12 +528,12 @@ section {
             li {
                 font-size: 0;
                 +li {
-                    margin-top: 1rem;
+                    margin-top: $h5;
                 }
                 >div {
                     display: inline-block;
                     vertical-align: text-top;
-                    font-size: 1rem;
+                    font-size: $h5;
                     line-height: 1.2;
                 }
                 .list-title {

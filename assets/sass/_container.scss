@@ -207,7 +207,7 @@ $align: left, center, right;
         }
     }
 }
-@include breakpoint(1280px) {
+@include breakpoint(1600px) {
     @for $i from 1 through 12 {
         .col-lg-#{$i} {
             width: #{$i*$unit};

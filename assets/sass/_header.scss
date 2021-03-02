@@ -11,18 +11,18 @@ header {
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 20px;
-        font-size: 1.5rem;
-        letter-spacing: 0.15em;
+        font-size: $h2;
+        letter-spacing: 0.075em;
         z-index: 1;
         @media screen and (min-width: 768px) {
-            font-size: 2rem;
+            font-size: $h5 * 2;
         }
         @media screen and (min-width: 1280px) {
             position: absolute;
             top: 50%;
             left: 80px;
             margin-left: 0;
-            font-size: 2.875rem;
+            font-size: $h2 * 2;
             @include translateY(-50%);
         }
         a {
@@ -132,12 +132,12 @@ nav {
             a {
                 display: block;
                 color: $white;
-                font-size: 1.25rem;
+                font-size: $h3;
                 -webkit-text-stroke: 0.5px $black;
                 text-stroke: 0.5px $black;
                 @media screen and (min-width: 1280px) {
-                    padding-left: 30px;
-                    padding-right: 30px;
+                    padding-left: 20px;
+                    padding-right: 20px;
                     color: $black;
                 }
                 &:hover {
@@ -150,7 +150,7 @@ nav {
                 @media screen and (min-width: 1280px) {
                     padding-right: 0;
                     color: $primary;
-                    font-size: 1rem;
+                    font-size: $h5;
                     -webkit-text-stroke: 0.5px $primary;
                     text-stroke: 0.5px $primary;
                     &:hover {
@@ -172,7 +172,7 @@ nav {
                 right: 20px;
                 padding: 8px 10px 12px;
                 background-color: $primary;
-                @include border-radius(0 0 1rem 1rem);
+                @include border-radius(0 0 $h5 $h5);
             }
             @media screen and (max-width: 1279px) {
                 padding-top: 10px;
@@ -195,7 +195,7 @@ nav {
                     display: block;
                     padding: 0;
                     color: $white;
-                    font-size: 1rem;
+                    font-size: $h5;
                     line-height: 1.25;
                     -webkit-text-stroke: 0.5px $white;
                     text-stroke: 0.5px $white;
@@ -213,7 +213,7 @@ nav {
                         position: absolute;
                         top: 50%;
                         left: 0;
-                        height: 1rem;
+                        height: $h5;
                         border-left: 1px solid $white;
                         @include translateY(-50%);
                     }

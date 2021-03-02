@@ -1,6 +1,6 @@
+@import "_variable";
 @import "_mixin";
 @import "_common";
-@import "_variable";
 @import "_container";
 @import "_button";
 @import "_font";
@@ -15,27 +15,27 @@ section.contact {
         color: $primary;
         line-height: 1.15;
         @media screen and (min-width: 1280px) {
-            font-size: 3.75rem;
+            font-size: $h1 * 2;
         }
         @media screen and (max-width: 1279px) {
-            font-size: 3.25rem;
+            font-size: $h2 * 2;
         }
     }
     .h3 {
         color: $primary;
         line-height: 1.15;
         @media screen and (min-width: 1280px) {
-            font-size: 2.25rem;
+            font-size: $h4 * 2;
         }
         @media screen and (max-width: 1279px) {
-            font-size: 1.75rem;
+            font-size: $h1;
         }
     }
     .form-column {
         margin: 20px;
         padding: 25px;
         background-color: $red-100;
-        @include border-radius(1.5rem);
+        @include border-radius($h2);
         @media screen and (min-width: 375px) {
             margin: 40px;
         }
@@ -101,6 +101,6 @@ section.contact {
         text-transform: uppercase;
     }
     i.icon {
-        font-size: 1rem;
+        font-size: $h5;
     }
 }

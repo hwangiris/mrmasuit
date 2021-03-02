@@ -7,20 +7,14 @@
             margin-top: 20px;
             margin-right: 20px;
             color: $white;
-            font-size: 1rem;
+            font-size: $h5;
             text-align: center;
             line-height: 1.25;
             background-color: $primary;
             @include border-radius(5px);
             @media screen and (min-width: 1024px) {
-                min-width: 120px;
+                min-width: calc((100% - 60px) / 2);
             }
-            @media screen and (min-width: 1920px) {
-                min-width: 130px;
-            }
-            @media screen and (min-width: 2560px) {
-                min-width: 150px;
-            }        
             &:hover {
                 background-color: $red-400;
             }
@@ -28,14 +22,14 @@
         .container, .container-fluid {
             position: relative;
             height: 100%;
-            @media screen and (orientation: landscape) {
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
-            @media screen and (min-width: 1280px) and (orientation: landscape) {
-                padding-top: 80px;
-                padding-bottom: 80px;
-            }
+            // @media screen and (orientation: landscape) {
+            //     padding-top: 40px;
+            //     padding-bottom: 40px;
+            // }
+            // @media screen and (min-width: 1280px) and (orientation: landscape) {
+            //     padding-top: 80px;
+            //     padding-bottom: 80px;
+            // }
             .row {
                 height: 100%;
             }
@@ -81,20 +75,20 @@
                 color: $primary;
                 line-height: 1.15;
                 @media screen and (min-width: 1414px) {
-                    font-size: 3.75rem;
+                    font-size: $h1 * 2;
                 }
                 @media screen and (max-width: 1415px) {
-                    font-size: 3.25rem;
+                    font-size: $h2 * 2;
                 }
             }
             .h3 {
                 color: $primary;
                 line-height: 1.15;
                 @media screen and (min-width: 1280px) {
-                    font-size: 2.25rem;
+                    font-size: $h5 * 2;
                 }
                 @media screen and (max-width: 1279px) {
-                    font-size: 1.75rem;
+                    font-size: $h1;
                 }
             }
             .txt {
@@ -102,11 +96,11 @@
                 @media screen and (min-width: 1280px) {
                     padding-top: 40px;
                     padding-bottom: 60px;
-                    font-size: 1.25rem;
+                    font-size: $h3;
                 }
                 @media screen and (max-width: 1279px) {
                     padding-bottom: 20px;
-                    font-size: 1.125rem;
+                    font-size: $h4;
                 }
             }
         }
@@ -209,12 +203,6 @@
                     object-fit: cover;
                     z-index: 0;
                 }
-                @media screen and (min-width: 1280px) {
-                    padding-right: 80px;
-                    img {
-                        width: calc(100% - 80px);
-                    }
-                }
             }
         }
         &.team {
@@ -314,36 +302,31 @@
                         padding: 20px;
                     }
                     @media screen and (min-width: 1280px) {
-                        padding: 70px 80px;
+                        padding: 70px 50px;
                     }
                     .h4 {
                         display: block;
                         width: 100%;
                         color: $white;
-                        font-size: 1.125rem;
+                        font-size: $h4;
                         text-align: center;
                         @media screen and (min-width: 768px) {
-                            font-size: 1.5rem;
+                            font-size: $h2;
                         }
                         @media screen and (min-width: 1280px) {
-                            font-size: 2rem;
+                            font-size: $h5 * 2;
                         }
                         @media screen and (max-width: 1279px) {
                             line-height: 1.25;
-                        }
-                        span {
-                            @media screen and (min-width: 768px) {
-                                display: inline-block;
-                            }
                         }
                     }
                     p {
                         display: none;
                         width: 100%;
                         color: $white;
-                        font-size: 1rem;
+                        font-size: $h5;
                         @media screen and (min-width: 1280px) {
-                            font-size: 1.125rem;
+                            font-size: $h4;
                         }
                     }
                     &:hover {
@@ -362,7 +345,7 @@
             }
             .btn-group {
                 @media screen and (min-width: 1024px) {
-                    width: calc(100% + 60px);
+                    width: calc(100% + 20px);
                 }
             }
         }
@@ -401,7 +384,7 @@
                         bottom: 5vh;
                         padding: 20px;
                         color: $white;
-                        font-size: 2rem;
+                        font-size: $h5 * 2;
                         font-weight: bold;
                         @include background-image(linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%));
                         z-index: 1;
@@ -411,7 +394,7 @@
                         @media screen and (min-width: 1280px) {
                             bottom: 10vh;
                             padding: 80px;
-                            font-size: 3.75rem;
+                            font-size: $h1 * 2;
                         }
                     }
                 }
