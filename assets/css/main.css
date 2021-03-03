@@ -3242,6 +3242,9 @@ a.btn, button {
   font-size: 1.125rem;
   text-align: center;
   line-height: 1.25;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   outline: 0;
 }
 @media screen and (min-width: 1024px) {
@@ -3254,27 +3257,19 @@ button[type*='submit'] {
   color: #fff;
   background-color: #8a6d58;
   border: 0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
 }
 button[type*='submit']:hover {
   background-color: #6b5444;
 }
 
-.btn {
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-}
 .btn.btn-outlined {
   color: #8a6d58;
   background-color: transparent;
   border: 1px solid #8a6d58;
 }
 .btn.btn-outlined:hover {
-  color: #1e1d1d;
-  border-color: #1e1d1d;
+  color: #6b5444;
+  border-color: #6b5444;
 }
 .btn.btn-outlined.btn-grayscale {
   color: #898989;
@@ -3288,6 +3283,10 @@ button[type*='submit']:hover {
   color: #fff;
   background-color: #8a6d58;
   border: 1px solid #8a6d58;
+}
+.btn.btn-contained:hover {
+  background-color: #6b5444;
+  border-color: #6b5444;
 }
 
 @font-face {
@@ -3313,32 +3312,36 @@ button[type*='submit']:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-x:before {
+  content: "";
+}
+
 .icon-message-square:before {
-  content: "";
+  content: "";
 }
 
 .icon-clock:before {
-  content: "";
+  content: "";
 }
 
 .icon-twitter:before {
-  content: "";
+  content: "";
 }
 
 .icon-sinaweibo:before {
-  content: "";
-}
-
-.icon-line:before {
   content: "";
 }
 
-.icon-fb:before {
+.icon-line:before {
   content: "";
 }
 
+.icon-fb:before {
+  content: "";
+}
+
 .icon-facebook:before {
-  content: "";
+  content: "";
 }
 
 .icon-map-marker:before {
@@ -3717,7 +3720,7 @@ footer .contact-list .title {
 }
 @media screen and (min-width: 768px) {
   footer .contact-list .title {
-    margin-right: -50px;
+    margin-right: -65%;
     font-size: 2.25rem;
   }
 }
@@ -3823,7 +3826,7 @@ footer .btn-list ul li.facebook a.btn i.icon {
 footer .btn-list ul li.facebook span {
   display: block;
   padding-top: 0.5em;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -4157,6 +4160,11 @@ footer .btn-list ul li.facebook span {
   height: 33.33333%;
   padding: 10px;
 }
+@media screen and (max-width: 1279px) {
+  .index-page section.service .grid-list .grid {
+    cursor: pointer;
+  }
+}
 .index-page section.service .grid-list .grid:nth-child(even) {
   background-color: rgba(138, 109, 88, 0.9);
 }
@@ -4168,9 +4176,14 @@ footer .btn-list ul li.facebook span {
     padding: 20px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .index-page section.service .grid-list .grid {
-    padding: 70px 50px;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .index-page section.service .grid-list .grid {
+    padding: 50px;
   }
 }
 .index-page section.service .grid-list .grid .h4 {
@@ -4179,6 +4192,7 @@ footer .btn-list ul li.facebook span {
   color: #fff;
   font-size: 1.25rem;
   text-align: center;
+  line-height: 1.125;
 }
 @media screen and (min-width: 768px) {
   .index-page section.service .grid-list .grid .h4 {
@@ -4195,6 +4209,11 @@ footer .btn-list ul li.facebook span {
     line-height: 1.25;
   }
 }
+@media screen and (min-width: 1280px) {
+  .index-page section.service .grid-list .grid .h4 span {
+    display: inline-block;
+  }
+}
 .index-page section.service .grid-list .grid p {
   display: none;
   width: 100%;
@@ -4203,8 +4222,11 @@ footer .btn-list ul li.facebook span {
 }
 @media screen and (min-width: 1280px) {
   .index-page section.service .grid-list .grid p {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
+}
+.index-page section.service .grid-list .grid p:last-child {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 1280px) {
   .index-page section.service .grid-list .grid:hover {
@@ -4223,22 +4245,9 @@ footer .btn-list ul li.facebook span {
     width: calc(100% + 20px);
   }
 }
-@media screen and (min-width: 1024px) {
-  .index-page section.news {
-    min-height: 100vh;
-  }
-  .index-page section.news > .row {
-    min-height: 100vh;
-  }
-}
 .index-page section.news .container-fluid {
   padding-top: 0;
   padding-bottom: 0;
-}
-@media screen and (min-width: 1024px) {
-  .index-page section.news .container-fluid {
-    min-height: 100vh;
-  }
 }
 .index-page section.news .container-fluid .img-col {
   position: relative;
@@ -4698,7 +4707,7 @@ section.contact {
   border-radius: 50%;
 }
 .lawyer-single .row .lawyer-profile .connect li i.icon::before, .lawyer-single .row .lawyer-profile .social li i.icon::before {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .lawyer-single .row .lawyer-profile .connect {
   margin: 40px 0 20px;
@@ -4928,6 +4937,162 @@ section.contact {
 }
 .contact-page section .contact-list li .list-content a:hover, .contact-page section .contact-list li .list-content a:active, .contact-page section .contact-list li .list-content a.active, .contact-page section .contact-list li .list-content a:focus {
   color: #8a6d58;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  z-index: 1050;
+}
+.modal:not(.show) {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal .modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 20px;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .modal .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+.modal .modal-dialog.modal-dialog-scrollable {
+  display: -ms-flexbox;
+  display: flex;
+  max-height: calc(100% - 40px);
+}
+@media (min-width: 768px) {
+  .modal .modal-dialog.modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+}
+.modal .modal-dialog.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .modal .modal-dialog.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+}
+.modal .modal-dialog.modal-dialog-centered {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - 40px);
+}
+@media (min-width: 768px) {
+  .modal .modal-dialog.modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+}
+.modal .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fdf5e9;
+  background-clip: padding-box;
+  border: 1px solid #8a6d58;
+  outline: 0;
+}
+.modal .modal-content button.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 1rem;
+  min-width: auto;
+  background: none;
+  border: 0;
+}
+.modal .modal-content button.modal-close i.icon {
+  display: block;
+  font-size: 1.25rem;
+}
+.modal .modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #8a6d58;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.modal-dialog-scrollable .modal .modal-header {
+  -ms-flex-negative: 0;
+}
+.modal .modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.modal .modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal-dialog-scrollable .modal .modal-footer {
+  flex-shrink: 0;
+}
+.modal.fade .modal-dialog {
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  -moz-transform: translate(0, -50px);
+  -ms-transform: translate(0, -50px);
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+.modal.show .modal-dialog {
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 1040;
+}
+.modal-backdrop.show {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
 
 section.contact {

@@ -292,6 +292,9 @@
                     width: 33.33333%;
                     height: 33.33333%;
                     padding: 10px;
+                    @media screen and (max-width: 1279px) {
+                        cursor: pointer;
+                    }
                     &:nth-child(even) {
                         background-color: rgba($primary, 0.9);
                     }
@@ -301,8 +304,11 @@
                     @media screen and (min-width: 768px) {
                         padding: 20px;
                     }
-                    @media screen and (min-width: 1280px) {
-                        padding: 70px 50px;
+                    @media screen and (min-width: 1024px) {
+                        padding: 30px;
+                    }
+                    @media screen and (min-width: 1600px) {
+                        padding: 50px;
                     }
                     .h4 {
                         display: block;
@@ -310,6 +316,7 @@
                         color: $white;
                         font-size: $h4;
                         text-align: center;
+                        line-height: 1.125;
                         @media screen and (min-width: 768px) {
                             font-size: $h2;
                         }
@@ -319,6 +326,11 @@
                         @media screen and (max-width: 1279px) {
                             line-height: 1.25;
                         }
+                        span {
+                            @media screen and (min-width: 1280px) {
+                                display: inline-block;
+                            }
+                        }
                     }
                     p {
                         display: none;
@@ -326,7 +338,10 @@
                         color: $white;
                         font-size: $h5;
                         @media screen and (min-width: 1280px) {
-                            font-size: $h4;
+                            font-size: $h3 * 0.9;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
                         }
                     }
                     &:hover {
@@ -351,16 +366,16 @@
         }
         &.news {
             @media screen and (min-width: 1024px) {
-                min-height: 100vh;
+                // min-height: 100vh;
                 > .row {
-                    min-height: 100vh;
+                    // min-height: 100vh;
                 }
             }
             .container-fluid {
                 padding-top: 0;
                 padding-bottom: 0;
                 @media screen and (min-width: 1024px) {
-                    min-height: 100vh;
+                    // min-height: 100vh;
                 }
                 .img-col {
                     position: relative;

@@ -23,14 +23,17 @@ $(function() {
             $(btnGroup).remove().clone().insertAfter(phrase).addClass('col-12');
         })
     }
-    $('.btn--modal').each(function() {
-        var idx = $(this).data('modal');
-        $(this).click(function() {
-            console.log(idx);
-            $('body').addClass('modal-open');
-            $('.' + idx + ', .modal-backdrop').fadeIn();
-        })
-    });
+    if (width < 1280) {
+        $('.grid').each(function() {
+            var idx = $(this).data('modal');
+            $(this).click(function() {
+                console.log(idx);
+                $('body').addClass('modal-open');
+                $('.modal-' + idx + ', .modal-backdrop').fadeIn();
+                $('.modal-' + idx + ', .modal-backdrop').addClass('show');
+            })
+        });
+    }
     $('.collapse-text').each(function() {
         if ($(this).outerHeight() >= 220) {
             $(this).addClass('collapse-hide');
@@ -107,25 +110,14 @@ $(function() {
         fade: true,
         cssEase: 'linear',
     });
-    var url = window.location.href,
-        id = url.split('id=')[1];
-    if (id != undefined) {
-        $('body').addClass('modal-open');
-        $('.' + id + ', .modal-backdrop').fadeIn();
-        $('.slide-img-grid').slick("slickSetOption", "draggable", true, true);
-    }
     $('.modal-backdrop, .modal, .modal-dialog, .modal-close').click(function() {
         $('body').removeClass('modal-open');
         $('.modal, .modal-backdrop').fadeOut();
+        $('.modal-' + idx + ', .modal-backdrop').removeClass('show');
     });
-    $('.modal-content').click(function(e) {
+    $('.modal-header, .modal-body').click(function(e) {
         e.stopPropagation()
     });
-    if (!location.href.match(/wedding/)) {
-        $('.list-section').each(function() {
-            $(this).parent().children('.list-section').last().addClass('pb-80');
-        })
-    }
     $('.jumbotron > .container').has('.btn-group').addClass('has-btn');
     $('a[target="_blank"]').each(function() {
         $(this).addClass('blank-link');

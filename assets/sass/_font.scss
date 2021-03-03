@@ -1,13 +1,14 @@
 $icomoon-font-family: "law" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon-message-square: "\e906";
-$icon-clock: "\e905";
-$icon-twitter: "\e904";
-$icon-sinaweibo: "\e901";
-$icon-line: "\e902";
-$icon-fb: "\e903";
-$icon-facebook: "\e900";
+$icon-x: "\e900";
+$icon-facebook: "\e901";
+$icon-sinaweibo: "\e902";
+$icon-line: "\e903";
+$icon-fb: "\e904";
+$icon-twitter: "\e905";
+$icon-clock: "\e906";
+$icon-message-square: "\e907";
 $icon-map-marker: "\f041";
 $icon-phone: "\f095";
 $icon-envelope: "\f0e0";
@@ -46,6 +47,11 @@ $icon-fax: "\f1ac";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-x {
+  &:before {
+    content: $icon-x; 
+  }
+}
 .icon-message-square {
   &:before {
     content: $icon-message-square;

@@ -5,6 +5,7 @@ a.btn, button {
     font-size: $h5;
     text-align: center;
     line-height: 1.25;
+    @include border-radius(5px);
     outline: 0;
     @media screen and (min-width: 1024px) {
         min-width: 160px;
@@ -14,20 +15,18 @@ button[type*='submit'] {
     color: $white;
     background-color: $primary;
     border: 0;
-    @include border-radius(5px);
     &:hover {
         background-color: $red-400;
     }
 }
 .btn {
-    @include border-radius(25px);
     &.btn-outlined {
         color: $primary;
         background-color: transparent;
         border: 1px solid $primary;
         &:hover {
-            color: $primary-variant;
-            border-color: $primary-variant;
+            color: $red-400;
+            border-color: $red-400;
         }
         &.btn-grayscale {
             color: $gray-600;
@@ -42,5 +41,9 @@ button[type*='submit'] {
         color: $white;
         background-color: $primary;
         border: 1px solid $primary;
+        &:hover {
+            background-color: $red-400;
+            border-color: $red-400;
+        }
     }
 }

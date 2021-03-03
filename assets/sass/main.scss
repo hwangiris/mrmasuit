@@ -8,6 +8,7 @@
 @import "_footer";
 @import "_index";
 @import "_inner";
+@import "_modal";
 
 section.contact {
     position: relative;
@@ -74,7 +75,6 @@ section.contact {
         }
     }
 }
-
 #top {
     display: none;
     position: fixed;
