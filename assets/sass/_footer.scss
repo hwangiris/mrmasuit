@@ -91,9 +91,9 @@ footer {
                     }
                     span {
                         width: calc(100% - 1.625rem);
+                        word-break: break-word;
                         @media screen and (max-width: 767px) {
                             line-height: 1.25;
-                            word-break: break-word;
                         }
                     }
                     &:hover {

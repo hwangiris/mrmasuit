@@ -87,6 +87,66 @@ $align: left, center, right;
         text-align: #{nth($align, $i)};
     }
 }
+@include breakpoint(414px) {
+    @for $i from 1 through 12 {
+        .col-xs-#{$i} {
+            width: #{$i*$unit};
+        }
+    }
+    @for $i from 1 through length($space) {
+        .m-xs-#{nth($space,$i)} {
+            margin: #{nth($space, $i)}px !important;
+        }
+        .my-xs-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px !important;
+            margin-bottom: #{nth($space, $i)}px !important;
+        }
+        .mx-xs-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px !important;
+            margin-right: #{nth($space, $i)}px !important;
+        }
+        .mt-xs-#{nth($space,$i)} {
+            margin-top: #{nth($space, $i)}px !important;
+        }
+        .mb-xs-#{nth($space,$i)} {
+            margin-bottom: #{nth($space, $i)}px !important;
+        }
+        .ml-xs-#{nth($space,$i)} {
+            margin-left: #{nth($space, $i)}px !important;
+        }
+        .mr-xs-#{nth($space,$i)} {
+            margin-right: #{nth($space, $i)}px !important;
+        }
+        .p-xs-#{nth($space,$i)} {
+            padding: #{nth($space, $i)}px !important;
+        }
+        .py-xs-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px !important;
+            padding-bottom: #{nth($space, $i)}px !important;
+        }
+        .px-xs-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px !important;
+            padding-right: #{nth($space, $i)}px !important;
+        }
+        .pt-xs-#{nth($space,$i)} {
+            padding-top: #{nth($space, $i)}px !important;
+        }
+        .pb-xs-#{nth($space,$i)} {
+            padding-bottom: #{nth($space, $i)}px !important;
+        }
+        .pl-xs-#{nth($space,$i)} {
+            padding-left: #{nth($space, $i)}px !important;
+        }
+        .pr-xs-#{nth($space,$i)} {
+            padding-right: #{nth($space, $i)}px !important;
+        }
+    }
+    @for $i from 1 through length($align) {
+        .text-xs-#{nth($align,$i)} {
+            text-align: #{nth($align, $i)};
+        }
+    }
+}
 @include breakpoint(768px) {
     @for $i from 1 through 12 {
         .col-sm-#{$i} {
