@@ -56,14 +56,19 @@ footer {
         }
         .title {
             margin-bottom: 10px;
-            font-size: $h3;
+            font-size: $h1;
             font-weight: bold;
             letter-spacing: 0.075em;
             line-height: 1;
             text-shadow: 0 0 1px $black;
+            @media screen and (min-width: 375px) {
+                font-size: $h5 * 2;
+                letter-spacing: 0.0125em;
+            }
             @media screen and (min-width: 768px) {
                 margin-right: -65%;
                 font-size: $h6 * 2;
+                letter-spacing: 0.075em;
             }
             @media screen and (min-width: 1280px) {
                 font-size: $h3 * 2;
