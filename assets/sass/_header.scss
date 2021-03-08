@@ -33,7 +33,7 @@ header {
             }
         }
         span {
-            font-size: 1.26086957em;
+            // font-size: 1.26086957em;
         }
     }
     .container-fluid {
@@ -131,14 +131,18 @@ nav {
             }
             a {
                 display: block;
-                color: $white;
                 font-size: $h3;
-                -webkit-text-stroke: 0.5px $black;
-                text-stroke: 0.5px $black;
                 @media screen and (min-width: 1280px) {
                     padding-left: 20px;
                     padding-right: 20px;
                     color: $black;
+                    -webkit-text-stroke: 0.5px $black;
+                    text-stroke: 0.5px $black;
+                }
+                @media screen and (max-width: 1279px) {
+                    color: $white;
+                    -webkit-text-stroke: 0.5px $white;
+                    text-stroke: 0.5px $white;
                 }
                 &:hover {
                     color: $primary;

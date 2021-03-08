@@ -3408,9 +3408,6 @@ header h1 a {
     text-shadow: 0 0 1px #000;
   }
 }
-header h1 span {
-  font-size: 1.26086957em;
-}
 header .container-fluid {
   position: relative;
 }
@@ -3527,16 +3524,22 @@ nav ul {
 }
 nav ul li a {
   display: block;
-  color: #fff;
   font-size: 1.5rem;
-  -webkit-text-stroke: 0.5px #000;
-  text-stroke: 0.5px #000;
 }
 @media screen and (min-width: 1280px) {
   nav ul li a {
     padding-left: 20px;
     padding-right: 20px;
     color: #000;
+    -webkit-text-stroke: 0.5px #000;
+    text-stroke: 0.5px #000;
+  }
+}
+@media screen and (max-width: 1279px) {
+  nav ul li a {
+    color: #fff;
+    -webkit-text-stroke: 0.5px #fff;
+    text-stroke: 0.5px #fff;
   }
 }
 nav ul li a:hover {
@@ -3712,7 +3715,7 @@ footer .contact-list {
 }
 footer .contact-list .title {
   margin-bottom: 10px;
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 0.075em;
   line-height: 1;
@@ -3721,16 +3724,13 @@ footer .contact-list .title {
 @media screen and (min-width: 768px) {
   footer .contact-list .title {
     margin-right: -65%;
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   footer .contact-list .title {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
-}
-footer .contact-list .title span {
-  font-size: 1.26086957em;
 }
 @media screen and (min-width: 414px) and (max-width: 767px) {
   footer .contact-list .title {
@@ -3902,7 +3902,7 @@ footer .btn-list ul li.facebook span {
 .index-page section .container .img-col, .index-page section .container-fluid .img-col {
   position: relative;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1440px) {
   .index-page section .container .img-col, .index-page section .container-fluid .img-col {
     padding-left: 0;
     padding-right: 0;
@@ -3912,12 +3912,12 @@ footer .btn-list ul li.facebook span {
   color: #8a6d58;
   line-height: 1.15;
 }
-@media screen and (min-width: 1414px) {
+@media screen and (min-width: 1441px) {
   .index-page section .container .h2, .index-page section .container-fluid .h2 {
     font-size: 3.75rem;
   }
 }
-@media screen and (max-width: 1415px) {
+@media screen and (max-width: 1440px) {
   .index-page section .container .h2, .index-page section .container-fluid .h2 {
     font-size: 3.25rem;
   }
@@ -3926,12 +3926,12 @@ footer .btn-list ul li.facebook span {
   color: #8a6d58;
   line-height: 1.15;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1441px) {
   .index-page section .container .h3, .index-page section .container-fluid .h3 {
     font-size: 2.25rem;
   }
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1440px) {
   .index-page section .container .h3, .index-page section .container-fluid .h3 {
     font-size: 1.875rem;
   }
@@ -3939,14 +3939,14 @@ footer .btn-list ul li.facebook span {
 .index-page section .container .txt, .index-page section .container-fluid .txt {
   line-height: 1.75;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1441px) {
   .index-page section .container .txt, .index-page section .container-fluid .txt {
     padding-top: 40px;
     padding-bottom: 60px;
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1440px) {
   .index-page section .container .txt, .index-page section .container-fluid .txt {
     padding-bottom: 20px;
     font-size: 1.25rem;
@@ -4194,12 +4194,12 @@ footer .btn-list ul li.facebook span {
   text-align: center;
   line-height: 1.125;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .index-page section.service .grid-list .grid .h4 {
     font-size: 1.625rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1441px) {
   .index-page section.service .grid-list .grid .h4 {
     font-size: 2.25rem;
   }
@@ -4220,7 +4220,7 @@ footer .btn-list ul li.facebook span {
   color: #fff;
   font-size: 1.125rem;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1441px) {
   .index-page section.service .grid-list .grid p {
     font-size: 1.35rem;
   }
@@ -4475,7 +4475,11 @@ section.loop-content .container-fluid:nth-child(even) .row {
 }
 section.loop-content .container-fluid .h3 {
   color: #8a6d58;
-  font-size: 1.65rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+section.loop-content .container-fluid .txt {
+  font-size: 1.25rem;
 }
 section.loop-content .container-fluid .txt > * {
   display: none;
@@ -4871,8 +4875,9 @@ section.contact {
 }
 .news-article .article-body {
   font-size: 1.25rem;
+  word-break: break-word;
 }
-.news-article .article-body img {
+.news-article .article-body img, .news-article .article-body div, .news-article .article-body iframe, .news-article .article-body frame, .news-article .article-body embed {
   max-width: 100%;
 }
 
@@ -4885,6 +4890,7 @@ section.contact {
 .contact-page section .map-group .map-text {
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 1.25rem;
 }
 @media screen and (min-width: 1024px) {
   .contact-page section .map-group .map-text {

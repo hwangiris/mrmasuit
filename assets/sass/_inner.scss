@@ -97,12 +97,16 @@ section {
             }
             .h3 {
                 color: $primary;
-                font-size: $h3 * 1.1;
+                font-size: $h3 * 1.25;
+                font-weight: bold;
             }
-            .txt > * {
-                display: none;
-                &:first-child {
-                    display: block;
+            .txt {
+                font-size: $h4;
+                > * {
+                    display: none;
+                    &:first-child {
+                        display: block;
+                    }
                 }
             }
             .btn-toggle {
@@ -487,7 +491,8 @@ section {
     }
     .article-body {
         font-size: $h4;
-        img {
+        word-break: break-word;
+        img, div, iframe, frame, embed {
             max-width: 100%;
             // width: 300px;
         }
@@ -504,6 +509,7 @@ section {
             .map-text {
                 padding-top: 30px;
                 padding-bottom: 30px;
+                font-size: $h4;
                 @media screen and (min-width: 1024px) {
                     padding-top: 70px;
                     padding-bottom: 70px;
