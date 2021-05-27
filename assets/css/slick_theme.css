@@ -203,6 +203,7 @@ th {
   position: relative;
   display: block;
   width: 16px;
+  min-width: auto;
   height: 16px;
   color: transparent;
   font-size: 0;
@@ -313,10 +314,10 @@ th {
 }
 .slider-guest .slick-dots li.slick-active button::before {
   width: 20px;
-  background-color: #898989;
+  background-color: #8a6d58;
 }
 .slider-guest .slick-dots li.slick-active button:hover::before {
-  background-color: #636363;
+  background-color: #3c3026;
 }
 
 /*# sourceMappingURL=slick_theme.css.map */

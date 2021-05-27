@@ -30,15 +30,15 @@
 
 section {
     &.page-opening {
-        height: 450px;
+        // height: 450px;
         background-repeat: no-repeat;
         @include background-size(cover);
         background-position: center;
         img {
             display: none;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            // height: 100%;
+            // object-fit: cover;
             &.desktop {
                 @media screen and (orientation: landscape) {
                     display: block;
@@ -71,7 +71,8 @@ section {
                 margin-left: 10px;
             }
             a.active {
-                color: $primary !important;
+                color: $white !important;
+                background-color: $primary !important;
                 border-color: $primary !important;
             }
         }
@@ -91,6 +92,14 @@ section {
             }
             .row {
                 align-items: center;
+                .col-md-5 {
+                    @media screen and (min-width: 1024px) {
+                        position: -webkit-sticky;	
+                        position: sticky;	
+                        top: 10px;	
+                        align-self: baseline;
+                    }
+                }
             }
             &:nth-child(even) .row {
                 flex-direction: row-reverse;
@@ -101,10 +110,16 @@ section {
             }
             .txt {
                 font-size: $h4;
-                > * {
-                    display: none;
-                    &:first-child {
-                        display: block;
+                > *, img, iframe, embed {
+                    display: block;
+                    max-width: 100%;
+                }
+                &.collapse-hide {
+                    > * {
+                        display: none;
+                        &:first-child {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -299,6 +314,9 @@ section {
                     color: $primary-variant;
                 }
             }
+            img, iframe, embed {
+                max-width: 100%;
+            }
         }
         .lawyer-profile {
             font-size: $h4;
@@ -343,10 +361,6 @@ section {
                             color: $gray-600;
                             border: 1px solid $gray-600;
                         }
-                        &.icon-line {
-                            color: $white;
-                            background-color: $line;
-                        }
                     }
                 }
             }
@@ -368,6 +382,19 @@ section {
                             &::before {
                                 font-size: $h2;
                             }
+                        }
+                        &.icon-line {
+                            background-color: $line;
+                        }
+                        &.icon-instagram {
+                            background: #f09433; 
+                            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+                            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+                        }
+                        &.icon-youtube {
+                            background-color: $youtube;
                         }
                         &.icon-twitter {
                             background-color: $twitter;
@@ -547,7 +574,7 @@ section {
                     border-right: 1px solid $text;
                 }
                 .list-content {
-                    width: calc(100% - 55px);
+                    width: calc(100% - 95px);
                     a {
                         color: $text;
                         &:hover, &:active, &.active, &:focus {

@@ -1,0 +1,170 @@
+footer {
+    position: relative;
+    background-color: $red-100;
+    > .container {
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        z-index: 1;
+        @media screen and (max-width: 1023px) and (min-width: 500px) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    > .container-fluid {
+        position: relative;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        color: $white;
+        text-align: center;
+        background-color: $primary;
+        z-index: 1;
+        span {
+            display: inline-block;
+        }
+    }
+    > .frame-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        @include opacity(0.1);
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        iframe {
+            display: block;
+        }
+    }
+    ul {
+        @include listrest(0, 0, none);
+    }
+    .contact-list {
+        font-size: $h5;
+        @media screen and (max-width: 413px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 414px) and (max-width: 767px) {
+            width: calc(100% - 170px);
+        }
+        .title {
+            margin-bottom: 10px;
+            font-size: $h1;
+            font-weight: bold;
+            letter-spacing: 0.075em;
+            line-height: 1;
+            text-shadow: 0 0 1px $black;
+            @media screen and (min-width: 375px) {
+                font-size: $h5 * 2;
+                letter-spacing: 0.0125em;
+            }
+            @media screen and (min-width: 768px) {
+                margin-right: -65%;
+                font-size: $h6 * 2;
+                letter-spacing: 0.075em;
+            }
+            @media screen and (min-width: 1280px) {
+                font-size: $h3 * 2;
+            }
+            span {
+                // font-size: 1.26086957em;
+            }
+            @media screen and (min-width: 414px) and (max-width: 767px) {
+                margin-right: -170px;
+            }
+        }
+        ul {
+            li {
+                a {
+                    display: block;
+                    padding: 12px 0;
+                    color: $black;
+                    border-bottom: 1px solid $primary;
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    i.icon {
+                        margin-right: 0.5rem;
+                    }
+                    span {
+                        width: calc(100% - 1.625rem);
+                        word-break: break-word;
+                        @media screen and (max-width: 767px) {
+                            line-height: 1.25;
+                        }
+                    }
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .btn-list {
+        @media screen and (max-width: 413px) {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        @media screen and (min-width: 414px) and (max-width: 767px) {
+            width: 170px;
+        }
+        @media screen and (min-width: 414px) {
+            padding-top: calc((1.625rem * 1.26086957) + 30px);
+        }
+        @media screen and (min-width: 1024px) {
+            padding-top: calc((1.625rem * 2 * 1.26086957) + 30px);
+        }
+        ul {
+            li {
+                text-align: center;
+                + li {
+                    margin-top: 10px;
+                    @media screen and (min-width: 414px) {
+                        margin-top: 20px;
+                    }            
+                }
+                a.btn {
+                    display: block;
+                    padding: 10px;
+                    color: $white;
+                    font-size: $h5;
+                    line-height: 1.25;
+                    background-color: $primary;
+                    @include border-radius(5px);
+                    &:hover {
+                        background-color: $red-400;
+                    }
+                }
+                &.facebook {
+                    color: $facebook;
+                    a.btn {
+                        background-color: $facebook;
+                        &:hover {
+                            background-color: darken($facebook, 10%);
+                        }
+                        i.icon {
+                            display: block;
+                            font-size: $h3;
+                        }
+                    }
+                    span {
+                        display: block;
+                        padding-top: 0.5em;
+                        font-size: $h6;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -254,8 +254,8 @@ html {
 
 body {
   position: relative;
-  font-family: "custom-cwTeXKai", "標楷體", serif;
-  font-size: 1.25rem;
+  font-family: "Times New Roman", "custom-cwTeXKai", "標楷體", serif;
+  font-size: 1.125rem;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -3960,7 +3960,7 @@ a.btn, button {
   display: inline-block;
   min-width: 130px;
   padding: 10px 20px;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   text-align: center;
   line-height: 1.25;
   -moz-border-radius: 5px;
@@ -4106,18 +4106,18 @@ header h1 {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 15px;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   z-index: 1;
 }
 @media screen and (min-width: 375px) {
   header h1 {
-    font-size: 2.25rem;
+    font-size: 2.125rem;
     letter-spacing: 0.0125em;
   }
 }
 @media screen and (min-width: 768px) {
   header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.075em;
   }
 }
@@ -4127,7 +4127,7 @@ header h1 {
     top: 50%;
     left: 80px;
     margin-left: 0;
-    font-size: 3.25rem;
+    font-size: 3.15rem;
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -4260,7 +4260,7 @@ nav ul {
 }
 nav ul li a {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 @media screen and (min-width: 1280px) {
   nav ul li a {
@@ -4287,7 +4287,7 @@ nav ul li a:hover {
   nav ul li.phone a {
     padding-right: 0;
     color: #8a6d58;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     -webkit-text-stroke: 0.5px #8a6d58;
     text-stroke: 0.5px #8a6d58;
   }
@@ -4308,9 +4308,9 @@ nav ul li.phone a > * {
     right: 80px;
     padding: 8px 10px 12px;
     background-color: #8a6d58;
-    -moz-border-radius: 0 0 1.125rem 1.125rem;
+    -moz-border-radius: 0 0 1.0625rem 1.0625rem;
     -webkit-border-radius: 0;
-    border-radius: 0 0 1.125rem 1.125rem;
+    border-radius: 0 0 1.0625rem 1.0625rem;
   }
 }
 @media screen and (max-width: 1279px) {
@@ -4339,7 +4339,7 @@ nav ul.lang li a {
   display: block;
   padding: 0;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.25;
   -webkit-text-stroke: 0.5px #fff;
   text-stroke: 0.5px #fff;
@@ -4361,7 +4361,7 @@ nav ul.lang li + li::before {
   position: absolute;
   top: 50%;
   left: 0;
-  height: 1.125rem;
+  height: 1.0625rem;
   border-left: 1px solid #fff;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -4437,7 +4437,7 @@ footer ul {
   list-style: none;
 }
 footer .contact-list {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 @media screen and (max-width: 413px) {
   footer .contact-list {
@@ -4451,7 +4451,7 @@ footer .contact-list {
 }
 footer .contact-list .title {
   margin-bottom: 10px;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: bold;
   letter-spacing: 0.075em;
   line-height: 1;
@@ -4459,7 +4459,7 @@ footer .contact-list .title {
 }
 @media screen and (min-width: 375px) {
   footer .contact-list .title {
-    font-size: 2.25rem;
+    font-size: 2.125rem;
     letter-spacing: 0.0125em;
   }
 }
@@ -4472,7 +4472,7 @@ footer .contact-list .title {
 }
 @media screen and (min-width: 1280px) {
   footer .contact-list .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 414px) and (max-width: 767px) {
@@ -4543,7 +4543,7 @@ footer .btn-list ul li a.btn {
   display: block;
   padding: 10px;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.25;
   background-color: #8a6d58;
   -moz-border-radius: 5px;
@@ -4564,7 +4564,7 @@ footer .btn-list ul li.facebook a.btn:hover {
 }
 footer .btn-list ul li.facebook a.btn i.icon {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 footer .btn-list ul li.facebook span {
   display: block;
@@ -4580,7 +4580,7 @@ footer .btn-list ul li.facebook span {
   margin-top: 20px;
   margin-right: 20px;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   text-align: center;
   line-height: 1.25;
   background-color: #8a6d58;
@@ -4657,12 +4657,12 @@ footer .btn-list ul li.facebook span {
 }
 @media screen and (min-width: 1441px) {
   .index-page section .h2 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 }
 @media screen and (max-width: 1440px) {
   .index-page section .h2 {
-    font-size: 3.25rem;
+    font-size: 3.15rem;
   }
 }
 .index-page section .h3 {
@@ -4671,12 +4671,12 @@ footer .btn-list ul li.facebook span {
 }
 @media screen and (min-width: 1441px) {
   .index-page section .h3 {
-    font-size: 2.25rem;
+    font-size: 2.125rem;
   }
 }
 @media screen and (max-width: 1440px) {
   .index-page section .h3 {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 }
 .index-page section .txt {
@@ -4686,13 +4686,23 @@ footer .btn-list ul li.facebook span {
   .index-page section .txt {
     padding-top: 40px;
     padding-bottom: 60px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 1440px) {
   .index-page section .txt {
     padding-bottom: 20px;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .index-page section .txt .date {
+    font-size: 1.0625rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .index-page section .txt .date {
+    font-size: 1rem;
   }
 }
 .index-page section.opening {
@@ -4913,18 +4923,18 @@ footer .btn-list ul li.facebook span {
   display: block;
   width: 100%;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-align: center;
   line-height: 1.125;
 }
 @media screen and (min-width: 1280px) {
   .index-page section.service .grid-list .grid .h4 {
-    font-size: 1.625rem;
+    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 1441px) {
   .index-page section.service .grid-list .grid .h4 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 1279px) {
@@ -4941,11 +4951,11 @@ footer .btn-list ul li.facebook span {
   display: none;
   width: 100%;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 @media screen and (min-width: 1441px) {
   .index-page section.service .grid-list .grid p {
-    font-size: 1.35rem;
+    font-size: 1.125rem;
   }
 }
 .index-page section.service .grid-list .grid p:last-child {
@@ -4997,7 +5007,7 @@ footer .btn-list ul li.facebook span {
   bottom: 5vh;
   padding: 20px;
   color: #fff;
-  font-size: 2.25rem;
+  font-size: 2.125rem;
   font-weight: bold;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -5016,7 +5026,7 @@ footer .btn-list ul li.facebook span {
   .index-page section.news .container-fluid .img-col .slogan {
     bottom: 10vh;
     padding: 80px;
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 }
 .index-page section.news .container-fluid .txt-col {
@@ -5087,11 +5097,11 @@ footer .btn-list ul li.facebook span {
 }
 
 .title .h4 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 .title .h5 {
   color: #898989;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 
 .pagination {
@@ -5204,10 +5214,10 @@ section.loop-content .container-fluid:nth-child(even) .row {
 }
 section.loop-content .container-fluid .h3 {
   color: #8a6d58;
-  font-size: 1.6875rem;
+  font-size: 1.40625rem;
 }
 section.loop-content .container-fluid .txt {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 section.loop-content .container-fluid .txt > *, section.loop-content .container-fluid .txt img, section.loop-content .container-fluid .txt iframe, section.loop-content .container-fluid .txt embed {
   display: block;
@@ -5252,7 +5262,7 @@ section.voc .title {
   color: #8a6d58;
 }
 section.voc .voc-content .h6 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 section.contact {
   background-color: #e8e2de;
@@ -5317,7 +5327,7 @@ section.contact {
   height: 100px;
   padding: 30px;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25;
   background-color: rgba(138, 109, 88, 0.9);
   -moz-transform: translateX(-50%);
@@ -5332,11 +5342,11 @@ section.contact {
 }
 .lawyer-list .lawyer-item span.txt .name {
   color: #8a6d58;
-  font-size: 1.65rem;
+  font-size: 1.375rem;
 }
 .lawyer-list .lawyer-item span.txt .title {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 .lawyer-list .lawyer-item:hover span.img span {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -5370,7 +5380,7 @@ section.contact {
   position: relative;
   margin-bottom: 10px;
   color: #8a6d58;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 .lawyer-single .row .lawyer-title h1::before {
   content: "";
@@ -5391,17 +5401,17 @@ section.contact {
   z-index: 1;
 }
 .lawyer-single .row .lawyer-title .title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .lawyer-single .row .lawyer-intro {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   word-break: break-word;
 }
 .lawyer-single .row .lawyer-intro .h5 {
   padding-top: 20px;
   padding-bottom: 10px;
   color: #8a6d58;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   border-bottom: 1px solid #CBD0D8;
 }
 .lawyer-single .row .lawyer-intro ul {
@@ -5424,7 +5434,7 @@ section.contact {
   max-width: 100%;
 }
 .lawyer-single .row .lawyer-profile {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 @media screen and (min-width: 1024px) {
   .lawyer-single .row .lawyer-profile {
@@ -5439,8 +5449,8 @@ section.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.625rem;
-  height: 1.625rem;
+  width: 1.575rem;
+  height: 1.575rem;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -5458,7 +5468,7 @@ section.contact {
 }
 .lawyer-single .row .lawyer-profile .connect li a {
   color: #898989;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 .lawyer-single .row .lawyer-profile .connect li a:hover {
   color: #8a6d58;
@@ -5480,7 +5490,7 @@ section.contact {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
 }
 .lawyer-single .row .lawyer-profile .social li + li {
   margin-right: 10px;
@@ -5492,7 +5502,7 @@ section.contact {
   color: #1877F2;
 }
 .lawyer-single .row .lawyer-profile .social li i.icon.icon-fb::before {
-  font-size: 1.625rem;
+  font-size: 1.575rem;
 }
 .lawyer-single .row .lawyer-profile .social li i.icon.icon-line {
   background-color: #00C200;
@@ -5571,11 +5581,11 @@ section.contact {
 }
 .inner-page .news-list a > span.title {
   color: #8a6d58;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .inner-page .news-list a > span.title .icon {
   margin-right: 10px;
-  font-size: 1.625rem;
+  font-size: 1.575rem;
 }
 .inner-page .news-list a > span.detail {
   color: #898989;
@@ -5615,10 +5625,10 @@ section.contact {
 }
 .news-article .article-head .title {
   color: #8a6d58;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 .news-article .article-body {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   word-break: break-word;
 }
 .news-article .article-body img, .news-article .article-body div, .news-article .article-body iframe, .news-article .article-body frame, .news-article .article-body embed {
@@ -5634,7 +5644,7 @@ section.contact {
 .contact-page section .map-group .map-text {
   padding-top: 30px;
   padding-bottom: 30px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 @media screen and (min-width: 1024px) {
   .contact-page section .map-group .map-text {
@@ -5666,12 +5676,12 @@ section.contact {
   font-size: 0;
 }
 .contact-page section .contact-list li + li {
-  margin-top: 1.125rem;
+  margin-top: 1.0625rem;
 }
 .contact-page section .contact-list li > div {
   display: inline-block;
   vertical-align: text-top;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.2;
 }
 .contact-page section .contact-list li .list-title {
@@ -5680,7 +5690,7 @@ section.contact {
   border-right: 1px solid #394148;
 }
 .contact-page section .contact-list li .list-content {
-  width: calc(100% - 55px);
+  width: calc(100% - 95px);
 }
 .contact-page section .contact-list li .list-content a {
   color: #394148;
@@ -5781,7 +5791,7 @@ section.contact {
 }
 .modal .modal-content button.modal-close i.icon {
   display: block;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .modal .modal-header {
   display: -ms-flexbox;
@@ -5791,7 +5801,7 @@ section.contact {
   -ms-flex-pack: center;
   justify-content: center;
   color: #8a6d58;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 .modal-dialog-scrollable .modal .modal-header {
@@ -5854,12 +5864,12 @@ section.contact .h2 {
 }
 @media screen and (min-width: 1280px) {
   section.contact .h2 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 }
 @media screen and (max-width: 1279px) {
   section.contact .h2 {
-    font-size: 3.25rem;
+    font-size: 3.15rem;
   }
 }
 section.contact .h3 {
@@ -5868,21 +5878,21 @@ section.contact .h3 {
 }
 @media screen and (min-width: 1280px) {
   section.contact .h3 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
 @media screen and (max-width: 1279px) {
   section.contact .h3 {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 }
 section.contact .form-column {
   margin: 20px;
   padding: 25px;
   background-color: #fdf5e9;
-  -moz-border-radius: 1.625rem;
-  -webkit-border-radius: 1.625rem;
-  border-radius: 1.625rem;
+  -moz-border-radius: 1.575rem;
+  -webkit-border-radius: 1.575rem;
+  border-radius: 1.575rem;
 }
 @media screen and (min-width: 375px) {
   section.contact .form-column {
@@ -5967,8 +5977,8 @@ section.contact form.contact-form label + label {
 }
 @media (min-width: 1024px) {
   #top i.icon {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main_en.css.map */

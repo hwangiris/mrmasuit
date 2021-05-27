@@ -1,14 +1,16 @@
 $icomoon-font-family: "law" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon-x: "\e900";
-$icon-facebook: "\e901";
-$icon-sinaweibo: "\e902";
-$icon-line: "\e903";
-$icon-fb: "\e904";
-$icon-twitter: "\e905";
-$icon-clock: "\e906";
-$icon-message-square: "\e907";
+$icon-instagram: "\e900";
+$icon-youtube: "\e901";
+$icon-x: "\e902";
+$icon-facebook: "\e903";
+$icon-sinaweibo: "\e904";
+$icon-line: "\e905";
+$icon-fb: "\e906";
+$icon-twitter: "\e907";
+$icon-clock: "\e908";
+$icon-message-square: "\e909";
 $icon-map-marker: "\f041";
 $icon-phone: "\f095";
 $icon-envelope: "\f0e0";
@@ -47,59 +49,69 @@ $icon-fax: "\f1ac";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
 .icon-x {
   &:before {
     content: $icon-x; 
   }
 }
-.icon-message-square {
+.icon-facebook {
   &:before {
-    content: $icon-message-square;
-  }
-}
-.icon-clock {
-  &:before {
-    content: $icon-clock;
-  }
-}
-.icon-twitter {
-  &:before {
-    content: $icon-twitter;
+    content: $icon-facebook; 
   }
 }
 .icon-sinaweibo {
   &:before {
-    content: $icon-sinaweibo;
+    content: $icon-sinaweibo; 
   }
 }
 .icon-line {
   &:before {
-    content: $icon-line;
+    content: $icon-line; 
   }
 }
 .icon-fb {
   &:before {
-    content: $icon-fb;
+    content: $icon-fb; 
   }
 }
-.icon-facebook {
+.icon-twitter {
   &:before {
-    content: $icon-facebook;
+    content: $icon-twitter; 
+  }
+}
+.icon-clock {
+  &:before {
+    content: $icon-clock; 
+  }
+}
+.icon-message-square {
+  &:before {
+    content: $icon-message-square; 
   }
 }
 .icon-map-marker {
   &:before {
-    content: $icon-map-marker;
+    content: $icon-map-marker; 
   }
 }
 .icon-phone {
   &:before {
-    content: $icon-phone;
+    content: $icon-phone; 
   }
 }
 .icon-envelope {
   &:before {
-    content: $icon-envelope;
+    content: $icon-envelope; 
   }
 }
 .icon-angle-up {
@@ -109,6 +121,6 @@ $icon-fax: "\f1ac";
 }
 .icon-fax {
   &:before {
-    content: $icon-fax;
+    content: $icon-fax; 
   }
 }

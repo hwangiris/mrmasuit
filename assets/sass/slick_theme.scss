@@ -2,8 +2,8 @@
 @import"Compass";
 @import"breakpoint";
 // 元件
-@import"_variable";
-@import"_mixin";
+@import"tw/_variable";
+@import"tw/_mixin";
 .slick-slide {
     img {
         width: 100%;
@@ -24,6 +24,7 @@
         position: relative;
         display: block;
         width: 16px;
+        min-width: auto;
         height: 16px;
         color: transparent;
         font-size: 0;
@@ -115,10 +116,10 @@
                     width: 24px;
                     &::before {
                         width: 20px;
-                        background-color: $gray-600;
+                        background-color: $primary;
                     }
                     &:hover::before {
-                        background-color: darken($gray-600, 15%);
+                        background-color: darken($red-400, 15%);
                     }
                 }
             }

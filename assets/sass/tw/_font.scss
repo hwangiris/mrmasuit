@@ -1,0 +1,126 @@
+$icomoon-font-family: "law" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon-instagram: "\e900";
+$icon-youtube: "\e901";
+$icon-x: "\e902";
+$icon-facebook: "\e903";
+$icon-sinaweibo: "\e904";
+$icon-line: "\e905";
+$icon-fb: "\e906";
+$icon-twitter: "\e907";
+$icon-clock: "\e908";
+$icon-message-square: "\e909";
+$icon-map-marker: "\f041";
+$icon-phone: "\f095";
+$icon-envelope: "\f0e0";
+$icon-angle-up: "\f106";
+$icon-fax: "\f1ac";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?byuil0");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?byuil0#iefix")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?byuil0")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?byuil0")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?byuil0##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+.icon-x {
+  &:before {
+    content: $icon-x; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-sinaweibo {
+  &:before {
+    content: $icon-sinaweibo; 
+  }
+}
+.icon-line {
+  &:before {
+    content: $icon-line; 
+  }
+}
+.icon-fb {
+  &:before {
+    content: $icon-fb; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-clock {
+  &:before {
+    content: $icon-clock; 
+  }
+}
+.icon-message-square {
+  &:before {
+    content: $icon-message-square; 
+  }
+}
+.icon-map-marker {
+  &:before {
+    content: $icon-map-marker; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-envelope {
+  &:before {
+    content: $icon-envelope; 
+  }
+}
+.icon-angle-up {
+  &:before {
+    content: $icon-angle-up; 
+  }
+}
+.icon-fax {
+  &:before {
+    content: $icon-fax; 
+  }
+}
