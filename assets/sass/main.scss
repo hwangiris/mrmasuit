@@ -75,6 +75,47 @@ section.contact {
         }
     }
 }
+.crosscut-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: $white;
+    background-color: $primary;
+    border-top: 1px solid rgba($white, 0.2);
+    z-index: 5;
+    @include breakpoint(1024px) {
+        display: none !important;
+    }
+    .row {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .crosscut-title {
+        margin-right: 1em;
+    }
+    a.btn {
+        @include button($white, $red-300);
+        min-width: auto;
+        margin-left: 5px;
+        padding: 0 7px;
+        line-height: 2;
+        vertical-align: middle;
+        @include border-radius(50px);
+        @include breakpoint(1024px) {
+            min-width: auto;
+        }
+        &.btn-text {
+            padding: 0 14px;
+        }
+        i.icon {
+            display: block;
+            padding: 7px 0;
+            font-weight: bold;
+        }
+    }
+}
 #top {
     display: none;
     position: fixed;
@@ -86,7 +127,7 @@ section.contact {
     color: $white;
     line-height: 1;
     text-align: center;
-    background-color: $black;
+    background-color: $primary;
     @include border-radius(50%);
     cursor: pointer;
     z-index: 5;

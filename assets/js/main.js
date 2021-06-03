@@ -170,11 +170,13 @@ $(function() {
         }
     });
     $(window).scroll(function() {
-        var scroll = $(this).scrollTop();
-        if (scroll >= height) {
-            $('#top').fadeIn();
+        var scroll = $(this).scrollTop(),
+            crosscutHeight = $('.crosscut-block').outerHeight();
+        $('body').css('padding-bottom', crosscutHeight);
+        if (scroll >= (height/2)) {
+            $('#top, .crosscut-block').fadeIn();
         } else {
-            $('#top').fadeOut();
+            $('#top, .crosscut-block').fadeOut();
         }
     });
 })

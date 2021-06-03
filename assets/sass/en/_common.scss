@@ -82,6 +82,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
+  @include breakpoint(1024px) {
+    padding-bottom: 0 !important;
+  }
   &.opened {
     overflow: hidden;
   }

@@ -262,6 +262,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
 }
+@media (min-width: 1024px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+}
 body.opened {
   overflow: hidden;
 }
@@ -4743,7 +4748,7 @@ footer .btn-list ul li.facebook span {
 }
 .index-page section.opening .title .h3 {
   color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 8px #000;
 }
 @media screen and (min-width: 768px) {
   .index-page section.opening .title a + a {
@@ -5927,6 +5932,71 @@ section.contact form.contact-form label + label {
   margin-left: 10px;
 }
 
+.crosscut-block {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: #fff;
+  background-color: #8a6d58;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+@media (min-width: 1024px) {
+  .crosscut-block {
+    display: none !important;
+  }
+}
+.crosscut-block .row {
+  justify-content: space-between;
+  align-items: center;
+}
+.crosscut-block .crosscut-title {
+  margin-right: 1em;
+}
+.crosscut-block a.btn {
+  display: inline-block;
+  min-width: 140px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2.5;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  min-width: auto;
+  margin-left: 5px;
+  padding: 0 7px;
+  line-height: 2;
+  vertical-align: middle;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.crosscut-block a.btn:hover, .crosscut-block a.btn:active, .crosscut-block a.btn.active, .crosscut-block a.btn:focus {
+  color: #8a6d58;
+  background-color: #fff;
+}
+@media (min-width: 1024px) {
+  .crosscut-block a.btn {
+    min-width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .crosscut-block a.btn {
+    min-width: auto;
+  }
+}
+.crosscut-block a.btn.btn-text {
+  padding: 0 14px;
+}
+.crosscut-block a.btn i.icon {
+  display: block;
+  padding: 7px 0;
+  font-weight: bold;
+}
+
 #top {
   display: none;
   position: fixed;
@@ -5938,7 +6008,7 @@ section.contact form.contact-form label + label {
   color: #fff;
   line-height: 1;
   text-align: center;
-  background-color: #000;
+  background-color: #8a6d58;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
