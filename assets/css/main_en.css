@@ -4753,6 +4753,7 @@ footer .btn-list ul li.facebook span {
 }
 .index-page section.opening .title .h3 {
   color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
   .index-page section.opening .title a + a {
@@ -5489,11 +5490,10 @@ section.contact {
 .lawyer-single .row .lawyer-profile .social li {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
   font-size: 1.0625rem;
 }
 .lawyer-single .row .lawyer-profile .social li + li {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .lawyer-single .row .lawyer-profile .social li i.icon {
   color: #fff;
