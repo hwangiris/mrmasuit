@@ -174,9 +174,14 @@ $(function() {
             crosscutHeight = $('.crosscut-block').outerHeight();
         $('body').css('padding-bottom', crosscutHeight);
         if (scroll >= (height/2)) {
-            $('#top, .crosscut-block').fadeIn();
+            $('#top').fadeIn();
         } else {
-            $('#top, .crosscut-block').fadeOut();
+            $('#top').fadeOut();
+        }
+        if ((scroll >= (height/2)) && (width < 1024)) {
+            $('.crosscut-block').fadeIn();
+        } else {
+            $('.crosscut-block').fadeOut();
         }
     });
 })
