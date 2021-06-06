@@ -5933,6 +5933,7 @@ section.contact form.contact-form label + label {
 }
 
 .crosscut-block {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -5974,13 +5975,17 @@ section.contact form.contact-form label + label {
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
-.crosscut-block a.btn:hover, .crosscut-block a.btn:active, .crosscut-block a.btn.active, .crosscut-block a.btn:focus {
+.crosscut-block a.btn.active {
   color: #8a6d58;
   background-color: #fff;
 }
 @media (min-width: 1024px) {
   .crosscut-block a.btn {
     min-width: 150px;
+  }
+  .crosscut-block a.btn:hover, .crosscut-block a.btn:active, .crosscut-block a.btn:focus {
+    color: #8a6d58;
+    background-color: #fff;
   }
 }
 @media (min-width: 1024px) {
